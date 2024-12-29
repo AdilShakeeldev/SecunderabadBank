@@ -94,8 +94,13 @@
     }
 
     @keyframes mymove {
-        from {left: -100%;}
-        to {left: 100%;}
+        from {
+            left: -100%;
+        }
+
+        to {
+            left: 100%;
+        }
     }
 
     /*** Topbar End ***/
@@ -111,7 +116,7 @@
         color: var(--bs-primary);
         font-size: 18px;
         outline: none;
-        
+
     }
 
     .navbar .navbar-nav .nav-link:hover,
@@ -139,14 +144,16 @@
             opacity: 0;
         }
     }
+
     @media (max-width: 620px) {
         .carousel-caption .carousel-content a button.carousel-content-btn1 {
-        scale: 0.7;
+            scale: 0.7;
         }
     }
+
     @media (max-width: 620px) {
         .carousel-caption .carousel-content a button.carousel-content-btn2 {
-        scale: 0.7;
+            scale: 0.7;
         }
     }
 
@@ -162,144 +169,145 @@
     /*** Navbar End ***/
 
 
-    /*** Carousel Start ***/
-
-    /* Carousel Base Styling */
     .carousel-item {
         position: relative;
-        min-height: 500px; /* Default height for larger screens */
     }
 
-    .carousel-item img {
-        object-fit: cover;
+    .carousel-item::after {
+        content: "";
         width: 100%;
         height: 100%;
-    }
-
-    /* Carousel Caption Styling */
-    .carousel-caption {
-        position: absolute;
-        top: 40%; /* Reduced top spacing */
-        transform: translateY(-50%);
-        left: 0;
-        right: 0;
-        z-index: 2;
-        padding: clamp(10px, 2vw, 30px);
-        text-align: center;
-    }
-
-    /* Carousel Content Styling */
-    .carousel-content {
-        max-width: 90%; /* Responsive max width */
-        margin: 0 auto;
-    }
-
-    .carousel-content h6 {
-        font-size: clamp(1rem, 2vw, 1.5rem);
-        color: #26d48c;
-        margin-bottom: clamp(8px, 1.5vw, 20px);
-    }
-
-    .carousel-content h1 {
-        font-size: clamp(1.5rem, 5vw, 4.5rem);
-        font-weight: 700;
-        color: white;
-        margin-bottom: clamp(10px, 2vw, 25px);
-        line-height: 1.2;
-    }
-
-    .carousel-content p {
-        font-size: clamp(0.6rem, 2vw, 1.3rem);
-        color: white;
-        margin-bottom: clamp(15px, 2.5vw, 35px);
-        line-height: 1.5;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-        opacity: 0.9;
-        padding: 0 10px; /* Padding for better readability */
-    }
-
-    /* Carousel Buttons */
-    .carousel-content .d-flex {
-        justify-content: center;
-        gap: clamp(10px, 2vw, 20px);
-    }
-
-    .carousel-content-btn1,
-    .carousel-content-btn2 {
-        padding: clamp(10px, 1.5vw, 15px) clamp(20px, 2.5vw, 40px);
-        font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-        border-radius: 50px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        border: none;
-        color: white;
-    }
-
-    .carousel-content-btn1 {
-        background-color: #1842b6; /* Blue color */
-    }
-
-    .carousel-content-btn2 {
-        background-color: #26d48c; /* Green color */
-    }
-
-    /* Hover effects for buttons */
-    .carousel-content-btn1:hover,
-    .carousel-content-btn2:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    /* Dark overlay for better text visibility */
-    .carousel-item::before {
-        content: '';
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, .6);
+    }
+
+    .carousel-caption {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         z-index: 1;
     }
 
-    /* Responsive Breakpoints */
-    @media (max-width: 991px) {
-        .carousel-item {
-            min-height: 400px; /* Adjust height for medium screens */
-        }
+    .carousel-item p {
+        max-width: 700px;
+        margin: 0 auto 35px auto;
     }
 
-    @media (max-width: 768px) {
-        .carousel-item {
-            min-height: 350px; /* Adjust height for smaller screens */
-        }
+    .carousel-control-prev {
+        width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        background: var(--bs-primary);
+        border-radius: 0 50px 50px 0;
+        opacity: 1;
     }
 
-    @media (max-width: 576px) {
+    .carousel-control-prev:hover {
+        background: var(--bs-secondary);
+        transition: .8s;
+    }
+
+    .carousel-control-next {
+        width: 90px;
+        height: 60px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background: var(--bs-primary);
+        border-radius: 50px 0 0 50px;
+        opacity: 1;
+    }
+
+    .carousel-control-next:hover {
+        background: var(--bs-secondary);
+        transition: .8s;
+    }
+
+    .carousel-caption .carousel-content a button.carousel-content-btn1 {
+        background: var(--bs-secondary);
+        color: var(--bs-dark);
+        opacity: 1;
+        border: 0;
+        border-radius: 20px;
+    }
+
+    .carousel-caption .carousel-content a button.carousel-content-btn1:hover {
+        background: var(--bs-primary);
+        color: #ffffff;
+        border: 0;
+        opacity: 1;
+        transition: 1s;
+        border-radius: 20px;
+    }
+
+    .carousel-caption .carousel-content a button.carousel-content-btn2 {
+        background: var(--bs-primary);
+        color: var(--bs-white);
+        opacity: 1;
+        border: 0;
+        border-radius: 20px;
+    }
+
+    .carousel-caption .carousel-content a button.carousel-content-btn2:hover {
+        background: var(--bs-secondary);
+        color: var(--bs-dark);
+        border: 0;
+        opacity: 1;
+        transition: 1s;
+        border-radius: 20px;
+    }
+
+    #carouselId .carousel-indicators li {
+        width: 30px;
+        height: 10px;
+        background: var(--bs-primary);
+        margin: 10px;
+        border-radius: 30px;
+        opacity: 1;
+    }
+
+    #carouselId .carousel-indicators li:hover {
+        background: var(--bs-secondary);
+        opacity: 1;
+    }
+
+    @media (max-width: 992px) {
         .carousel-item {
-            min-height: 300px; /* Adjust height for mobile */
+            min-height: 500px;
         }
 
         .carousel-item img {
+            min-height: 500px;
             object-fit: cover;
-            width: 100%;
-            height: 300px;
         }
-    
-        .carousel-content-btn1,
-        .carousel-content-btn2 {
-            width: clamp(160px, 50vw, 200px); /* Responsive button width */
-            padding: clamp(8px, 1vw, 12px) clamp(15px, 2vw, 30px); /* Responsive padding */
+
+        .carousel-item h1 {
+            font-size: 40px !important;
+        }
+
+        .carousel-item p {
+            font-size: 16px !important;
         }
     }
 
     @media (max-width: 375px) {
-        .carousel-item {
-            min-height: 250px; /* Adjust height for very small screens */
-        }
+    .carousel-item {
+        min-height: 250px; /* Adjust height for very small screens */
     }
+
+    .section h2 {
+        font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+    }
+
+    .section p {
+        font-size: 0.75rem;
+    }
+}
 
     .page-header {
         background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/carousel-1.jpg) center center no-repeat;
@@ -315,8 +323,8 @@
         font-size: 18px;
         color: var(--bs-white);
     }
+    
 
-    /*** Carousel End ***/
 
 
     /*** Services Start ***/
@@ -459,7 +467,7 @@
         position: absolute;
         top: 6px;
         left: -140px;
-        
+
     }
 
     .blog-btn-icon:hover .blog-icon-2 {
@@ -468,10 +476,12 @@
         top: 6px;
         padding-bottom: 5px;
     }
+
     .blog-icon-1 {
         position: relative;
         top: -4px;
     }
+
     .blog-btn-icon:hover .blog-icon-1 {
         top: 0;
         right: -140px;
@@ -675,8 +685,10 @@
         border: 2px solid #009041;
         border-radius: 5px;
         position: absolute;
-        right: 15px; /* Position from right */
-        top: 50%; /* Center vertically */
+        right: 15px;
+        /* Position from right */
+        top: 50%;
+        /* Center vertically */
         transform: translateY(-50%);
         z-index: 1000;
     }
@@ -694,7 +706,7 @@
 
     /* Dropdown Hover Functionality */
     @media (min-width: 992px) {
-        .dropdown:hover > .dropdown-menu {
+        .dropdown:hover>.dropdown-menu {
             display: block;
             margin-top: 0;
             animation: fadeIn 0.3s ease;
@@ -705,14 +717,14 @@
             position: relative;
         }
 
-        .dropdown-submenu > .dropdown-menu {
+        .dropdown-submenu>.dropdown-menu {
             top: 0;
             left: 100%;
             margin-top: -6px;
             display: none;
         }
 
-        .dropdown-submenu:hover > .dropdown-menu {
+        .dropdown-submenu:hover>.dropdown-menu {
             display: block;
         }
     }
@@ -723,6 +735,7 @@
             opacity: 0;
             transform: translateY(10px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -732,7 +745,8 @@
     /* Mobile Responsive Styles */
     @media (max-width: 991.98px) {
         .navbar {
-            position: relative; /* Enable absolute positioning of toggler */
+            position: relative;
+            /* Enable absolute positioning of toggler */
         }
 
         .navbar-brand img {
@@ -766,18 +780,21 @@
     /* Small phones */
     @media (max-width: 576px) {
         .navbar-toggler {
-            right: 10px; /* Adjust position for smaller screens */
+            right: 10px;
+            /* Adjust position for smaller screens */
             padding: 6px;
         }
 
         .navbar-brand img {
-            max-width: 180px; /* Smaller logo for very small screens */
+            max-width: 180px;
+            /* Smaller logo for very small screens */
         }
     }
 
     /* Container padding adjustment */
-    /* @media (max-width: 991.98px) {
+    @media (max-width: 991.98px) {
         .container {
-            padding-right: 50px; 
+            padding-right: 50px;
+            /* Make room for toggler */
         }
-    } */
+    }
