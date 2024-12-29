@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Our Team</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        #our-story,
+        #vision-mission,
+        #our-team {
+            scroll-margin-top: 80px;
+            /* To account for sticky navbar */
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+        }
+
+        .card-body p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+        #our-story img,
+        #our-team img {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #our-story img:hover,
+        #our-team img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <style>
+        .calculator-container {
+            background-color: white;
+            padding: 80px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            text-align: center;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .input-section {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .pricing-section {
+            background-color: #f9f9f9;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card .plan-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .pricing-card .price {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #009041;
+        }
+
+        .pricing-card .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .pricing-card .features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-card .btn {
+            font-weight: bold;
+        }
+
+        .featured {
+            border: 2px solid #007bff;
+            background-color: #e6f4ff;
+        }
+
+        .featured .btn {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .gallery {
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.2s ease;
+            object-fit: cover;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery .col {
+            margin-bottom: 20px;
+        }
+
+        .gallery img {
+            max-height: 200px;
+            /* For mobile */
+        }
+
+        @media (min-width: 768px) {
+            .gallery img {
+                max-height: 300px;
+                /* For larger screens */
+            }
+        }
+
+        .show-more-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Hide all submenus by default */
+        .dropdown-menu .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 1000;
+        }
+
+        /* Show submenu when the parent dropdown item is hovered */
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
+        /* Ensure proper alignment for submenus */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        .icon-box {
+            width: 100px;
+            height: 60px;
+            border-radius: 10px;
+        }
+
+        .content-box h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .content-box p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .bg-danger {
+            background-color: #009041 !important;
+        }
+
+        .shadow-sm {
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .icon-box {
+                width: 50px;
+                height: 50px;
+            }
+
+            .content-box h5 {
+                font-size: 1rem;
+            }
+
+            .content-box p {
+                font-size: 0.85rem;
+            }
+        }
+
+        .company-benefits {
+            background-color: #1a1a1a;
+            /* padding: 50px; */
+            border-radius: 10px;
+        }
+
+        .company-benefits h6 {
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .company-benefits h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .company-benefits p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .progress {
+            background: #333;
+            height: 6px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            transition: width 2s ease-in-out;
+        }
+
+        .video-container video {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .row {
+            margin: 0;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input {
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            border: solid;
+            border-color: #009041;
+        }
+
+        .search-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #45a049;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+.terbang {
+position: fixed;
+width: 75px;
+height: 40px;
+bottom: 0px;
+left: 13px;
+background-color: #25d366;
+color: #FFF;
+border-radius:5px 5px 0px 0px;
+text-align: left;
+font-size: 27px;
+box-shadow: 2px 2px 3px #999;
+z-index: 100;
+}
+
+@media screen
+  and (min-device-width: 1025px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+.text-wa {
+font-size:15px;
+position:relative;
+color:whitesmoke;
+margin-left:10px;
+text-align:right;
+top:-5px;
+}		
+.melayang{
+	margin-top:8px;
+	margin-left:25px;
+}
+}
+
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 580px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.terbang {
+position: fixed;
+width: 65px;
+height: 65px;
+bottom: 17px;
+left: 15px;
+background-color: #25d366;
+color: #FFF;
+border-radius: 10px;
+text-align: center;
+font-size: 30px;
+box-shadow: 2px 2px 3px #999;
+z-index: 100;
+	}
+.text-wa {
+	font-size:15px;
+	position:relative;
+	color:white;
+	margin-left:15px;
+	text-align:right;
+	top:-5px;
+	display:none;
+}
+.melayang{
+	margin-top:17px;
+}
+}
+    </style>
+</head>
+
+<body>
+    <a href="http://wa.me/+918985083534" class="terbang" target="_blank"><i class="fa fa-whatsapp melayang"></i><i class="teks-wa">WhatsApp</i></a>
+    
+    <!-- Spinner Start -->
+    <!-- <div id="spinner"
+        class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div> -->
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-white py-2 d-none d-md-flex">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center topbar">
+                <a href="index.html" class="navbar-brand" style="align-self: center;">
+                    <img src="./img/Logo-update-Copy-1.png" alt="bank Logo" class="logo" style="width: 60%;">
+                </a>
+                <button type="button" class="navbar-toggler ms-3 navbar navbar-dark" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Topbar End -->
+    <style>
+        @media (max-width: 767px) {
+            .pc {
+                display: none;
+            }
+        }
+    </style>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white" style=" box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;;">
+        <div class="container">
+            <nav class="navbar navbar-dark navbar-expand-lg py-0">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center topbar">
+                        <a href="index.html" class="navbar-brand" style="align-self: center;">
+                            <img src="./img/Logo-update-Copy-1.png" alt="bank Logo" class="logo" style="width: 60%;">
+                        </a>
+                        <button type="button" class="navbar-toggler ms-3 navbar navbar-dark pc"
+                            data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+
+                        <!-- About Us Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="Aboutteam.html" id="aboutUsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+                            <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
+                                <li><a class="dropdown-item" href="./Aboutteam.html#story">Our Story</a></li>
+                                <li><a class="dropdown-item" href="./Aboutteam.html#Vision">Our Vision & Mission</a>
+                                </li>
+                                <li><a class="dropdown-item" href="./Aboutteam.html#Board">Board Members</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Banking Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="bankingDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Banking
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="bankingDropdown">
+                                <!-- Personal Banking Submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item" href="personalbanking.html">Personal Banking</a>
+                                    <!-- <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="personalbanking.html#Current">Current Account</a></li>
+                <li><a class="dropdown-item" href="personalbanking.html#Savings">Savings Bank Account</a></li>
+            </ul> -->
+                                </li>
+                                <!-- Corporate Banking Submenu -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item " href="corporatebanking.html">Corporate Banking</a>
+                                    <!-- <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="corporatebanking.html#Cash">Cash Credit</a></li>
+                <li><a class="dropdown-item" href="corporatebanking.html#Over">Over Draft</a></li>
+            </ul>
+        </li> -->
+                            </ul>
+                        </li>
+
+
+
+                        <!-- Deposit Schemes Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="DepositSchemes.html" id="depositSchemesDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Deposit Schemes</a>
+                            <ul class="dropdown-menu" aria-labelledby="depositSchemesDropdown">
+                                <li><a class="dropdown-item" href="DepositSchemes.html#Fixed">Fixed Deposit</a></li>
+                                <li><a class="dropdown-item" href="DepositSchemes.html#Recurring">Recurring
+                                        Deposit</a></li>
+                                <li><a class="dropdown-item" href="DepositSchemes.html#Investment">Re-Investment
+                                        Policy</a></li>
+                                <li><a class="dropdown-item" href="DepositSchemes.html#Daily">Daily Deposit</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Loans & Advances Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="loanpage.html" id="loansAdvancesDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Loans & Advances</a>
+                            <ul class="dropdown-menu" aria-labelledby="loansAdvancesDropdown">
+                                <li><a class="dropdown-item" href="loanpage.html#Gold">Gold Loan</a></li>
+                                <li><a class="dropdown-item" href="loanpage.html#Vehicle">Vehicle Loan</a></li>
+                                <li><a class="dropdown-item" href="loanpage.html#Demand">Demand Loan</a></li>
+                                <li><a class="dropdown-item" href="loanpage.html#Deposit">Loan on Deposit</a>
+                                </li>
+                                <li><a class="dropdown-item" href="DepositSchemes.html#Secured">Other Secured
+                                        Loans</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Other Services Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="OtherServices.html" id="otherServicesDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Other Services</a>
+                            <ul class="dropdown-menu" aria-labelledby="otherServicesDropdown">
+                                <li><a class="dropdown-item" href="./OtherServices.html#Merchant">Merchant QR</a></li>
+                                <li><a class="dropdown-item" href="./OtherServices.html#commerce">E-commerce</a></li>
+                                <li><a class="dropdown-item" href="./OtherServices.html#Pos">Pos machine facility</a>
+                                </li>
+                                <li><a class="dropdown-item" href="OtherServices.html#Demand">Demand Draft</a></li>
+                                <li><a class="dropdown-item" href="OtherServices.html#RTGS">RTGS/NEFT</a></li>
+                                <li><a class="dropdown-item" href="OtherServices.html#cheque">At par cheque</a></li>
+                                <li><a class="dropdown-item" href="OtherServices.html#Forex">Forex</a></li>
+                                <li><a class="dropdown-item" href="OtherServices.html#SMS">SMS Services</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Search for topics..." oninput="searchTopics()">
+                        <button type="button" onclick="searchTopics()">Search</button>
+                    </div>
+                </div>
+                <!-- <div class="d-none d-xl-flex flex-shirink-0">
+                    <div class="d-flex align-items-center justify-content-center ms-4 ">
+                        <a href="#"><i class="bi bi-search text-white fa-2x"></i></a>
+                    </div>
+                </div> -->
+                <script>
+                    function searchTopics() {
+                        const searchInput = document.getElementById("searchInput").value.toLowerCase();
+
+                        // Simple way to define the pages where search terms might be found
+                        const pages = {
+                            home: { url: "home.html", keywords: ["home", "welcome", "introduction"] },
+                            about: { url: "about.html", keywords: ["about", "company", "history"] },
+                            services: { url: "services.html", keywords: ["services", "consulting", "development"] },
+                            contact: { url: "contact.html", keywords: ["contact", "email", "location"] }
+                        };
+
+                        // Check each page's keywords
+                        for (let page in pages) {
+                            const pageKeywords = pages[page].keywords;
+
+                            // If search input matches any keyword on the page, navigate to that page
+                            if (pageKeywords.some(keyword => keyword.includes(searchInput))) {
+                                window.location.href = pages[page].url;  // Navigate to the matched page
+                                break;  // Exit the loop once we find a match
+                            }
+                        }
+                    }
+
+                </script>
+            </nav>
+
+        </div>
+    </div>
+    <div id="note" class="text-secondary d-none d-xl-flex note-slider"><small>Note : We help you to Grow your
+            Business</small></div>
+    <!-- Navbar End -->
+
+
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 animated fadeInLeft">
+                    <img src="img/WhatsApp-Image-2023-11-02-at-1.11.40-PM.jpeg" alt="Our Story" class="img-fluid rounded shadow" style="width: 100%;">
+                </div>
+                <div class="col-lg-6 animated fadeInRight">
+                    
+                <h2 class="text-primary display-5 fw-bold animated fadeInDown" id="Story">Our Story</h2>
+                <p class="text-secondary fs-5 animated fadeInUp">A journey of trust, innovation, and growth.</p>
+                    <p class="text-muted fs-5">Secunderabad Bank, a cooperative institution founded in 1998, sets itself apart by leveraging advanced technology, a distinctive branch sales and service approach, and centralized operational support. Its efficient processes enable the bank to provide real-time solutions tailored to the evolving and varied needs of its customers, offering innovative and customized cash management products and services.</p>
+                    <!-- <a href="#" class="btn btn-primary rounded-pill px-4 py-2 mt-3">Learn More</a> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision-mission" class="py-5">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="text-primary display-5 fw-bold animated fadeInDown" id="vision">Our Vision & Mission</h2>
+                <p class="text-secondary fs-5 animated fadeInUp">Shaping the future of banking, one goal at a time.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4 animated fadeInLeft">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary fw-bold">Our Vision</h4>
+                            <p class="text-muted fs-5">To become one of the leading and most trusted banks by upholding the highest standards of professionalism and excellence across all our operations. We are dedicated to protecting our customers’ interests and ensuring their needs are met through personalized services.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4 animated fadeInRight">
+                    <div class="card shadow border-0">
+                        <div class="card-body">
+                            <h4 class="card-title text-primary fw-bold">Our Mission</h4>
+                            <p class="text-muted fs-5">To embrace the latest banking techniques and procedures, enhancing our customers’ experience with superior services and standards. We aim to establish multiple branches nationwide, delivering tailored services to every customer of Secunderabad Bank.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="our-team" class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-4">
+                <h2 class="text-primary display-5 fw-bold animated fadeInDown" id="Board">Board Members</h2>
+                <p class="text-secondary fs-5 animated fadeInUp">Meet the esteemed members of our Board, who bring a
+                    wealth of experience and expertise to Secunderabad Bank. Their leadership and vision drive our
+                    commitment to excellence and customer service</p>
+            </div>
+            <div class="row g-3">
+                <!-- Team Member -->
+                <div class="col-lg-2 col-md-3 col-6 animated fadeInUp">
+                    <div class="text-center">
+                        <img src="./img/team/admin.jpg" alt="Mr. Dr. Aslam Mohd Khan" class="img-fluid rounded-circle mb-2"
+                            style="width: 100px; height: 100px;">
+                        <h6 class="text-primary fw-bold mb-1">Mr. Dr. Aslam Mohd Khan</h6>
+                        <p class="text-secondary small mb-0">Chairman</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="col-lg-2 col-md-3 col-6 animated fadeInUp">
+                    <div class="text-center">
+                        <img src="./img/team/photo-6.jpg" alt="Mr. Syed Zahooruddin" class="img-fluid rounded-circle mb-2"
+                            style="width: 100px; height: 100px;">
+                        <h6 class="text-primary fw-bold mb-1">Mr. Syed Zahooruddin</h6>
+                        <p class="text-secondary small mb-0">Vice Chairman</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="col-lg-2 col-md-3 col-6 animated fadeInUp">
+                    <div class="text-center">
+                        <img src="./img/team/photo-2.jpg" alt="Mr. Dr. Mir Akber Ali Khan"
+                            class="img-fluid rounded-circle mb-2" style="width: 100px; height: 100px;">
+                        <h6 class="text-primary fw-bold mb-1">Mr. Dr. Mir Akber Ali Khan</h6>
+                        <p class="text-secondary small mb-0">Director</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="col-lg-2 col-md-3 col-6 animated fadeInUp">
+                    <div class="text-center">
+                        <img src="./img/team/photo-9.jpg" alt="Mr. Mohd Shujayath Ali Qureshi"
+                            class="img-fluid rounded-circle mb-2" style="width: 100px; height: 100px;">
+                        <h6 class="text-primary fw-bold mb-1">Mr. Mohd Shujayath Ali Qureshi</h6>
+                        <p class="text-secondary small mb-0">Director</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="col-lg-2 col-md-3 col-6 animated fadeInUp">
+                    <div class="text-center">
+                        <img src="./img/team/photo-1.jpg" alt="Mr. Md Abdul Majeed Ansari "
+                            class="img-fluid rounded-circle mb-2" style="width: 100px; height: 100px;">
+                        <h6 class="text-primary fw-bold mb-1">Mr. Md Abdul Majeed Ansari </h6>
+                        <p class="text-secondary small mb-0">Director</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="col-lg-2 col-md-3 col-6 animated fadeInUp">
+                    <div class="text-center">
+                        <img src="./img/team/photo-7.jpg" alt="Mr. Syed Md Hassan Hussaini"
+                            class="img-fluid rounded-circle mb-2" style="width: 100px; height: 100px;">
+                        <h6 class="text-primary fw-bold mb-1">Mr. Syed Md Hassan Hussaini</h6>
+                        <p class="text-secondary small mb-0">Director</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="col-lg-2 col-md-3 col-6 animated fadeInUp">
+                    <div class="text-center">
+                        <img src="./img/team/photo-5.jpg" alt="Mrs. Hooria Fatima Ghalib"
+                            class="img-fluid rounded-circle mb-2" style="width: 100px; height: 100px;">
+                        <h6 class="text-primary fw-bold mb-1">Mrs. Hooria Fatima Ghalib</h6>
+                        <p class="text-secondary small mb-0">Director</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="col-lg-2 col-md-3 col-6 animated fadeInUp">
+                    <div class="text-center">
+                        <img src="./img/team/photo-3.jpg" alt="Mrs. Zareena Sultana"
+                            class="img-fluid rounded-circle mb-2" style="width: 100px; height: 100px;">
+                        <h6 class="text-primary fw-bold mb-1">Mrs. Zareena Sultana</h6>
+                        <p class="text-secondary small mb-0">Director</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="col-lg-2 col-md-3 col-6 animated fadeInUp">
+                    <div class="text-center">
+                        <img src="./img/team/photo-4.jpg" alt="Mrs. J. Shashi Rekha"
+                            class="img-fluid rounded-circle mb-2" style="width: 100px; height: 100px;">
+                        <h6 class="text-primary fw-bold mb-1">Mrs. J. Shashi Rekha</h6>
+                        <p class="text-secondary small mb-0">Director</p>
+                    </div>
+                </div>
+                <!-- Team Member -->
+                <div class="col-lg-2 col-md-3 col-6 animated fadeInUp">
+                    <div class="text-center">
+                        <img src="./img/team/photo-8.jpg" alt="Mr. Syed Ahmed Akberuddin"
+                            class="img-fluid rounded-circle mb-2" style="width: 100px; height: 100px;">
+                        <h6 class="text-primary fw-bold mb-1">Mr. Syed Ahmed Akberuddin</h6>
+                        <p class="text-secondary small mb-0">Director</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-light wow fadeIn" data-wow-delay=".3s" style="color: #403a76;">
+        <div class="container pt-5 pb-4">
+            <!-- Main Footer Row -->
+            <div class="row g-5">
+                <!-- Address Section -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold">The Secunderabad Co-operative Urban Bank Ltd.</h5>
+                    <address>
+                        <a href="tel:+918985083534" class="text-decoration-none">
+                            1-4-908/7/2/B/1 to 4 (GR FLOOR),<br>
+                            Beside Gurunanak Care Hospitals,<br>
+                            Musheerabad, Hyderabad-500020.
+                        </a>
+                    </address>
+                    <p>
+                        <a href="tel:+918985083534" class="text-decoration-none">+918985083534</a><br>
+                        <a href="mailto:accounts@secunderabadbank.com" class="text-decoration-none">
+                            accounts@secunderabadbank.com
+                        </a>
+                    </p>
+                    <h5 class="fw-bold">Careers</h5>
+                    <h5>Connect With Us:</h5>
+                    <div style="padding-bottom: 20px;">
+                        <a href="https://www.facebook.com/secunderabadbank" class="me-2"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/secunderabadbank/" class="me-2"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@secunderabadbank?si=AsSdTzB1hdWEV-Tz" class="me-2"><i
+                                class="fab fa-youtube"></i></a>
+                        <a href="https://twitter.com/Sec_bank" class="me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/33645542/admin/page-posts/published/"><i
+                                class="fab fa-linkedin-in"></i></a>
+
+                    </div>
+
+                </div>
+
+                <!-- Our Services Section -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold">Our Services</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./personalbanking.html#Savings" class="text-decoration-none">Savings Account</a>
+                        </li>
+                        <li><a href="./personalbanking.html#Current" class="text-decoration-none">Current Account</a>
+                        </li>
+                        <li><a href="./corporatebanking.html#Cash" class="text-decoration-none">Cash Credit</a></li>
+                        <li><a href="./corporatebanking.html#Over" class="text-decoration-none">Over Draft</a></li>
+                        <li><a href="./DepositSchemes.html#Fixed" class="text-decoration-none">Fixed Deposit</a></li>
+                        <li><a href="./DepositSchemes.html#Recurring" class="text-decoration-none">Recurring
+                                Deposit</a></li>
+                        <li><a href="./DepositSchemes.html#Investment" class="text-decoration-none">Re-Investment
+                                Policy</a></li>
+                        <li><a href="./DepositSchemes.html#Daily" class="text-decoration-none">Daily Deposit</a></li>
+                        <li><a href="./DepositSchemes.html#Gold" class="text-decoration-none">Gold Loan</a></li>
+                        <li><a href="./DepositSchemes.html#Vehicle" class="text-decoration-none">Vehicle Loan</a></li>
+                        <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan</a></li>
+                        <li><a href="./DepositSchemes.html#Deposit" class="text-decoration-none">Loan on Deposit</a>
+                        </li>
+                        <li><a href="./DepositSchemes.html#Secured" class="text-decoration-none">Other Secured
+                                Loans</a></li>
+                        <li><a href="./OtherServices.html#Merchant" class="text-decoration-none">Merchant QR</a></li>
+                        <li><a href="./OtherServices.html#commerce" class="text-decoration-none">E-commerce</a></li>
+                        <li><a href="./OtherServices.html#Pos" class="text-decoration-none">POS Machine Facility</a>
+                        </li>
+                        <li><a href="./OtherServices.html#Locker" class="text-decoration-none">Locker Facility</a></li>
+                        <li><a href="./OtherServices.html#Demand" class="text-decoration-none">Demand Draft</a></li>
+                        <li><a href="./OtherServices.html#RTGS" class="text-decoration-none">RTGS/NEFT</a></li>
+                        <li><a href="./OtherServices.html#cheque" class="text-decoration-none">At Par Cheque</a></li>
+                        <li><a href="./OtherServices.html#Forex" class="text-decoration-none">Forex</a></li>
+                        <li><a href="./OtherServices.html#SMS" class="text-decoration-none">SMS Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Application Forms Section -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold">Useful Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#calculateEMI" class="text-decoration-none">EMI calculator</a>
+                        </li>
+                        <li><a href="./corporatebanking.html" class="text-decoration-none">Service Charges</a>
+                        </li>
+                        <li><a href="./DepositSchemes.html#Fixed" class="text-decoration-none">FDI Rate</a></li>
+                        <li><a href="./DepositSchemes.html#Gold" class="text-decoration-none">Gold Loan Rate</a></li>
+                        <li><a href="./DepositSchemes.html#Vehicle" class="text-decoration-none">Vehicle Loan Rate</a>
+                        </li>
+                        <li><a href="./DepositSchemes.html#Deposit" class="text-decoration-none">Loan on Deposit
+                                Rate</a></li>
+                        <li><a href="./corporatebanking.html#Over" class="text-decoration-none">Overdraft Interest
+                                Rate</a></li>
+                        <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan Rate</a></li>
+                        <li><a href="./OtherServices.html#RTGS" class="text-decoration-none">IFSC Code</a></li>
+                        <li><a href="./img/about us/CALENDER FINAL 2025 UPDATE.pdf" class="text-decoration-none">Bank Calendar</a></li>
+                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf" class="text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf" class="text-decoration-none">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                    <h5 class="fw-bold">Application Forms</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./application.html" class="text-decoration-none">Savings Account Application</a>
+                        </li>
+                        <li><a href="./application.html" class="text-decoration-none">Current Account Application</a>
+                        </li>
+                        <li><a href="./application.html" class="text-decoration-none">FD Application</a></li>
+                        <li><a href="./application.html" class="text-decoration-none">RIP Application</a></li>
+                        <li><a href="./application.html" class="text-decoration-none">DD Application</a></li>
+                        <li><a href="./application.html" class="text-decoration-none">Service Request Form</a></li>
+                    </ul>
+
+                    <!-- <div class="col-lg-3 col-md-6"> -->
+
+
+                    <!-- </div> -->
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold">Media Centre</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="Galley.html" class="text-decoration-none">Gallery</a></li>
+                        <li><a href="Galley.html" class="text-decoration-none">Awards & Recognition</a></li>
+                    </ul>
+                    <h5 class="fw-bold">Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./support.html" class="text-decoration-none">Report a Fraud</a></li>
+                        <li><a href="./support.html" class="text-decoration-none">Queries</a></li>
+                        <li><a href="./support.html" class="text-decoration-none">Requests</a></li>
+                        <li><a href="./support.html" class="text-decoration-none">Complaints</a></li>
+                    </ul>
+                    <h5 class="fw-bold">Customer Awareness</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.rbi.org.in/commonman/English/scripts/Notification.aspx?Id=578"
+                                class="text-decoration-none">Security & Fraud Awareness</a></li>
+                        <li><a href="https://www.ckycindia.in/ckyc/assets/images/CentralKYCRecordsRegistryCustomerAwarenessVideo.webm"
+                                class="text-decoration-none">CKYC</a></li>
+                    </ul>
+                    <img src="./img/DICGC.png" alt="DICGC Logo" style="max-width: 40%; height: auto;">
+                    <p class="mt-2">Secunderabad Bank is registered with DICGC.</p>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <span class="text-dark">Designed by <a href="https://Adilogram.com"
+                        class="text-dark">Adilogram.com</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i
+            class="fa fa-arrow-up text-white"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
