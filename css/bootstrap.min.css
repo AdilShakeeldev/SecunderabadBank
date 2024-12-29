@@ -8251,7 +8251,7 @@ fieldset:disabled .btn {
 }
 
 .fs-5 {
-    font-size: 1.25rem !important
+    font-size: 1.25rem
 }
 
 .fs-6 {
@@ -9196,8 +9196,8 @@ fieldset:disabled .btn {
     }
 
     .px-sm-5 {
-        padding-right: 3rem !important;
-        padding-left: 3rem !important
+        padding-right: 3rem ;
+        padding-left: 3rem
     }
 
     .py-sm-0 {
@@ -9216,8 +9216,8 @@ fieldset:disabled .btn {
     }
 
     .py-sm-3 {
-        padding-top: 1rem !important;
-        padding-bottom: 1rem !important
+        padding-top: 1rem ;
+        padding-bottom: 1rem 
     }
 
     .py-sm-4 {
