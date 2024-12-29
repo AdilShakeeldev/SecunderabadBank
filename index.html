@@ -227,7 +227,7 @@
 
         @media (max-width: 768px) {
             .icon-box {
-                width: 70px;
+                width: 100px;
                 height: 50px;
             }
 
@@ -238,6 +238,11 @@
             .content-box p {
                 font-size: 0.85rem;
             }
+
+            .gallery {
+                margin: 20px 30px;
+            }
+
         }
 
         .company-benefits {
@@ -289,31 +294,32 @@
         }
 
         .search-container input {
-    padding: 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    border: solid;
-    border-color: #009041;
-    margin-right: 175px;
-}
-.search-container {
-    position: relative;
-}
+            padding: 5px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            border: solid;
+            border-color: #009041;
+            margin-right: 175px;
+        }
 
-/* Hide search-container for screen widths below 620px */
-@media (max-width: 620px) {
-    .search-container {
-        display: none;
-    }
-}
+        .search-container {
+            position: relative;
+        }
 
-/* Remove margin-right for screen widths below 820px */
-@media (max-width: 820px) {
-    .search-container input {
-        margin-right: 0;
-    }
-}
+        /* Hide search-container for screen widths below 620px */
+        @media (max-width: 620px) {
+            .search-container {
+                display: none;
+            }
+        }
+
+        /* Remove margin-right for screen widths below 820px */
+        @media (max-width: 820px) {
+            .search-container input {
+                margin-right: 0;
+            }
+        }
 
         .search-container button {
             background-color: #4CAF50;
@@ -332,84 +338,82 @@
         html {
             scroll-behavior: smooth;
         }
-        
-.terbang {
-position: fixed;
-width: 75px;
-height: 40px;
-bottom: 0px;
-left: 13px;
-background-color: #25d366;
-color: #FFF;
-border-radius:5px 5px 0px 0px;
-text-align: left;
-font-size: 27px;
-box-shadow: 2px 2px 3px #999;
-z-index: 100;
-}
 
-@media screen
-  and (min-device-width: 1025px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-.text-wa {
-font-size:15px;
-position:relative;
-color:whitesmoke;
-margin-left:10px;
-text-align:right;
-top:-5px;
-}		
-.melayang{
-	margin-top:8px;
-	margin-left:25px;
-}
-}
+        .terbang {
+            position: fixed;
+            width: 75px;
+            height: 40px;
+            bottom: 0px;
+            left: 13px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 5px 5px 0px 0px;
+            text-align: left;
+            font-size: 27px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+        }
+
+        @media screen and (min-device-width: 1025px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+            .text-wa {
+                font-size: 15px;
+                position: relative;
+                color: whitesmoke;
+                margin-left: 10px;
+                text-align: right;
+                top: -5px;
+            }
+
+            .melayang {
+                margin-top: 8px;
+                margin-left: 25px;
+            }
+        }
 
 
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 580px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-	.terbang {
-position: fixed;
-width: 65px;
-height: 65px;
-bottom: 17px;
-left: 15px;
-background-color: #25d366;
-color: #FFF;
-border-radius: 10px;
-text-align: center;
-font-size: 30px;
-box-shadow: 2px 2px 3px #999;
-z-index: 100;
-	}
-.text-wa {
-	font-size:15px;
-	position:relative;
-	color:white;
-	margin-left:15px;
-	text-align:right;
-	top:-5px;
-	display:none;
-}
-.melayang{
-	margin-top:17px;
-}
-}
-.navbar-toggler {
-    margin-left: auto;
-    margin-top: 0;
-}
+        @media only screen and (min-device-width: 320px) and (max-device-width: 580px) and (-webkit-min-device-pixel-ratio: 2) {
+            .terbang {
+                position: fixed;
+                width: 65px;
+                height: 65px;
+                bottom: 17px;
+                left: 15px;
+                background-color: #25d366;
+                color: #FFF;
+                border-radius: 10px;
+                text-align: center;
+                font-size: 30px;
+                box-shadow: 2px 2px 3px #999;
+                z-index: 100;
+            }
 
-/* Apply styles for screen widths below 1000px */
-@media (max-width: 1000px) {
-    .responsive-navbar-toggler {
-        margin-left: 31rem !important;
-        margin-top: 12px;
-    }
-}
+            .text-wa {
+                font-size: 15px;
+                position: relative;
+                color: white;
+                margin-left: 15px;
+                text-align: right;
+                top: -5px;
+                display: none;
+            }
+
+            .melayang {
+                margin-top: 17px;
+            }
+        }
+
+        .navbar-toggler {
+            margin-left: auto;
+            margin-top: 0;
+        }
+
+        /* Apply styles for screen widths below 1000px */
+        @media (max-width: 1000px) {
+            .responsive-navbar-toggler {
+                margin-left: 31rem !important;
+                margin-top: 12px;
+            }
+        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -429,7 +433,8 @@ z-index: 100;
 </head>
 
 <body>
-    <a href="http://wa.me/+918985083534" class="terbang" target="_blank"><i class="fa fa-whatsapp melayang"></i><i class="teks-wa"></i></a>
+    <a href="http://wa.me/+918985083534" class="terbang" target="_blank"><i class="fa fa-whatsapp melayang"></i><i
+            class="teks-wa"></i></a>
     <!-- Spinner Start -->
 
     <!-- Spinner End -->
@@ -448,11 +453,13 @@ z-index: 100;
                 <div class="container">
                     <div class="d-flex justify-content-between align-items-center topbar">
                         <a href="index.html" class="navbar-brand">
-                        <img src="./img/Logo-update-Copy-1.png" alt="bank Logo" width="200px">
-                    </a>
-                    
+                            <img src="./img/Logo-update-Copy-1.png" alt="bank Logo" width="200px">
+                        </a>
+
                     </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
@@ -548,7 +555,8 @@ z-index: 100;
                     </ul>
                     <div class="search-container">
                         <input type="text" id="searchInput" placeholder="Search for topics..." oninput="searchTopics()">
-                        <ul id="suggestions" class="list-group" style="display: none; position: absolute; z-index: 1000; width: 100%;"></ul>
+                        <ul id="suggestions" class="list-group"
+                            style="display: none; position: absolute; z-index: 1000; width: 100%;"></ul>
                     </div>
                 </div>
                 <!-- <div class="d-none d-xl-flex flex-shirink-0">
@@ -558,61 +566,61 @@ z-index: 100;
                 </div> -->
                 <script>
                     const pages = {
-                        home: { 
-                            url: "index.html", 
-                            keywords: ["welcome", "home", "introduction", "EMI calculator", "banking services"] 
+                        home: {
+                            url: "index.html",
+                            keywords: ["welcome", "home", "introduction", "EMI calculator", "banking services"]
                         },
-                        PersonalBanking: { 
-                            url: "PersonalBanking.html", 
-                            keywords: ["savings account", "current account", "personal finance", "banking solutions"] 
+                        PersonalBanking: {
+                            url: "PersonalBanking.html",
+                            keywords: ["savings account", "current account", "personal finance", "banking solutions"]
                         },
-                        CorporateBanking: { 
-                            url: "CorporateBanking.html", 
-                            keywords: ["cash credit", "overdraft", "service charges", "business banking", "corporate finance"] 
+                        CorporateBanking: {
+                            url: "CorporateBanking.html",
+                            keywords: ["cash credit", "overdraft", "service charges", "business banking", "corporate finance"]
                         },
-                        Loan: { 
-                            url: "Loanpage.html", 
-                            keywords: ["gold loan", "vehicle loan", "demand loan", "loan on deposit", "secured loans"] 
+                        Loan: {
+                            url: "Loanpage.html",
+                            keywords: ["gold loan", "vehicle loan", "demand loan", "loan on deposit", "secured loans"]
                         },
-                        DepositSchemes: { 
-                            url: "DepositSchemes.html", 
-                            keywords: ["fixed deposit", "recurring deposit", "reinvestment policy", "daily deposit", "investment plans"] 
+                        DepositSchemes: {
+                            url: "DepositSchemes.html",
+                            keywords: ["fixed deposit", "recurring deposit", "reinvestment policy", "daily deposit", "investment plans"]
                         },
-                        OthersServices: { 
-                            url: "OthersServices.html", 
-                            keywords: ["merchant QR", "e-commerce", "POS machine", "locker facility", "RTGS", "forex"] 
+                        OthersServices: {
+                            url: "OthersServices.html",
+                            keywords: ["merchant QR", "e-commerce", "POS machine", "locker facility", "RTGS", "forex"]
                         },
-                        AboutTeam: { 
-                            url: "AboutTeam.html", 
-                            keywords: ["team", "leadership", "about us", "history", "bank overview"] 
+                        AboutTeam: {
+                            url: "AboutTeam.html",
+                            keywords: ["team", "leadership", "about us", "history", "bank overview"]
                         },
-                        Gallery: { 
-                            url: "Galley.html", 
-                            keywords: ["gallery", "awards", "recognition", "events", "media center"] 
+                        Gallery: {
+                            url: "Galley.html",
+                            keywords: ["gallery", "awards", "recognition", "events", "media center"]
                         }
                     };
-                
+
                     function searchTopics() {
                         const searchInput = document.getElementById("searchInput").value.toLowerCase();
                         const suggestions = document.getElementById("suggestions");
                         suggestions.innerHTML = ""; // Clear previous suggestions
-                
+
                         if (searchInput.trim() === "") {
                             suggestions.style.display = "none";
                             return;
                         }
-                
+
                         let results = [];
-                
+
                         for (let page in pages) {
                             const pageKeywords = pages[page].keywords;
-                
+
                             // If any keyword matches the input, add the page to results
                             if (pageKeywords.some(keyword => keyword.includes(searchInput))) {
                                 results.push({ name: page, url: pages[page].url });
                             }
                         }
-                
+
                         // Show suggestions if results are found
                         if (results.length > 0) {
                             suggestions.style.display = "block";
@@ -731,7 +739,8 @@ z-index: 100;
                                 <h4 class="mb-3">E-Commerce</h4>
                                 <p class="mb-4">Enjoy 24/7 shopping, secure payments, and fast delivery. Shop smart with
                                     a wide selection and excellent customer support at your fingertips!</p>
-                                <a href="./OtherServices.html#commerce" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                <a href="./OtherServices.html#commerce"
+                                    class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -744,7 +753,8 @@ z-index: 100;
                                 <h4 class="mb-3">Gold Loan</h4>
                                 <p class="mb-4">Get instant gold loans with flexible repayment options and attractive
                                     rates. Access quick cash while keeping your gold secure!</p>
-                                <a href="./personalbanking.html#savings" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                <a href="./personalbanking.html#savings"
+                                    class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -757,7 +767,8 @@ z-index: 100;
                                 <h4 class="mb-3">FD Interest</h4>
                                 <p class="mb-4">Earn more on your fixed deposits with competitive rates, flexible
                                     tenures, and easy renewals. Secure your financial future today!</p>
-                                <a href="./DepositSchemes.html#Fixed" class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
+                                <a href="./DepositSchemes.html#Fixed"
+                                    class="btn btn-secondary text-white px-5 py-3 rounded-pill">Read More</a>
                             </div>
                         </div>
                     </div>
@@ -1641,9 +1652,9 @@ z-index: 100;
             <div class="text-center mx-auto pb-5 wow fadeIn" data-wow-delay=".3s" style="max-width: 600px;">
                 <h5 class="text-primary">Get In Touch</h5>
                 <h1 class="mb-3">Contact for any query</h1>
-                <p class="mb-2">The contact form is currently inactive. Get a functional and working contact form with
+                <!-- <p class="mb-2">The contact form is currently inactive. Get a functional and working contact form with
                     Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a
-                        href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                        href="https://htmlcodex.com/contact-form">Download Now</a>.</p> -->
             </div>
             <div class="contact-detail position-relative p-5">
                 <div class="row g-5 mb-5 justify-content-center">
@@ -1814,11 +1825,15 @@ z-index: 100;
                                 Rate</a></li>
                         <li><a href="./corporatebanking.html#Over" class="text-decoration-none">Overdraft Interest
                                 Rate</a></li>
-                        <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan Rate</a></li>
+                        <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan Rate</a>
+                        </li>
                         <li><a href="./OtherServices.html#RTGS" class="text-decoration-none">IFSC Code</a></li>
-                        <li><a href="./img/about us/CALENDER FINAL 2025 UPDATE.pdf" class="text-decoration-none">Bank Calendar</a></li>
-                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf" class="text-decoration-none">Privacy Policy</a></li>
-                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf" class="text-decoration-none">Terms & Conditions</a>
+                        <li><a href="./img/about us/CALENDER FINAL 2025 UPDATE.pdf" class="text-decoration-none">Bank
+                                Calendar</a></li>
+                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf"
+                                class="text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf"
+                                class="text-decoration-none">Terms & Conditions</a>
                         </li>
                     </ul>
                     <h5 class="fw-bold">Application Forms</h5>
