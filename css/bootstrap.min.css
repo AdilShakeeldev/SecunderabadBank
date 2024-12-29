@@ -4,23 +4,23 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-:root {
-    --bs-blue: #0d6efd;
+ :root {
+    --bs-blue: #3c2c7b;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
     --bs-pink: #d63384;
     --bs-red: #dc3545;
     --bs-orange: #fd7e14;
     --bs-yellow: #ffc107;
-    --bs-green: #198754;
+    --bs-green: #048c44;
     --bs-teal: #20c997;
     --bs-cyan: #0dcaf0;
     --bs-white: #fff;
     --bs-gray: #6c757d;
     --bs-gray-dark: #343a40;
-    --bs-primary: #1842b6;
-    --bs-secondary: #009041;
-    --bs-success: #198754;
+    --bs-primary: #3c2c7b;
+    --bs-secondary: #048c44;
+    --bs-success: #048c44;
     --bs-info: #0dcaf0;
     --bs-warning: #ffc107;
     --bs-danger: #dc3545;
@@ -52,7 +52,7 @@ body {
     color: #787878;
     background-color: #fff;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    /* -webkit-tap-highlight-color: rgba(0, 0, 0, 0) */
 }
 
 hr {
@@ -699,7 +699,7 @@ progress {
 
 .row {
     --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 1rem;
+    --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
     margin-top: calc(var(--bs-gutter-y)*-1);
@@ -3190,8 +3190,8 @@ fieldset:disabled .btn {
 
 .btn-secondary {
     color: #000;
-    background-color: #009041;
-    border-color: #009041
+    background-color: #26d48c;
+    border-color: #26d48c
 }
 
 .btn-secondary:hover {
@@ -3229,8 +3229,8 @@ fieldset:disabled .btn {
 .btn-secondary:disabled,
 .btn-secondary.disabled {
     color: #000;
-    background-color: #009041;
-    border-color: #009041
+    background-color: #26d48c;
+    border-color: #26d48c
 }
 
 .btn-success {
@@ -3544,14 +3544,14 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-secondary {
-    color: #009041;
-    border-color: #009041
+    color: #26d48c;
+    border-color: #26d48c
 }
 
 .btn-outline-secondary:hover {
     color: #000;
-    background-color: #009041;
-    border-color: #009041
+    background-color: #26d48c;
+    border-color: #26d48c
 }
 
 .btn-check:focus+.btn-outline-secondary,
@@ -3565,8 +3565,8 @@ fieldset:disabled .btn {
 .btn-outline-secondary.active,
 .btn-outline-secondary.dropdown-toggle.show {
     color: #000;
-    background-color: #009041;
-    border-color: #009041
+    background-color: #26d48c;
+    border-color: #26d48c
 }
 
 .btn-check:checked+.btn-outline-secondary:focus,
@@ -3579,7 +3579,7 @@ fieldset:disabled .btn {
 
 .btn-outline-secondary:disabled,
 .btn-outline-secondary.disabled {
-    color: #009041;
+    color: #26d48c;
     background-color: rgba(0, 0, 0, 0)
 }
 
@@ -6958,7 +6958,7 @@ fieldset:disabled .btn {
 }
 
 .link-secondary {
-    color: #009041
+    color: #26d48c
 }
 
 .link-secondary:hover,
@@ -7379,7 +7379,7 @@ fieldset:disabled .btn {
 }
 
 .border-secondary {
-    border-color: #009041 !important
+    border-color: #26d48c !important
 }
 
 .border-success {
@@ -7861,7 +7861,7 @@ fieldset:disabled .btn {
 }
 
 .mb-4 {
-    margin-bottom: 1.5rem !important
+    margin-bottom: 1.5rem
 }
 
 .mb-5 {
@@ -8251,7 +8251,7 @@ fieldset:disabled .btn {
 }
 
 .fs-5 {
-    font-size: 1.25rem
+    font-size: 1.25rem 
 }
 
 .fs-6 {
@@ -8356,7 +8356,7 @@ fieldset:disabled .btn {
 }
 
 .text-secondary {
-    color: #009041 !important
+    color: #26d48c !important
 }
 
 .text-success {
@@ -8412,7 +8412,7 @@ fieldset:disabled .btn {
 }
 
 .bg-secondary {
-    background-color: #009041 !important
+    background-color: #26d48c !important
 }
 
 .bg-success {
@@ -9196,8 +9196,8 @@ fieldset:disabled .btn {
     }
 
     .px-sm-5 {
-        padding-right: 3rem ;
-        padding-left: 3rem
+        padding-right: 3rem !important;
+        padding-left: 3rem !important
     }
 
     .py-sm-0 {
@@ -9216,8 +9216,8 @@ fieldset:disabled .btn {
     }
 
     .py-sm-3 {
-        padding-top: 1rem ;
-        padding-bottom: 1rem 
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important
     }
 
     .py-sm-4 {

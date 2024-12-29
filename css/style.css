@@ -94,13 +94,8 @@
     }
 
     @keyframes mymove {
-        from {
-            left: -100%;
-        }
-
-        to {
-            left: 100%;
-        }
+        from {left: -100%;}
+        to {left: 100%;}
     }
 
     /*** Topbar End ***/
@@ -116,7 +111,7 @@
         color: var(--bs-primary);
         font-size: 18px;
         outline: none;
-
+        
     }
 
     .navbar .navbar-nav .nav-link:hover,
@@ -144,16 +139,14 @@
             opacity: 0;
         }
     }
-
     @media (max-width: 620px) {
         .carousel-caption .carousel-content a button.carousel-content-btn1 {
-            scale: 0.7;
+        scale: 0.7;
         }
     }
-
     @media (max-width: 620px) {
         .carousel-caption .carousel-content a button.carousel-content-btn2 {
-            scale: 0.7;
+        scale: 0.7;
         }
     }
 
@@ -169,148 +162,226 @@
     /*** Navbar End ***/
 
 
+    /*** Carousel Start ***/
+
+    /* Base container styles */
+    .container-fluid {
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+
+    /* Carousel Base Styling */
     .carousel-item {
         position: relative;
-    }
-
-    .carousel-item::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: rgba(0, 0, 0, .6);
-    }
-
-    .carousel-caption {
-        height: 100%;
+        min-height: 300px;
+        background-color: #000;
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 1;
+        overflow: hidden;
     }
 
-    .carousel-item p {
-        max-width: 700px;
-        margin: 0 auto 35px auto;
-    }
-
-    .carousel-control-prev {
-        width: 90px;
-        height: 60px;
+    .carousel-item img {
         position: absolute;
-        top: 50%;
+        top: 0;
         left: 0;
-        background: var(--bs-primary);
-        border-radius: 0 50px 50px 0;
-        opacity: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.7;
     }
 
-    .carousel-control-prev:hover {
-        background: var(--bs-secondary);
-        transition: .8s;
-    }
-
-    .carousel-control-next {
-        width: 90px;
-        height: 60px;
+    /* Carousel Caption & Content */
+    .carousel-caption {
         position: absolute;
         top: 50%;
+        transform: translateY(-50%);
+        left: 0;
         right: 0;
-        background: var(--bs-primary);
-        border-radius: 50px 0 0 50px;
-        opacity: 1;
+        z-index: 2;
+        padding: 0 10px;
+        width: 100%;
     }
 
-    .carousel-control-next:hover {
-        background: var(--bs-secondary);
-        transition: .8s;
+    .carousel-content {
+        max-width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 5px;
     }
 
-    .carousel-caption .carousel-content a button.carousel-content-btn1 {
-        background: var(--bs-secondary);
-        color: var(--bs-dark);
-        opacity: 1;
-        border: 0;
-        border-radius: 20px;
+    .carousel-content h1 {
+        font-size: clamp(1.2rem, 4vw, 4rem);
+        font-weight: 700;
+        color: white;
+        margin-bottom: clamp(10px, 2vw, 25px);
+        line-height: 1.2;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
-    .carousel-caption .carousel-content a button.carousel-content-btn1:hover {
-        background: var(--bs-primary);
-        color: #ffffff;
-        border: 0;
-        opacity: 1;
-        transition: 1s;
-        border-radius: 20px;
+    .carousel-content p {
+        font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+        color: white;
+        margin-bottom: clamp(15px, 3vw, 35px);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.4;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        padding: 0 5px;
     }
 
-    .carousel-caption .carousel-content a button.carousel-content-btn2 {
-        background: var(--bs-primary);
-        color: var(--bs-white);
-        opacity: 1;
-        border: 0;
-        border-radius: 20px;
+    /* Carousel Buttons */
+    .carousel-content .d-flex {
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
     }
 
-    .carousel-caption .carousel-content a button.carousel-content-btn2:hover {
-        background: var(--bs-secondary);
-        color: var(--bs-dark);
-        border: 0;
-        opacity: 1;
-        transition: 1s;
-        border-radius: 20px;
+    .carousel-content-btn1,
+    .carousel-content-btn2 {
+        padding: 8px 20px;
+        font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+        border-radius: 50px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: none;
+        width: clamp(140px, 80%, 200px);
+        margin: 5px 0;
     }
 
-    #carouselId .carousel-indicators li {
-        width: 30px;
-        height: 10px;
-        background: var(--bs-primary);
-        margin: 10px;
-        border-radius: 30px;
-        opacity: 1;
+    .carousel-content-btn1 {
+        background-color: #1842b6;
+        color: white;
     }
 
-    #carouselId .carousel-indicators li:hover {
-        background: var(--bs-secondary);
-        opacity: 1;
+    .carousel-content-btn2 {
+        background-color: #26d48c;
+        color: white;
     }
 
-    @media (max-width: 992px) {
+    .carousel-content-btn1:hover,
+    .carousel-content-btn2:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive Breakpoints */
+    @media (min-width: 576px) {
+        .carousel-content .d-flex {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .carousel-content-btn1,
+        .carousel-content-btn2 {
+            width: auto;
+            min-width: 160px;
+        }
+
+        .container {
+            padding: 0 15px;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .carousel-item {
+            min-height: 400px;
+        }
+
+        .carousel-content h1 {
+            font-size: clamp(1.8rem, 4vw, 4rem);
+        }
+
+        .carousel-content p {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            padding: 0 20px;
+        }
+    }
+
+    @media (min-width: 992px) {
         .carousel-item {
             min-height: 500px;
         }
 
-        .carousel-item img {
-            min-height: 500px;
-            object-fit: cover;
-        }
-
-        .carousel-item h1 {
-            font-size: 40px !important;
-        }
-
-        .carousel-item p {
-            font-size: 16px !important;
+        .carousel-content-btn1,
+        .carousel-content-btn2 {
+            padding: 12px 30px;
         }
     }
 
-    @media (max-width: 375px) {
-    .carousel-item {
-        min-height: 250px; /* Adjust height for very small screens */
+    /* Extra small devices (phones, 300px and up) */
+    @media (min-width: 300px) and (max-width: 575px) {
+        .carousel-item {
+            min-height: 250px;
+        }
+
+        .carousel-caption {
+            padding: 0 5px;
+        }
+
+        .carousel-content h1 {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            margin-bottom: 8px;
+        }
+
+        .carousel-content p {
+            font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+            margin-bottom: 10px;
+            padding: 0 2px;
+        }
+
+        .carousel-content-btn1,
+        .carousel-content-btn2 {
+            padding: 6px 15px;
+            font-size: 0.8rem;
+            width: clamp(120px, 70%, 160px);
+        }
     }
 
-    .section h2 {
-        font-size: clamp(0.9rem, 2.5vw, 1.5rem);
+    /* Fix for very small screens */
+    @media (max-width: 320px) {
+        .carousel-content h1 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .carousel-content p {
+            font-size: 0.7rem;
+            margin-bottom: 8px;
+        }
+
+        .carousel-content-btn1,
+        .carousel-content-btn2 {
+            padding: 5px 12px;
+            font-size: 0.75rem;
+            width: 110px;
+        }
     }
 
-    .section p {
-        font-size: 0.75rem;
+    /* Dark overlay for better text visibility */
+    .carousel-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
     }
-}
 
     .page-header {
-        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/carousel-1.jpg) center center no-repeat;
+        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/carouselbg/2.png) center center no-repeat;
         background-size: cover;
     }
 
@@ -323,8 +394,8 @@
         font-size: 18px;
         color: var(--bs-white);
     }
-    
 
+    /*** Carousel End ***/
 
 
     /*** Services Start ***/
@@ -467,7 +538,7 @@
         position: absolute;
         top: 6px;
         left: -140px;
-
+        
     }
 
     .blog-btn-icon:hover .blog-icon-2 {
@@ -476,12 +547,10 @@
         top: 6px;
         padding-bottom: 5px;
     }
-
     .blog-icon-1 {
         position: relative;
         top: -4px;
     }
-
     .blog-btn-icon:hover .blog-icon-1 {
         top: 0;
         right: -140px;
@@ -685,10 +754,8 @@
         border: 2px solid #009041;
         border-radius: 5px;
         position: absolute;
-        right: 15px;
-        /* Position from right */
-        top: 50%;
-        /* Center vertically */
+        right: 15px; /* Position from right */
+        top: 50%; /* Center vertically */
         transform: translateY(-50%);
         z-index: 1000;
     }
@@ -706,7 +773,7 @@
 
     /* Dropdown Hover Functionality */
     @media (min-width: 992px) {
-        .dropdown:hover>.dropdown-menu {
+        .dropdown:hover > .dropdown-menu {
             display: block;
             margin-top: 0;
             animation: fadeIn 0.3s ease;
@@ -717,14 +784,14 @@
             position: relative;
         }
 
-        .dropdown-submenu>.dropdown-menu {
+        .dropdown-submenu > .dropdown-menu {
             top: 0;
             left: 100%;
             margin-top: -6px;
             display: none;
         }
 
-        .dropdown-submenu:hover>.dropdown-menu {
+        .dropdown-submenu:hover > .dropdown-menu {
             display: block;
         }
     }
@@ -735,7 +802,6 @@
             opacity: 0;
             transform: translateY(10px);
         }
-
         to {
             opacity: 1;
             transform: translateY(0);
@@ -745,8 +811,7 @@
     /* Mobile Responsive Styles */
     @media (max-width: 991.98px) {
         .navbar {
-            position: relative;
-            /* Enable absolute positioning of toggler */
+            position: relative; /* Enable absolute positioning of toggler */
         }
 
         .navbar-brand img {
@@ -780,21 +845,445 @@
     /* Small phones */
     @media (max-width: 576px) {
         .navbar-toggler {
-            right: 10px;
-            /* Adjust position for smaller screens */
+            right: 10px; /* Adjust position for smaller screens */
             padding: 6px;
         }
 
         .navbar-brand img {
-            max-width: 180px;
-            /* Smaller logo for very small screens */
+            max-width: 180px; /* Smaller logo for very small screens */
         }
     }
 
     /* Container padding adjustment */
-    @media (max-width: 991.98px) {
+    /* @media (max-width: 991.98px) {
         .container {
-            padding-right: 50px;
-            /* Make room for toggler */
+            padding-right: 50px; 
         }
+    } */
+
+    /* Contact Section Styles */
+    .container-fluid.py-5 {
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .text-center h5 {
+        font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
+    }
+
+    .text-center h1 {
+        font-size: clamp(1.5rem, 3vw, 2.5rem); /* Responsive font size */
+    }
+
+    .text-center p {
+        font-size: clamp(0.9rem, 2vw, 1.2rem); /* Responsive font size */
+    }
+
+    /* Contact Details */
+    .contact-detail {
+        position: relative;
+        padding: 30px;
+    }
+
+    .contact-detail .d-flex {
+        align-items: center;
+    }
+
+    .contact-detail h4 {
+        font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
+    }
+
+    .contact-detail a {
+        font-size: clamp(0.9rem, 1.5vw, 1rem); /* Responsive font size */
+    }
+
+    /* Map and Form Styles */
+    .contact-map {
+        height: 300px; /* Set a fixed height for the map */
+    }
+
+    .contact-form {
+        padding: 30px; /* Adjust padding */
+    }
+
+    .contact-form h4 {
+        font-size: clamp(1.2rem, 2vw, 1.5rem); /* Responsive font size */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: clamp(0.9rem, 1.5vw, 1rem); /* Responsive font size */
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 992px) {
+        .contact-detail {
+            padding: 20px; /* Reduce padding for medium screens */
+        }
+
+        .contact-map {
+            height: 250px; /* Adjust map height */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .contact-detail {
+            padding: 15px; /* Further reduce padding */
+        }
+
+        .contact-map {
+            height: 200px; /* Adjust map height */
+        }
+
+        .contact-form {
+            padding: 20px; /* Adjust padding */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .contact-detail {
+            padding: 10px; /* Minimal padding for small screens */
+        }
+
+        .contact-map {
+            height: 150px; /* Adjust map height */
+        }
+
+        .contact-form {
+            padding: 15px; /* Adjust padding */
+        }
+    }
+
+    @media (max-width: 400px) {
+        .text-center h5 {
+            font-size: 1.2rem; /* Smaller font size for very small screens */
+        }
+
+        .text-center h1 {
+            font-size: 1.5rem; /* Smaller font size for very small screens */
+        }
+
+        .text-center p {
+            font-size: 0.9rem; /* Smaller font size for very small screens */
+        }
+
+        .contact-detail h4 {
+            font-size: 1rem; /* Smaller font size for very small screens */
+        }
+
+        .contact-detail a {
+            font-size: 0.9rem; /* Smaller font size for very small screens */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            font-size: 0.9rem; /* Smaller font size for very small screens */
+        }
+
+        .contact-map {
+            height: 120px; /* Adjust map height for very small screens */
+        }
+    }
+
+    /* Base container styles */
+    .container-fluid {
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1320px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    /* Navbar Responsive Styles */
+    @media (max-width: 1200px) {
+        .container {
+            max-width: 1140px;
+        }
+        
+        .search-container input {
+            margin-right: 50px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .container {
+            max-width: 960px;
+        }
+        
+        .navbar-collapse {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            z-index: 1000;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar-nav {
+            padding: 0 !important;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 0.5rem 1rem;
+        }
+
+        .search-container {
+            margin: 1rem 0;
+        }
+        
+        .search-container input {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            max-width: 720px;
+        }
+
+        /* Carousel adjustments */
+        .carousel-caption {
+            top: 30%;
+        }
+
+        .carousel-content h1 {
+            font-size: clamp(1.2rem, 4vw, 2.5rem);
+        }
+
+        .carousel-content p {
+            font-size: clamp(0.8rem, 2vw, 1rem);
+        }
+
+        /* Services section */
+        .services-item {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .container {
+            max-width: 540px;
+        }
+
+        /* Navbar adjustments */
+        .navbar-brand img {
+            max-width: 180px;
+        }
+
+        .navbar-toggler {
+            padding: 4px 8px;
+            margin-right: 0;
+        }
+
+        /* Carousel further adjustments */
+        .carousel-item {
+            min-height: 250px;
+        }
+
+        .carousel-caption {
+            top: 25%;
+        }
+
+        .carousel-content-btn1,
+        .carousel-content-btn2 {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer adjustments */
+        .footer .col-lg-3 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    /* Calculator Section Responsive */
+    @media (max-width: 768px) {
+        .calculator-container {
+            width: 90%;
+            padding: 20px;
+        }
+    }
+
+    /* Testimonial Section Responsive */
+    @media (max-width: 576px) {
+        .testimonial-item {
+            padding: 15px;
+        }
+
+        .testimonial-item .d-flex {
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+        }
+
+        .testimonial-item .ms-4 {
+            margin-left: 0 !important;
+            margin-top: 1rem;
+        }
+    }
+
+    /* Contact Section Responsive */
+    @media (max-width: 768px) {
+        .contact-detail {
+            padding: 15px;
+        }
+
+        .contact-map,
+        .contact-form {
+            padding: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+        }
+    }
+
+    /* Fix for unwanted horizontal scroll */
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Services section spacing fix */
+    .services .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* Gallery section responsive */
+    .gallery img {
+        margin-bottom: 15px;
+    }
+
+    /* Company benefits section responsive */
+    @media (max-width: 768px) {
+        .company-benefits {
+            padding: 30px 15px;
+        }
+
+        .progress-item {
+            margin-bottom: 20px;
+        }
+    }
+
+    /* Fix for search container */
+    @media (max-width: 620px) {
+        .search-container {
+            display: none;
+        }
+    }
+
+    /* Navbar toggle button positioning */
+    @media (max-width: 1000px) {
+        .responsive-navbar-toggler {
+            margin-left: 0 !important;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    /* Responsive Breakpoints for Carousel */
+    @media (max-width: 992px) {
+        .carousel-caption {
+            top: 45%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .carousel-caption {
+            top: 50%;
+        }
+        
+        .carousel-content {
+            padding: 0 10px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .carousel-caption {
+            top: 45%;
+            padding: 0 5px;
+        }
+
+        .carousel-content h1 {
+            margin-bottom: 10px;
+        }
+
+        .carousel-content p {
+            margin-bottom: 15px;
+        }
+    }
+
+    /* Extra small devices */
+    @media (max-width: 400px) {
+        .carousel-caption {
+            top: 45%;
+        }
+
+        .carousel-content h1 {
+            margin-bottom: 8px;
+        }
+
+        .carousel-content p {
+            margin-bottom: 12px;
+        }
+    }
+
+    /* Very small devices */
+    @media (max-width: 320px) {
+        .carousel-caption {
+            top: 42%;
+        }
+
+        .carousel-content {
+            padding: 0 5px;
+        }
+    }
+
+    /* Ensure content is visible on all screen sizes */
+    .carousel-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /* Improve button visibility */
+    .carousel-content .d-flex {
+        margin-top: 15px;
+    }
+
+    @media (max-width: 576px) {
+        .carousel-content .d-flex {
+            margin-top: 10px;
+        }
+    }
+
+    /* Ensure Navbar is on top */
+    .navbar {
+        position: fixed; /* Fix the navbar at the top */
+        top: 0;
+        width: 100%;
+        z-index: 1050; /* Higher z-index to ensure it stays on top */
+        background-color: white; /* Ensure background color is set */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+    }
+
+    /* Adjustments for Navbar Collapse */
+    .navbar-collapse {
+        z-index: 1050; /* Ensure the collapse menu is also on top */
+        background-color: white; /* Ensure background color is set for the collapse menu */
+    }
+
+    /* Add padding to the body to prevent content from being hidden under the fixed navbar */
+    body {
+        padding-top: 70px; /* Adjust this value based on the height of your navbar */
     }

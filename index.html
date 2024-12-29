@@ -647,12 +647,12 @@
     <!-- Carousel Start -->
     <div class="container-fluid px-0">
         <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
-            <ol class="carousel-indicators">
+            <!-- <ol class="carousel-indicators">
                 <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true"
                     aria-label="First slide"></li>
                 <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
-                <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="third slide"></li>
-            </ol>
+                <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+            </ol> -->
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <img src="img/carouselbg/1.png" class="img-fluid" alt="First slide">
@@ -673,7 +673,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item">
+                <!-- <div class="carousel-item">
                     <img src="img/carouselbg/3.png" class="img-fluid" alt="Second slide">
                     <div class="carousel-caption">
                         <div class="container carousel-content">
@@ -692,7 +692,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/carouselbg/2.png" class="img-fluid" alt="third slide">
+                    <img src="img/carouselbg/2.png" class="img-fluid" alt="Third slide">
                     <div class="carousel-caption">
                         <div class="container carousel-content">
                             <h6 class="text-secondary h4 animated fadeInUp">Enjoy the Benefits of</h6>
@@ -709,7 +709,7 @@
                                     Us</button></a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -717,8 +717,8 @@
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span> -->
-            </button>
+                <span class="visually-hidden">Next</span>
+            </button> -->
         </div>
     </div>
     <!-- Carousel End -->
@@ -1412,30 +1412,24 @@
     <!-- Team End -->
     <!-- calculator start -->
     <div class="row g-5 align-items-center mt-5" id="calculateEMI">
-        <div class="calculator-container">
-            <h1>EMI Calculator</h1>
+        <div class="calculator-container" style="max-width: 600px; margin: auto; padding: 20px; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h1 style="text-align: center; color: #0056b3; margin-bottom: 20px;">EMI Calculator</h1>
 
-            <div class="input-section text-secondary">
-                <label for="loanAmount">Loan Amount: ₹<span id="loanAmountValue">50000</span></label>
-                <input type="range" style="text-shadow: #009041;" id="loanAmount" min="50000" max="10000000"
-                    step="50000" value="50000">
+            <div class="input-section text-dark" style="margin-top: 20px;">
+                <label for="loanAmount" style="display: block; margin-bottom: 10px; font-weight: bold;">Loan Amount: ₹<span id="loanAmountValue">50000</span></label>
+                <input type="range" style="width: 100%; accent-color: #0056b3;" id="loanAmount" min="50000" max="10000000" step="50000" value="50000">
 
-                <label for="interestRate">Interest Rate: <span id="interestRateValue">11</span>%</label>
-                <input type="range" id="interestRate" min="11" max="22" step="0.1" value="11">
+                <label for="interestRate" style="display: block; margin-top: 20px; margin-bottom: 10px; font-weight: bold;">Interest Rate: <span id="interestRateValue">5</span>%</label>
+                <input type="range" style="width: 100%; accent-color: #0056b3;" id="interestRate" min="5" max="22" step="0.1" value="5">
 
-                <label for="loanTenure">Loan Tenure (Months): <span id="loanTenureValue">12</span></label>
-                <input type="range" id="loanTenure" min="12" max="84" step="1" value="12">
+                <label for="loanTenure" style="display: block; margin-top: 20px; margin-bottom: 10px; font-weight: bold;">Loan Tenure (Months): <span id="loanTenureValue">12</span></label>
+                <input type="range" style="width: 100%; accent-color: #0056b3;" id="loanTenure" min="12" max="84" step="1" value="12">
             </div>
 
-            <div class="result">
-                <h2>Equated Monthly Installments: ₹<span id="emiResult">0</span></h2>
+            <div class="result" style="margin-top: 30px; text-align: center;">
+                <h2 style="color: #28a745; font-weight: bold;">Equated Monthly Installments: ₹<span id="emiResult">0</span></h2>
             </div>
         </div>
-        <!-- <div class="col-lg-6 col-md-6 col-sm-12">
-            <img src="img/about us/car loan.jpg" style="height: 420px;" class="img-fluid w-100 rounded"
-                alt="Equated Monthly Installments">
-
-        </div> -->
     </div>
     <script>
         // Get elements
