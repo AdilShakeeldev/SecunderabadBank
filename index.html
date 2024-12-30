@@ -464,12 +464,15 @@
                         </a>
 
                     </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#footer" aria-controls="navbarCollapse" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <!-- <span ></span> -->
-                        <a href="#footer" class="navbar-toggler-icon"></a>
+                    <button class="navbar-toggler" type="button" id="scrollToFooter">
+                        <span class="navbar-toggler-icon"></span>
                     </button>
+                    
+                    <script>
+                        document.getElementById('scrollToFooter').addEventListener('click', function () {
+                            document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
+                        });
+                    </script>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto">
@@ -1739,7 +1742,7 @@
 
 
     <!-- Footer Start -->
-    <div class="container-fluid footer bg-light wow fadeIn" data-wow-delay=".3s" style="color: #403a76; " id="footer">
+    <div class="container-fluid footer bg-light wow fadeIn" data-wow-delay=".3s" style="color: #403a76;" id="footer">
         <div class="container pt-5 pb-4">
             <!-- Main Footer Row -->
             <div class="row g-5">
