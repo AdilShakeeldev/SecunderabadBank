@@ -641,10 +641,10 @@ progress {
 .container-md,
 .container-sm {
     width: 100%;
-    padding-right: var(--bs-gutter-x, 0.75rem);
+    /* padding-right: var(--bs-gutter-x, 0.75rem);
     padding-left: var(--bs-gutter-x, 0.75rem);
     margin-right: auto;
-    margin-left: auto
+    margin-left: auto */
 }
 
 @media(min-width: 576px) {
@@ -4514,6 +4514,7 @@ fieldset:disabled .btn {
     padding-top: .3125rem;
     padding-bottom: .3125rem;
     margin-right: 1rem;
+    margin-left: 1rem;
     font-size: 1.25rem;
     white-space: nowrap
 }

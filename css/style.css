@@ -101,8 +101,8 @@
     /*** Topbar End ***/
 
 
-    /*** Navbar Start ***/
-    .navbar .navbar-nav {
+     /*** Navbar Start ***/
+     .navbar .navbar-nav {
         padding: 15px 0;
     }
 
@@ -162,6 +162,7 @@
     /*** Navbar End ***/
 
 
+
     /*** Carousel Start ***/
 
     /* Base container styles */
@@ -173,8 +174,8 @@
 
     .container {
         width: 100%;
-        padding: 0 10px;
-        margin: 0 auto;
+        /* padding: 0 10px; */
+        /* margin: 0 auto; */
     }
 
     /* Carousel Base Styling */
@@ -212,7 +213,7 @@
 
     .carousel-content {
         max-width: 100%;
-        margin: 0 auto;
+        margin: 5px auto;
         text-align: center;
         padding: 0 5px;
     }
@@ -289,7 +290,7 @@
         }
 
         .container {
-            padding: 0 15px;
+            padding: 10px 0px;
         }
     }
 
@@ -335,9 +336,9 @@
         }
 
         .carousel-content p {
-            font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+            font-size: clamp(0.5rem, 1.2vw, 0.9rem);
             margin-bottom: 10px;
-            padding: 0 2px;
+            padding: 0 20px;
         }
 
         .carousel-content-btn1,
@@ -992,8 +993,8 @@
 
     .container {
         max-width: 1320px;
-        padding: 0 15px;
-        margin: 0 auto;
+        /* padding: 0 0px; */
+        /* margin: 0 auto; */
     }
 
     /* Navbar Responsive Styles */
@@ -1203,7 +1204,7 @@
         }
         
         .carousel-content {
-            padding: 0 10px;
+            padding: 15px 10px;
         }
     }
 
@@ -1266,3 +1267,24 @@
             margin-top: 10px;
         }
     }
+
+        /* Ensure Navbar is on top */
+        .navbar {
+            position: fixed; /* Fix the navbar at the top */
+            top: 0;
+            width: 100%;
+            z-index: 1050; /* Higher z-index to ensure it stays on top */
+            background-color: white; /* Ensure background color is set */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+        }
+    
+        /* Adjustments for Navbar Collapse */
+        .navbar-collapse {
+            z-index: 1050; /* Ensure the collapse menu is also on top */
+            background-color: white; /* Ensure background color is set for the collapse menu */
+        }
+    
+        /* Add padding to the body to prevent content from being hidden under the fixed navbar */
+        /* body {
+            padding-top: 70px;
+        } */

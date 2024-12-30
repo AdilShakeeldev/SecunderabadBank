@@ -454,25 +454,20 @@
         }
     </style>
     <!-- Navbar Start -->
+    <!-- Navbar Start -->
     <div class="container-fluid bg-white" style=" box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;;">
         <div class="container">
             <nav class="navbar navbar-dark navbar-expand-lg py-0">
                 <div class="container">
                     <div class="d-flex justify-content-between align-items-center topbar">
                         <a href="index.html" class="navbar-brand">
-                            <img src="./img/Logo-update-Copy-1.png" alt="bank Logo" width="200px">
-                        </a>
-
+                        <img src="./img/Logo-update-Copy-1.png" alt="bank Logo" width="200px">
+                    </a>
+                    
                     </div>
-                    <button class="navbar-toggler" type="button" id="scrollToFooter">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    
-                    <script>
-                        document.getElementById('scrollToFooter').addEventListener('click', function () {
-                            document.getElementById('footer').scrollIntoView({ behavior: 'smooth' });
-                        });
-                    </script>
                 </div>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ms-auto">
@@ -566,8 +561,7 @@
                     </ul>
                     <div class="search-container">
                         <input type="text" id="searchInput" placeholder="Search for topics..." oninput="searchTopics()">
-                        <ul id="suggestions" class="list-group"
-                            style="display: none; position: absolute; z-index: 1000; width: 100%;"></ul>
+                        <ul id="suggestions" class="list-group" style="display: none; position: absolute; z-index: 1000; width: 100%;"></ul>
                     </div>
                 </div>
                 <!-- <div class="d-none d-xl-flex flex-shirink-0">
@@ -577,61 +571,61 @@
                 </div> -->
                 <script>
                     const pages = {
-                        home: {
-                            url: "index.html",
-                            keywords: ["welcome", "home", "introduction", "EMI calculator", "banking services"]
+                        home: { 
+                            url: "index.html", 
+                            keywords: ["welcome", "home", "introduction", "EMI calculator", "banking services"] 
                         },
-                        PersonalBanking: {
-                            url: "PersonalBanking.html",
-                            keywords: ["savings account", "current account", "personal finance", "banking solutions"]
+                        PersonalBanking: { 
+                            url: "PersonalBanking.html", 
+                            keywords: ["savings account", "current account", "personal finance", "banking solutions"] 
                         },
-                        CorporateBanking: {
-                            url: "CorporateBanking.html",
-                            keywords: ["cash credit", "overdraft", "service charges", "business banking", "corporate finance"]
+                        CorporateBanking: { 
+                            url: "CorporateBanking.html", 
+                            keywords: ["cash credit", "overdraft", "service charges", "business banking", "corporate finance"] 
                         },
-                        Loan: {
-                            url: "Loanpage.html",
-                            keywords: ["gold loan", "vehicle loan", "demand loan", "loan on deposit", "secured loans"]
+                        Loan: { 
+                            url: "Loanpage.html", 
+                            keywords: ["gold loan", "vehicle loan", "demand loan", "loan on deposit", "secured loans"] 
                         },
-                        DepositSchemes: {
-                            url: "DepositSchemes.html",
-                            keywords: ["fixed deposit", "recurring deposit", "reinvestment policy", "daily deposit", "investment plans"]
+                        DepositSchemes: { 
+                            url: "DepositSchemes.html", 
+                            keywords: ["fixed deposit", "recurring deposit", "reinvestment policy", "daily deposit", "investment plans"] 
                         },
-                        OthersServices: {
-                            url: "OthersServices.html",
-                            keywords: ["merchant QR", "e-commerce", "POS machine", "locker facility", "RTGS", "forex"]
+                        OthersServices: { 
+                            url: "OthersServices.html", 
+                            keywords: ["merchant QR", "e-commerce", "POS machine", "locker facility", "RTGS", "forex"] 
                         },
-                        AboutTeam: {
-                            url: "AboutTeam.html",
-                            keywords: ["team", "leadership", "about us", "history", "bank overview"]
+                        AboutTeam: { 
+                            url: "AboutTeam.html", 
+                            keywords: ["team", "leadership", "about us", "history", "bank overview"] 
                         },
-                        Gallery: {
-                            url: "Galley.html",
-                            keywords: ["gallery", "awards", "recognition", "events", "media center"]
+                        Gallery: { 
+                            url: "Galley.html", 
+                            keywords: ["gallery", "awards", "recognition", "events", "media center"] 
                         }
                     };
-
+                
                     function searchTopics() {
                         const searchInput = document.getElementById("searchInput").value.toLowerCase();
                         const suggestions = document.getElementById("suggestions");
                         suggestions.innerHTML = ""; // Clear previous suggestions
-
+                
                         if (searchInput.trim() === "") {
                             suggestions.style.display = "none";
                             return;
                         }
-
+                
                         let results = [];
-
+                
                         for (let page in pages) {
                             const pageKeywords = pages[page].keywords;
-
+                
                             // If any keyword matches the input, add the page to results
                             if (pageKeywords.some(keyword => keyword.includes(searchInput))) {
                                 results.push({ name: page, url: pages[page].url });
                             }
                         }
-
+                
                         // Show suggestions if results are found
                         if (results.length > 0) {
                             suggestions.style.display = "block";
@@ -650,6 +644,7 @@
             </nav>
 
         </div>
+
     </div>
     <div id="note" class="text-secondary d-none d-xl-flex note-slider">
         <small>Note: We help you to Grow your Business</small>
