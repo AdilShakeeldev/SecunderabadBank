@@ -1,1290 +1,508 @@
-    /*** Spinner Start ***/
+/********** Template CSS **********/
+:root {
+    --primary: #18804e;
+    --secondary: #fefffe;
+    --light: #fefffe;
+    --dark: #323331;
+}
 
-    #spinner {
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity .8s ease-out, visibility 0s linear .5s;
-        z-index: 99999;
+
+/*** Spinner ***/
+.spinner {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+#note {
+    width: 100%;
+    overflow: hidden;
+}
+
+#note small {
+    position: relative;
+    display: inline-block;
+    animation: mymove 20s infinite;
+    animation-timing-function: all;
+}
+@keyframes mymove {
+    from {left: -100%;}
+    to {left: 100%;}
+}
+
+
+@-webkit-keyframes sk-rotateplane {
+    0% {
+        -webkit-transform: perspective(120px)
     }
-
-    #spinner.show {
-        transition: opacity .8s ease-out, visibility 0s linear .0s;
-        visibility: visible;
-        opacity: 1;
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg)
     }
-
-    /*** Spinner End ***/
-
-
-    /*** Button Start ***/
-    .btn {
-        font-weight: 600;
-        transition: .5s;
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg)
     }
+}
 
-    .btn-square {
-        width: 38px;
-        height: 38px;
+@keyframes sk-rotateplane {
+    0% {
+        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
     }
-
-    .btn-sm-square {
-        width: 32px;
-        height: 32px;
+    50% {
+        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+        -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
     }
-
-    .btn-md-square {
-        width: 46px;
-        height: 46px;
+    100% {
+        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+        -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     }
+}
 
-    .btn-lg-square {
-        width: 58px;
-        height: 58px;
-    }
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
 
-    .btn-square,
-    .btn-sm-square,
-    .btn-md-square,
-    .btn-lg-square {
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: normal;
-    }
-
-    .back-to-top {
-        position: fixed;
-        width: 50px;
-        height: 50px;
-        right: 30px;
-        bottom: 30px;
-        z-index: 99;
-    }
-
-    /*** Button End ***/
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
 
 
-    /*** Topbar Start ***/
+/*** Heading ***/
+h1,
+h2,
+.fw-bold {
+    font-weight: 800 !important;
+}
 
-    .topbar .top-info {
-        letter-spacing: 1px;
-    }
+h3,
+h4,
+.fw-semi-bold {
+    font-weight: 700 !important;
+}
 
-    .topbar .top-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+h5,
+h6,
+.fw-medium {
+    font-weight: 600 !important;
+}
 
-    .topbar .top-link a {
-        margin-right: 10px;
-    }
 
-    #note {
-        width: 100%;
-        overflow: hidden;
-    }
+/*** Button ***/
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    transition: .5s;
+}
 
-    #note small {
+.btn-primary,
+.btn-secondary {
+    color: #FFFFFF;
+    box-shadow: inset 0 0 0 50px transparent;
+}
+
+.btn-primary:hover {
+    box-shadow: inset 0 0 0 0 var(--primary);
+}
+
+.btn-secondary:hover {
+    box-shadow: inset 0 0 0 0 var(--secondary);
+}
+
+.btn-square {
+    width: 36px;
+    height: 36px;
+}
+
+.btn-sm-square {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+
+/*** Navbar ***/
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-left: 25px;
+    padding: 35px 0;
+    color: #18804e;
+    font-size: 18px;
+    font-weight: 600;
+    outline: none;
+    transition: .5s;
+}
+
+.sticky-top.navbar-dark .navbar-nav .nav-link {
+    padding: 20px 0;
+    color: var(--dark);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar-dark .navbar-brand h1 {
+    color: #FFFFFF;
+}
+
+.navbar-dark .navbar-toggler {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top.navbar-dark {
         position: relative;
-        display: inline-block;
-        animation: mymove 18s infinite;
-        animation-timing-function: all;
+        background: #FFFFFF;
     }
 
-    @keyframes mymove {
-        from {left: -100%;}
-        to {left: 100%;}
-    }
-
-    /*** Topbar End ***/
-
-
-     /*** Navbar Start ***/
-     .navbar .navbar-nav {
-        padding: 15px 0;
-    }
-
-    .navbar .navbar-nav .nav-link {
-        padding: 10px;
-        color: var(--bs-primary);
-        font-size: 18px;
-        outline: none;
-        
-    }
-
-    .navbar .navbar-nav .nav-link:hover,
-    .navbar .navbar-nav .nav-link.active {
-        color: var(--bs-secondary) !important;
-    }
-
-    .navbar .dropdown-toggle::after {
-        border: none;
-        content: "";
-        font-family: "font awesome 5 free";
-        font-weight: 900;
-        vertical-align: middle;
-        margin-left: 8px;
-    }
-
-    @media (min-width: 992px) {
-        .navbar .nav-item .dropdown-menu {
-            display: block;
-            visibility: hidden;
-            top: 100%;
-            transform: rotateX(-75deg);
-            transform-origin: 0% 0%;
-            transition: .5s;
-            opacity: 0;
-        }
-    }
-    @media (max-width: 620px) {
-        .carousel-caption .carousel-content a button.carousel-content-btn1 {
-        scale: 0.7;
-        }
-    }
-    @media (max-width: 620px) {
-        .carousel-caption .carousel-content a button.carousel-content-btn2 {
-        scale: 0.7;
-        }
-    }
-
-
-
-    .navbar .nav-item:hover .dropdown-menu {
-        transform: rotateX(0deg);
-        visibility: visible;
-        transition: .5s;
-        opacity: 1;
-    }
-
-    /*** Navbar End ***/
-
-
-
-    /*** Carousel Start ***/
-
-    /* Base container styles */
-    .container-fluid {
-        padding: 0;
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    .container {
-        width: 100%;
-        /* padding: 0 10px; */
-        /* margin: 0 auto; */
-    }
-
-    /* Carousel Base Styling */
-    .carousel-item {
-        position: relative;
-        min-height: 300px;
-        background-color: #000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    .carousel-item img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        opacity: 0.7;
-    }
-
-    /* Carousel Caption & Content */
-    .carousel-caption {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 0;
-        right: 0;
-        z-index: 2;
-        padding: 0 10px;
-        width: 100%;
-    }
-
-    .carousel-content {
-        max-width: 100%;
-        margin: 5px auto;
-        text-align: center;
-        padding: 0 5px;
-    }
-
-    .carousel-content h1 {
-        font-size: clamp(1.2rem, 4vw, 4rem);
-        font-weight: 700;
-        color: white;
-        margin-bottom: clamp(10px, 2vw, 25px);
-        line-height: 1.2;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .carousel-content p {
-        font-size: clamp(0.8rem, 1.5vw, 1.2rem);
-        color: white;
-        margin-bottom: clamp(15px, 3vw, 35px);
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.4;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        padding: 0 5px;
-    }
-
-    /* Carousel Buttons */
-    .carousel-content .d-flex {
-        justify-content: center;
-        gap: 10px;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 15px;
-    }
-
-    .carousel-content-btn1,
-    .carousel-content-btn2 {
-        padding: 8px 20px;
-        font-size: clamp(0.8rem, 1.2vw, 1.1rem);
-        border-radius: 50px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        border: none;
-        width: clamp(140px, 80%, 200px);
-        margin: 5px 0;
-    }
-
-    .carousel-content-btn1 {
-        background-color: #1842b6;
-        color: white;
-    }
-
-    .carousel-content-btn2 {
-        background-color: #26d48c;
-        color: white;
-    }
-
-    .carousel-content-btn1:hover,
-    .carousel-content-btn2:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    }
-
-    /* Responsive Breakpoints */
-    @media (min-width: 576px) {
-        .carousel-content .d-flex {
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-
-        .carousel-content-btn1,
-        .carousel-content-btn2 {
-            width: auto;
-            min-width: 160px;
-        }
-
-        .container {
-            padding: 10px 0px;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .carousel-item {
-            min-height: 400px;
-        }
-
-        .carousel-content h1 {
-            font-size: clamp(1.8rem, 4vw, 4rem);
-        }
-
-        .carousel-content p {
-            font-size: clamp(1rem, 1.5vw, 1.2rem);
-            padding: 0 20px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .carousel-item {
-            min-height: 500px;
-        }
-
-        .carousel-content-btn1,
-        .carousel-content-btn2 {
-            padding: 12px 30px;
-        }
-    }
-
-    /* Extra small devices (phones, 300px and up) */
-    @media (min-width: 300px) and (max-width: 575px) {
-        .carousel-item {
-            min-height: 250px;
-        }
-
-        .carousel-caption {
-            padding: 0 5px;
-        }
-
-        .carousel-content h1 {
-            font-size: clamp(1rem, 3vw, 1.5rem);
-            margin-bottom: 8px;
-        }
-
-        .carousel-content p {
-            font-size: clamp(0.5rem, 1.2vw, 0.9rem);
-            margin-bottom: 10px;
-            padding: 0 20px;
-        }
-
-        .carousel-content-btn1,
-        .carousel-content-btn2 {
-            padding: 6px 15px;
-            font-size: 0.8rem;
-            width: clamp(120px, 70%, 160px);
-        }
-    }
-
-    /* Fix for very small screens */
-    @media (max-width: 320px) {
-        .carousel-content h1 {
-            font-size: 1rem;
-            margin-bottom: 5px;
-        }
-
-        .carousel-content p {
-            font-size: 0.7rem;
-            margin-bottom: 8px;
-        }
-
-        .carousel-content-btn1,
-        .carousel-content-btn2 {
-            padding: 5px 12px;
-            font-size: 0.75rem;
-            width: 110px;
-        }
-    }
-
-    /* Dark overlay for better text visibility */
-    .carousel-item::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
-
-    .page-header {
-        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../img/carousel-1.jpg) center center no-repeat;
-        background-size: cover;
-    }
-
-    .page-header .breadcrumb-item+.breadcrumb-item::before {
-        color: var(--bs-white);
-    }
-
-    .page-header .breadcrumb-item,
-    .page-header .breadcrumb-item a {
-        font-size: 18px;
-        color: var(--bs-white);
-    }
-
-    /*** Carousel End ***/
-
-
-    /*** Services Start ***/
-
-    .services .services-item {
-        box-shadow: 0 0 60px rgba(0, 0, 0, .2);
-        width: 100%;
-        height: 100%;
-        border-radius: 10px;
+    .navbar-dark .navbar-nav .nav-link,
+    .navbar-dark .navbar-nav .nav-link.show,
+    .sticky-top.navbar-dark .navbar-nav .nav-link {
         padding: 10px 0;
-        position: relative;
+        color: var(--dark);
     }
 
-
-    .services-content::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 0;
-        top: 0;
-        left: 0;
-        border-radius: 10px 10px 0 0;
-        background: rgba(3, 43, 243, 0.8);
-        transition: .5s;
+    .navbar-dark .navbar-brand h1 {
+        color: var(--primary);
     }
+}
 
-    .services-content::after {
-        top: 0;
-        bottom: auto;
-        border-radius: 10px 10px 10px 10px;
-    }
-
-    .services-item:hover .services-content::after {
-        height: 100%;
-        opacity: 1;
-        transition: .5s;
-    }
-
-    .services-item:hover .services-content-icon {
-        position: relative;
-        z-index: 2;
-    }
-
-    .services-item .services-content-icon i,
-    .services-item .services-content-icon p {
-        transition: .5s;
-    }
-
-    .services-item:hover .services-content-icon i {
-        color: var(--bs-secondary) !important;
-    }
-
-    .services-item:hover .services-content-icon p {
-        color: var(--bs-white);
-    }
-
-    /*** Services End ***/
-
-
-    /*** Project Start ***/
-
-    .project-img {
-        position: relative;
-        padding: 15px;
-    }
-
-    .project-img::before {
-        content: "";
-        position: absolute;
-        width: 150px;
-        height: 150px;
-        top: 0;
-        left: 0;
-        background: var(--bs-secondary);
-        border-radius: 10px;
-        opacity: 1;
-        z-index: -1;
-        transition: .5s;
-    }
-
-    .project-img::after {
-        content: "";
-        width: 150px;
-        height: 150px;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        background: var(--bs-primary);
-        border-radius: 10px;
-        opacity: 1;
-        z-index: -1;
-        transition: .5s;
-    }
-
-    .project-content {
+@media (min-width: 992px) {
+    .navbar-dark {
         position: absolute;
         width: 100%;
-        height: 100%;
         top: 0;
         left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
+        border-bottom: 1px solid rgba(256, 256, 256, .1);
+        z-index: 999;
+    }
+    
+    .sticky-top.navbar-dark {
+        position: fixed;
+        background: #FFFFFF;
     }
 
-    .project-content a {
-        display: inline-block;
-        padding: 20px 25px;
-        background: var(--bs-primary);
-        border-radius: 10px;
-    }
-
-    .project-item:hover .project-content {
-        opacity: 1;
-        transition: .5s;
-    }
-
-    .project-item:hover .project-img::before,
-    .project-item:hover .project-img::after {
-        opacity: 0;
-    }
-
-    /*** Project End ***/
-
-
-    /*** Blog Start ***/
-    .blog-item .blog-btn {
-        z-index: 2;
-    }
-
-    .blog-btn .blog-btn-icon {
-        height: 50px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .blog-btn-icon .blog-icon-2 {
-        display: flex;
+    .navbar-dark .navbar-nav .nav-link::before {
         position: absolute;
-        top: 6px;
-        left: -140px;
-        
-    }
-
-    .blog-btn-icon:hover .blog-icon-2 {
-        transition: 1s;
-        left: 5px;
-        top: 6px;
-        padding-bottom: 5px;
-    }
-    .blog-icon-1 {
-        position: relative;
-        top: -4px;
-    }
-    .blog-btn-icon:hover .blog-icon-1 {
-        top: 0;
-        right: -140px;
-        transition: 1s;
-    }
-
-    /*** Blog End ***/
-
-
-    /*** Team Start ***/
-
-    .team-item {
-        border-top: 30px solid var(--bs-secondary) !important;
-        background: rgba(239, 239, 241, 0.8);
-    }
-
-    .team-content::before {
-        height: 200px;
-        display: block;
         content: "";
-        position: relative;
-        top: -101px;
-        background: var(--bs-secondary);
-        clip-path: polygon(50% 50%, 100% 50%, 50% 100%, 0% 50%);
-        padding: 60px;
-        opacity: 1;
-    }
-
-    .team-img-icon {
-        position: relative;
-        margin-top: -200px;
-        padding: 30px;
-        padding-bottom: 0;
-    }
-
-    .team-img {
-        border: 15px solid var(--bs-white);
-    }
-
-    .team-img img {
-        border: 10px solid var(--bs-secondary);
+        width: 0;
+        height: 2px;
+        bottom: -1px;
+        left: 50%;
+        background: var(--primary);
         transition: .5s;
     }
 
-    .team-item:hover h4 {
-        color: var(--bs-primary);
-        transition: .5s;
-    }
-
-    .team-item:hover .team-img img {
-        transform: scale(1.05);
-        border: 10px solid var(--bs-secondary);
-    }
-
-    .team-carousel .owl-stage {
-        position: relative;
+    .navbar-dark .navbar-nav .nav-link:hover::before,
+    .navbar-dark .navbar-nav .nav-link.active::before {
         width: 100%;
-        height: 100%;
+        left: 0;
     }
 
-    .team-carousel .owl-nav {
-        position: absolute;
-        top: -100px;
-        right: 50px;
-        display: flex;
+    .navbar-dark .navbar-nav .nav-link.nav-contact::before {
+        display: none;
     }
 
-    .team-carousel .owl-nav .owl-prev,
-    .team-carousel .owl-nav .owl-next {
-        width: 56px;
-        height: 56px;
-        border-radius: 56px;
-        margin-left: 15px;
-        background: var(--bs-secondary);
-        color: var(--bs-white);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: .5s;
+    .sticky-top.navbar-dark .navbar-brand h1 {
+        color: var(--primary);
+    }
+}
+
+
+/*** Carousel ***/
+.carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(9, 30, 62, .7);
+    z-index: 1;
+}
+
+@media (max-width: 576px) {
+    .carousel-caption h5 {
+        font-size: 14px;
+        font-weight: 500 !important;
     }
 
-    .team-carousel .owl-nav .owl-prev:hover,
-    .team-carousel .owl-nav .owl-next:hover {
-        background: var(--bs-primary);
-        color: var(--bs-white);
+    .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 600 !important;
     }
+}
 
-    @media (max-width: 992px) {
-        .team-carousel {
-            margin-top: 3rem;
-        }
+.carousel-control-prev,
+.carousel-control-next {
+    width: 10%;
+}
 
-        .team-carousel .owl-nav {
-            top: -85px;
-            left: 50%;
-            right: auto;
-            transform: translateX(-50%);
-            margin-left: -15px;
-        }
-    }
-
-    /*** Team End ***/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 3rem;
+    height: 3rem;
+}
 
 
-    /*** Testimonial Start ***/
+/*** Section Title ***/
+.section-title::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 5px;
+    left: 0;
+    bottom: 0;
+    background: var(--primary);
+    border-radius: 2px;
+}
 
-    .testimonial-item {
-        background: #e3f0eb;
+.section-title.text-center::before {
+    left: 50%;
+    margin-left: -75px;
+}
 
-    }
+.section-title.section-title-sm::before {
+    width: 90px;
+    height: 3px;
+}
 
-    .testimonial-carousel .owl-dots {
-        margin-top: 15px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
-    }
+.section-title::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 5px;
+    bottom: 0px;
+    background: #FFFFFF;
+    -webkit-animation: section-title-run 5s infinite linear;
+    animation: section-title-run 5s infinite linear;
+}
 
-    .testimonial-carousel .owl-dot {
+.section-title.section-title-sm::after {
+    width: 4px;
+    height: 3px;
+}
+
+.section-title.text-center::after {
+    -webkit-animation: section-title-run-center 5s infinite linear;
+    animation: section-title-run-center 5s infinite linear;
+}
+
+.section-title.section-title-sm::after {
+    -webkit-animation: section-title-run-sm 5s infinite linear;
+    animation: section-title-run-sm 5s infinite linear;
+}
+
+@-webkit-keyframes section-title-run {
+    0% {left: 0; } 50% { left : 145px; } 100% { left: 0; }
+}
+
+@-webkit-keyframes section-title-run-center {
+    0% { left: 50%; margin-left: -75px; } 50% { left : 50%; margin-left: 45px; } 100% { left: 50%; margin-left: -75px; }
+}
+
+@-webkit-keyframes section-title-run-sm {
+    0% {left: 0; } 50% { left : 85px; } 100% { left: 0; }
+}
+
+
+/*** Service ***/
+.service-item {
+    position: relative;
+    height: 300px;
+    padding: 0 30px;
+    transition: .5s;
+}
+
+.service-item .service-icon {
+    margin-bottom: 30px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    border-radius: 2px;
+    transform: rotate(-45deg);
+}
+
+.service-item .service-icon i {
+    transform: rotate(45deg);
+}
+
+.service-item a.btn {
+    position: absolute;
+    width: 60px;
+    bottom: -48px;
+    left: 50%;
+    margin-left: -30px;
+    opacity: 0;
+}
+
+.service-item:hover a.btn {
+    bottom: -24px;
+    opacity: 1;
+}
+
+
+/*** Testimonial ***/
+.testimonial-carousel .owl-dots {
+    margin-top: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.testimonial-carousel .owl-dot {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    background: #DDDDDD;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-dot.active {
+    width: 30px;
+    background: var(--primary);
+}
+
+.testimonial-carousel .owl-item.center {
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-carousel .owl-item .testimonial-item {
+    transition: .5s;
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+    background: #FFFFFF !important;
+    box-shadow: 0 0 30px #DDDDDD;
+}
+
+
+/*** Team ***/
+.team-item {
+    transition: .5s;
+}
+
+.team-social {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.team-social a.btn {
+    position: relative;
+    margin: 0 3px;
+    margin-top: 100px;
+    opacity: 0;
+}
+
+.team-item:hover {
+    box-shadow: 0 0 30px #DDDDDD;
+}
+
+.team-item:hover .team-social {
+    background: rgba(9, 30, 62, .7);
+}
+
+.team-item:hover .team-social a.btn:first-child {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s 0s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(2) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .05s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(3) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .1s;
+}
+
+.team-item:hover .team-social a.btn:nth-child(4) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .15s;
+}
+
+.team-item .team-img img,
+.blog-item .blog-img img  {
+    transition: .5s;
+}
+
+.team-item:hover .team-img img,
+.blog-item:hover .blog-img img {
+    transform: scale(1.15);
+}
+
+
+/*** Miscellaneous ***/
+@media (min-width: 991.98px) {
+    .facts {
         position: relative;
-        display: inline-block;
-        margin: 0 5px;
-        width: 15px;
-        height: 15px;
-        background: #c1dad0;
-        border-radius: 15px;
-        transition: .5s;
-    }
-
-    .testimonial-carousel .owl-dot.active {
-        width: 30px;
-        background: var(--bs-primary);
-    }
-
-    .testimonial-carousel .owl-item.center {
-        position: relative;
+        margin-top: -75px;
         z-index: 1;
     }
+}
 
-    .testimonial-carousel .owl-item .testimonial-item {
-        transition: .5s;
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+.bg-header {
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/carousel-1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.link-animated a {
+    transition: .5s;
+}
+
+.link-animated a:hover {
+    padding-left: 10px;
+}
+
+@media (min-width: 767.98px) {
+    .footer-about {
+        margin-bottom: -75px;
     }
-
-    .testimonial-carousel .owl-item.center .testimonial-item {
-        background: #FFFFFF !important;
-        box-shadow: 0 0 30px #DDDDDD;
-    }
-
-    /*** Testimonial End ***/
-
-
-    /*** Contact Start ***/
-    .contact-detail::before {
-        position: absolute;
-        content: "";
-        height: 50%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: linear-gradient(rgb(210, 243, 235, 1), rgba(230, 250, 245, .3)), url(../img/background.jpg) center center no-repeat;
-        background-size: cover;
-        border-radius: 10px;
-        z-index: -1;
-    }
-
-    .contact-map {
-        background: #009041;
-    }
-
-    .contact-form {
-        background: #009041;
-    }
-
-    /*** Contact End ***/
-
-
-    /*** Footer Start ***/
-
-    .footer .short-link a,
-    .footer .help-link a,
-    .footer .contact-link a {
-        transition: .5s;
-    }
-
-    .footer .short-link a:hover,
-    .footer .help-link a:hover,
-    .footer .contact-link a:hover {
-        letter-spacing: 1px;
-    }
-
-    .footer .hightech-link a:hover {
-        background: var(--bs-secondary);
-        border: 0;
-    }
-
-    /*** Footer End ***/
-
-    /* Navbar Toggler Positioning */
-    .navbar-toggler {
-        padding: 8px;
-        border: 2px solid #009041;
-        border-radius: 5px;
-        position: absolute;
-        right: 15px; /* Position from right */
-        top: 50%; /* Center vertically */
-        transform: translateY(-50%);
-        z-index: 1000;
-    }
-
-    .navbar-toggler:focus {
-        box-shadow: none;
-        outline: none;
-    }
-
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 144, 65, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-        width: 24px;
-        height: 24px;
-    }
-
-    /* Dropdown Hover Functionality */
-    @media (min-width: 992px) {
-        .dropdown:hover > .dropdown-menu {
-            display: block;
-            margin-top: 0;
-            animation: fadeIn 0.3s ease;
-        }
-
-        /* Submenu positioning and hover */
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu > .dropdown-menu {
-            top: 0;
-            left: 100%;
-            margin-top: -6px;
-            display: none;
-        }
-
-        .dropdown-submenu:hover > .dropdown-menu {
-            display: block;
-        }
-    }
-
-    /* Animation for dropdown */
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    /* Mobile Responsive Styles */
-    @media (max-width: 991.98px) {
-        .navbar {
-            position: relative; /* Enable absolute positioning of toggler */
-        }
-
-        .navbar-brand img {
-            max-width: 200px;
-            height: auto;
-        }
-
-        .navbar-collapse {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background-color: white;
-            padding: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            z-index: 999;
-        }
-
-        /* Mobile dropdown styling */
-        .dropdown-menu {
-            border: none;
-            background-color: #f8f9fa;
-            padding-left: 20px;
-        }
-
-        .dropdown-item {
-            padding: 8px 15px;
-        }
-    }
-
-    /* Small phones */
-    @media (max-width: 576px) {
-        .navbar-toggler {
-            right: 10px; /* Adjust position for smaller screens */
-            padding: 6px;
-        }
-
-        .navbar-brand img {
-            max-width: 180px; /* Smaller logo for very small screens */
-        }
-    }
-
-    /* Container padding adjustment */
-    /* @media (max-width: 991.98px) {
-        .container {
-            padding-right: 50px; 
-        }
-    } */
-
-    /* Contact Section Styles */
-    .container-fluid.py-5 {
-        padding: 40px 15px; /* Adjust padding for smaller screens */
-    }
-
-    .text-center h5 {
-        font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
-    }
-
-    .text-center h1 {
-        font-size: clamp(1.5rem, 3vw, 2.5rem); /* Responsive font size */
-    }
-
-    .text-center p {
-        font-size: clamp(0.9rem, 2vw, 1.2rem); /* Responsive font size */
-    }
-
-    /* Contact Details */
-    .contact-detail {
-        position: relative;
-        padding: 30px;
-    }
-
-    .contact-detail .d-flex {
-        align-items: center;
-    }
-
-    .contact-detail h4 {
-        font-size: clamp(1rem, 2vw, 1.2rem); /* Responsive font size */
-    }
-
-    .contact-detail a {
-        font-size: clamp(0.9rem, 1.5vw, 1rem); /* Responsive font size */
-    }
-
-    /* Map and Form Styles */
-    .contact-map {
-        height: 300px; /* Set a fixed height for the map */
-    }
-
-    .contact-form {
-        padding: 30px; /* Adjust padding */
-    }
-
-    .contact-form h4 {
-        font-size: clamp(1.2rem, 2vw, 1.5rem); /* Responsive font size */
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        font-size: clamp(0.9rem, 1.5vw, 1rem); /* Responsive font size */
-    }
-
-    /* Responsive Breakpoints */
-    @media (max-width: 992px) {
-        .contact-detail {
-            padding: 20px; /* Reduce padding for medium screens */
-        }
-
-        .contact-map {
-            height: 250px; /* Adjust map height */
-        }
-    }
-
-    @media (max-width: 768px) {
-        .contact-detail {
-            padding: 15px; /* Further reduce padding */
-        }
-
-        .contact-map {
-            height: 200px; /* Adjust map height */
-        }
-
-        .contact-form {
-            padding: 20px; /* Adjust padding */
-        }
-    }
-
-    @media (max-width: 576px) {
-        .contact-detail {
-            padding: 10px; /* Minimal padding for small screens */
-        }
-
-        .contact-map {
-            height: 150px; /* Adjust map height */
-        }
-
-        .contact-form {
-            padding: 15px; /* Adjust padding */
-        }
-    }
-
-    @media (max-width: 400px) {
-        .text-center h5 {
-            font-size: 1.2rem; /* Smaller font size for very small screens */
-        }
-
-        .text-center h1 {
-            font-size: 1.5rem; /* Smaller font size for very small screens */
-        }
-
-        .text-center p {
-            font-size: 0.9rem; /* Smaller font size for very small screens */
-        }
-
-        .contact-detail h4 {
-            font-size: 1rem; /* Smaller font size for very small screens */
-        }
-
-        .contact-detail a {
-            font-size: 0.9rem; /* Smaller font size for very small screens */
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            font-size: 0.9rem; /* Smaller font size for very small screens */
-        }
-
-        .contact-map {
-            height: 120px; /* Adjust map height for very small screens */
-        }
-    }
-
-    /* Base container styles */
-    .container-fluid {
-        padding: 0;
-        overflow-x: hidden;
-    }
-
-    .container {
-        max-width: 1320px;
-        /* padding: 0 0px; */
-        /* margin: 0 auto; */
-    }
-
-    /* Navbar Responsive Styles */
-    @media (max-width: 1200px) {
-        .container {
-            max-width: 1140px;
-        }
-        
-        .search-container input {
-            margin-right: 50px;
-        }
-    }
-
-    @media (max-width: 992px) {
-        .container {
-            max-width: 960px;
-        }
-        
-        .navbar-collapse {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: white;
-            z-index: 1000;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .navbar-nav {
-            padding: 0 !important;
-        }
-
-        .navbar-nav .nav-link {
-            padding: 0.5rem 1rem;
-        }
-
-        .search-container {
-            margin: 1rem 0;
-        }
-        
-        .search-container input {
-            width: 100%;
-            margin-right: 0;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .container {
-            max-width: 720px;
-        }
-
-        /* Carousel adjustments */
-        .carousel-caption {
-            top: 30%;
-        }
-
-        .carousel-content h1 {
-            font-size: clamp(1.2rem, 4vw, 2.5rem);
-        }
-
-        .carousel-content p {
-            font-size: clamp(0.6rem, 2vw, 1rem);
-        }
-
-        /* Services section */
-        .services-item {
-            margin-bottom: 2rem;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .container {
-            max-width: 540px;
-        }
-
-        /* Navbar adjustments */
-        .navbar-brand img {
-            max-width: 180px;
-        }
-
-        .navbar-toggler {
-            padding: 4px 8px;
-            margin-right: 0;
-        }
-
-        /* Carousel further adjustments */
-        .carousel-item {
-            min-height: 250px;
-        }
-
-        .carousel-caption {
-            top: 25%;
-        }
-
-        .carousel-content-btn1,
-        .carousel-content-btn2 {
-            padding: 8px 16px;
-            font-size: 0.9rem;
-        }
-
-        /* Footer adjustments */
-        .footer .col-lg-3 {
-            margin-bottom: 2rem;
-        }
-    }
-
-    /* Calculator Section Responsive */
-    @media (max-width: 768px) {
-        .calculator-container {
-            width: 90%;
-            padding: 20px;
-        }
-    }
-
-    /* Testimonial Section Responsive */
-    @media (max-width: 576px) {
-        .testimonial-item {
-            padding: 15px;
-        }
-
-        .testimonial-item .d-flex {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .testimonial-item .ms-4 {
-            margin-left: 0 !important;
-            margin-top: 1rem;
-        }
-    }
-
-    /* Contact Section Responsive */
-    @media (max-width: 768px) {
-        .contact-detail {
-            padding: 15px;
-        }
-
-        .contact-map,
-        .contact-form {
-            padding: 15px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            padding: 10px;
-        }
-    }
-
-    /* Fix for unwanted horizontal scroll */
-    html, body {
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    /* Services section spacing fix */
-    .services .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    /* Gallery section responsive */
-    .gallery img {
-        margin-bottom: 15px;
-    }
-
-    /* Company benefits section responsive */
-    @media (max-width: 768px) {
-        .company-benefits {
-            padding: 30px 15px;
-        }
-
-        .progress-item {
-            margin-bottom: 20px;
-        }
-    }
-
-    /* Fix for search container */
-    @media (max-width: 620px) {
-        .search-container {
-            display: none;
-        }
-    }
-
-    /* Navbar toggle button positioning */
-    @media (max-width: 1000px) {
-        .responsive-navbar-toggler {
-            margin-left: 0 !important;
-            position: absolute;
-            right: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-
-    /* Responsive Breakpoints for Carousel */
-    @media (max-width: 992px) {
-        .carousel-caption {
-            top: 45%;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .carousel-caption {
-            top: 50%;
-        }
-        
-        .carousel-content {
-            padding: 15px 10px;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .carousel-caption {
-            top: 45%;
-            padding: 0 5px;
-        }
-
-        .carousel-content h1 {
-            margin-bottom: 10px;
-        }
-
-        .carousel-content p {
-            margin-bottom: 15px;
-        }
-    }
-
-    /* Extra small devices */
-    @media (max-width: 400px) {
-        .carousel-caption {
-            top: 45%;
-        }
-
-        .carousel-content h1 {
-            margin-bottom: 8px;
-        }
-
-        .carousel-content p {
-            margin-bottom: 12px;
-        }
-    }
-
-    /* Very small devices */
-    @media (max-width: 320px) {
-        .carousel-caption {
-            top: 42%;
-        }
-
-        .carousel-content {
-            padding: 0 5px;
-        }
-    }
-
-    /* Ensure content is visible on all screen sizes */
-    .carousel-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
-    /* Improve button visibility */
-    .carousel-content .d-flex {
-        margin-top: 15px;
-    }
-
-    @media (max-width: 576px) {
-        .carousel-content .d-flex {
-            margin-top: 10px;
-        }
-    }
-
-        /* Ensure Navbar is on top */
-        .navbar {
-            position: fixed; /* Fix the navbar at the top */
-            top: 0;
-            width: 100%;
-            z-index: 1050; /* Higher z-index to ensure it stays on top */
-            background-color: white; /* Ensure background color is set */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
-        }
-    
-        /* Adjustments for Navbar Collapse */
-        .navbar-collapse {
-            z-index: 1050; /* Ensure the collapse menu is also on top */
-            background-color: white; /* Ensure background color is set for the collapse menu */
-        }
-    
-        /* Add padding to the body to prevent content from being hidden under the fixed navbar */
-        /* body {
-            padding-top: 70px;
-        } */
+}

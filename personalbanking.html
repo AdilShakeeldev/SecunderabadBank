@@ -3,25 +3,26 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Personal Banking</title>
+    <title>Startup - Startup Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -413,468 +414,356 @@ z-index: 100;
 </head>
 
 <body>
-    <a href="http://wa.me/+918985083534" class="terbang" target="_blank"><i class="fa fa-whatsapp melayang"></i><i class="teks-wa">WhatsApp</i></a>
     <!-- Spinner Start -->
-
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
     <!-- Spinner End -->
 
-    <style>
-        @media (max-width: 767px) {
-            .pc {
-                display: none;
-            }
-        }
-    </style>
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white" style=" box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;;">
-        <div class="container">
-            <nav class="navbar navbar-dark navbar-expand-lg py-0">
-                <div class="container">
-                    <div class="d-flex justify-content-between align-items-center topbar">
-                        <a href="index.html" class="navbar-brand">
-                        <img src="./img/Logo-update-Copy-1.png" alt="bank Logo" width="200px">
-                    </a>
-                    
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ms-auto">
-
-                        <!-- About Us Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="Aboutteam.html" id="aboutUsDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
-                            <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
-                                <li><a class="dropdown-item" href="./Aboutteam.html#story">Our Story</a></li>
-                                <li><a class="dropdown-item" href="./Aboutteam.html#Vision">Our Vision & Mission</a>
-                                </li>
-                                <li><a class="dropdown-item" href="./Aboutteam.html#Board">Board Members</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Banking Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="bankingDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Banking
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="bankingDropdown">
-                                <!-- Personal Banking Submenu -->
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item" href="personalbanking.html">Personal Banking</a>
-                                    <!-- <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="personalbanking.html#Current">Current Account</a></li>
-                <li><a class="dropdown-item" href="personalbanking.html#Savings">Savings Bank Account</a></li>
-            </ul> -->
-                                </li>
-                                <!-- Corporate Banking Submenu -->
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item " href="corporatebanking.html">Corporate Banking</a>
-                                    <!-- <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="corporatebanking.html#Cash">Cash Credit</a></li>
-                <li><a class="dropdown-item" href="corporatebanking.html#Over">Over Draft</a></li>
-            </ul>
-        </li> -->
-                            </ul>
-                        </li>
-
-
-
-                        <!-- Deposit Schemes Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="DepositSchemes.html" id="depositSchemesDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Deposit Schemes</a>
-                            <ul class="dropdown-menu" aria-labelledby="depositSchemesDropdown">
-                                <li><a class="dropdown-item" href="DepositSchemes.html#Fixed">Fixed Deposit</a></li>
-                                <li><a class="dropdown-item" href="DepositSchemes.html#Recurring">Recurring
-                                        Deposit</a></li>
-                                <li><a class="dropdown-item" href="DepositSchemes.html#Investment">Re-Investment
-                                        Policy</a></li>
-                                <li><a class="dropdown-item" href="DepositSchemes.html#Daily">Daily Deposit</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Loans & Advances Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="loanpage.html" id="loansAdvancesDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Loans & Advances</a>
-                            <ul class="dropdown-menu" aria-labelledby="loansAdvancesDropdown">
-                                <li><a class="dropdown-item" href="loanpage.html#Gold">Gold Loan</a></li>
-                                <li><a class="dropdown-item" href="loanpage.html#Vehicle">Vehicle Loan</a></li>
-                                <li><a class="dropdown-item" href="loanpage.html#Demand">Demand Loan</a></li>
-                                <li><a class="dropdown-item" href="loanpage.html#Deposit">Loan on Deposit</a>
-                                </li>
-                                <li><a class="dropdown-item" href="DepositSchemes.html#Secured">Other Secured
-                                        Loans</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Other Services Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="OtherServices.html" id="otherServicesDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Other Services</a>
-                            <ul class="dropdown-menu" aria-labelledby="otherServicesDropdown">
-                                <li><a class="dropdown-item" href="./OtherServices.html#Merchant">Merchant QR</a></li>
-                                <li><a class="dropdown-item" href="./OtherServices.html#commerce">E-commerce</a></li>
-                                <li><a class="dropdown-item" href="./OtherServices.html#Pos">Pos machine facility</a>
-                                </li>
-                                <li><a class="dropdown-item" href="OtherServices.html#Demand">Demand Draft</a></li>
-                                <li><a class="dropdown-item" href="OtherServices.html#RTGS">RTGS/NEFT</a></li>
-                                <li><a class="dropdown-item" href="OtherServices.html#cheque">At par cheque</a></li>
-                                <li><a class="dropdown-item" href="OtherServices.html#Forex">Forex</a></li>
-                                <li><a class="dropdown-item" href="OtherServices.html#SMS">SMS Services</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                    <div class="search-container">
-                        <input type="text" id="searchInput" placeholder="Search for topics..." oninput="searchTopics()">
-                        <ul id="suggestions" class="list-group" style="display: none; position: absolute; z-index: 1000; width: 100%;"></ul>
-                    </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
                 </div>
-                <!-- <div class="d-none d-xl-flex flex-shirink-0">
-                    <div class="d-flex align-items-center justify-content-center ms-4 ">
-                        <a href="#"><i class="bi bi-search text-white fa-2x"></i></a>
-                    </div>
-                </div> -->
-                <script>
-                    const pages = {
-                        home: { 
-                            url: "index.html", 
-                            keywords: ["main", "home", "introduction", "EMI calculator", "banking services"] 
-                        },
-                        PersonalBanking: { 
-                            url: "PersonalBanking.html", 
-                            keywords: ["savings account", "current account", "personal finance", "banking solutions"] 
-                        },
-                        CorporateBanking: { 
-                            url: "CorporateBanking.html", 
-                            keywords: ["cash credit", "overdraft", "service charges", "business banking", "corporate finance"] 
-                        },
-                        Loan: { 
-                            url: "Loanpage.html", 
-                            keywords: ["gold", "vehicle", "demand", "loan", "secured", "loan"] 
-                        },
-                        DepositSchemes: { 
-                            url: "DepositSchemes.html", 
-                            keywords: ["deposit","fixed deposit", "recurring deposit", "reinvestment policy", "daily deposit", "investment plans"] 
-                        },
-                        OthersServices: { 
-                            url: "OthersServices.html", 
-                            keywords: ["merchant QR", "e-commerce", "POS machine", "locker facility", "RTGS", "forex", "IFSC"] 
-                        },
-                        AboutTeam: { 
-                            url: "AboutTeam.html", 
-                            keywords: ["team", "leadership", "about us", "history", "bank overview"] 
-                        },
-                        Gallery: { 
-                            url: "Galley.html", 
-                            keywords: ["gallery", "awards", "recognition", "events", "media center"] 
-                        }
-                    };
-                
-                    function searchTopics() {
-                        const searchInput = document.getElementById("searchInput").value.toLowerCase();
-                        const suggestions = document.getElementById("suggestions");
-                        suggestions.innerHTML = ""; // Clear previous suggestions
-                
-                        if (searchInput.trim() === "") {
-                            suggestions.style.display = "none";
-                            return;
-                        }
-                
-                        let results = [];
-                
-                        for (let page in pages) {
-                            const pageKeywords = pages[page].keywords;
-                
-                            // If any keyword matches the input, add the page to results
-                            if (pageKeywords.some(keyword => keyword.includes(searchInput))) {
-                                results.push({ name: page, url: pages[page].url });
-                            }
-                        }
-                
-                        // Show suggestions if results are found
-                        if (results.length > 0) {
-                            suggestions.style.display = "block";
-                            results.forEach(result => {
-                                const listItem = document.createElement("li");
-                                listItem.textContent = result.name; // Show the page name
-                                listItem.className = "list-group-item list-group-item-action";
-                                listItem.onclick = () => window.location.href = result.url; // Navigate to the page on click
-                                suggestions.appendChild(listItem);
-                            });
-                        } else {
-                            suggestions.style.display = "none"; // Hide suggestions if no results
-                        }
-                    }
-                </script>
-            </nav>
-
+            </div>
         </div>
-
     </div>
-    <div id="note" class="text-secondary d-none d-xl-flex note-slider">
-        <small>Note: We help you to Grow your Business</small>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link active">Services</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="price.html" class="dropdown-item">Pricing Plan</a>
+                            <a href="feature.html" class="dropdown-item">Our features</a>
+                            <a href="team.html" class="dropdown-item">Team Members</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="quote.html" class="dropdown-item">Free Quote</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">Services</h1>
+                    <a href="" class="h5 text-white">Home</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <a href="" class="h5 text-white">Services</a>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Navbar End -->
 
 
-
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-white mb-4 animated slideInDown">Personal Banking</h1>
-            <p class="text-white">Personal banking offers a range of financial services tailored for individual
-                customers. It provides a secure way for you to manage your finances, access credit, and deposit your
-                money. Designed to meet your personal financial needs, personal banking ensures you have the support and
-                tools necessary for effective money management.</p>
-            <!-- <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb justify-content-center mb-0">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item" aria-current="page">Blog</li>
-                    </ol>
-                </nav> -->
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <div class="container-fluid py-5 my-5">
-        <div class="container pt-5">
-            <!-- Savings Account Section -->
-            <div class="row g-5 align-items-center">
-                <!-- Image on Left -->
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img src="img/about us/saving account.jpg" class="img-fluid w-100 rounded" alt="Savings Account">
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <!-- Text on Right -->
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <h1 class="text-primary" id="Savings">Savings Account</h1>
-                    <p>A savings account is the cornerstone of your financial journey, offering a safe and reliable
-                        place to store your hard-earned money. Say goodbye to the challenges of managing cash or the
-                        risks of hidden safes. With our savings account, you’ll have seamless access to your funds
-                        whenever you need them, paired with the convenience of a cheque book, passbook, and ATM card.
-                    </p>
-                    <p>We offer a range of savings account options to cater to your unique needs, including traditional
-                        savings accounts, high-yield accounts with competitive interest rates, and specialty accounts
-                        designed for specific goals. Our dedicated banking team is here to guide you every step of the
-                        way, helping you select the account that aligns with your financial aspirations.</p>
-                    <p>Enjoy the added benefits of low maintenance charges, making it easy to grow your savings without
-                        worrying about high fees. Whether you're saving for a rainy day, planning a major purchase, or
-                        building financial security for the future, our savings accounts are designed to support your
-                        goals.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluid py-5 my-5">
-        <div class="container pt-5">
-            <!-- Current Account Section -->
-            <div class="row g-5 align-items-center">
-                <!-- Text on Left -->
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <h1 class="text-primary" id="Current">Current Account</h1>
-                    <p>A current account is an essential tool for managing day-to-day finances, offering flexibility and
-                        convenience for both individuals and businesses. With this account, you can deposit, withdraw,
-                        and access your funds as needed, empowering you to manage your financial transactions with ease.
-                    </p>
-                    <p>We offer a variety of current account options tailored to meet diverse requirements. Whether
-                        you’re an individual, a partnership firm, a company, or a society, our accounts are designed to
-                        suit your needs. Each account comes with a cheque book and ATM card, giving you quick and easy
-                        access to your funds.</p>
-                    <h5 class="mt-4">Key features of our current accounts include:</h5>
-                    <ul>
-                        <li>Unlimited transactions: Conduct as many transactions as needed to manage your business or
-                            personal finances without restrictions.</li>
-                        <li>Overdraft facility: Access additional funds when necessary to enhance cash flow and
-                            operational efficiency.</li>
-                        <li>Separation of finances: Keep business and personal transactions distinct for better
-                            financial organization.</li>
-                    </ul>
-                    
-                </div>
-                <!-- Image on Right -->
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img src="img/about us/current account.jpg"img-fluid w-100 rounded" alt="Current Account">
-                </div>
-                <p style="vertical-align: middle;">At Secunderabad Bank, we also offer an Individual Current Account with a low initial deposit
-                        requirement, making it accessible and affordable. Our professional staff is committed to
-                        providing personalized assistance throughout the account opening process, ensuring you select an
-                        account that best suits your needs. Additionally, our current accounts are designed with minimal charges, allowing you to focus on
-                        growing your business or managing your personal finances effectively. Whether you're an
-                        entrepreneur looking to streamline your business operations or an individual needing a flexible
-                        financial tool, our current accounts are the perfect solution.</p>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid footer bg-light wow fadeIn" data-wow-delay=".3s" style="color: #403a76;">
-        <div class="container pt-5 pb-4">
-            <!-- Main Footer Row -->
-            <div class="row g-5">
-                <!-- Address Section -->
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold">The Secunderabad Co-operative Urban Bank Ltd.</h5>
-                    <address>
-                        <a href="tel:+918985083534" class="text-decoration-none">
-                            1-4-908/7/2/B/1 to 4 (GR FLOOR),<br>
-                            Beside Gurunanak Care Hospitals,<br>
-                            Musheerabad, Hyderabad-500020.
-                        </a>
-                    </address>
-                    <p>
-                        <a href="tel:+918985083534" class="text-decoration-none">+918985083534</a><br>
-                        <a href="mailto:accounts@secunderabadbank.com" class="text-decoration-none">
-                            accounts@secunderabadbank.com
-                        </a>
-                    </p>
-                    <h5 class="fw-bold">Careers</h5>
-                    <h5>Connect With Us:</h5>
-                    <div style="padding-bottom: 20px;">
-                        <a href="https://www.facebook.com/secunderabadbank" class="me-2"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/secunderabadbank/" class="me-2"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://youtube.com/@secunderabadbank?si=AsSdTzB1hdWEV-Tz" class="me-2"><i
-                                class="fab fa-youtube"></i></a>
-                        <a href="https://twitter.com/Sec_bank" class="me-2"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/company/33645542/admin/page-posts/published/"><i
-                                class="fab fa-linkedin-in"></i></a>
-
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
                     </div>
-
                 </div>
-
-                <!-- Our Services Section -->
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold">Our Services</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="./personalbanking.html#Savings" class="text-decoration-none">Savings Account</a>
-                        </li>
-                        <li><a href="./personalbanking.html#Current" class="text-decoration-none">Current Account</a>
-                        </li>
-                        <li><a href="./corporatebanking.html#Cash" class="text-decoration-none">Cash Credit</a></li>
-                        <li><a href="./corporatebanking.html#Over" class="text-decoration-none">Over Draft</a></li>
-                        <li><a href="./DepositSchemes.html#Fixed" class="text-decoration-none">Fixed Deposit</a></li>
-                        <li><a href="./DepositSchemes.html#Recurring" class="text-decoration-none">Recurring
-                                Deposit</a></li>
-                        <li><a href="./DepositSchemes.html#Investment" class="text-decoration-none">Re-Investment
-                                Policy</a></li>
-                        <li><a href="./DepositSchemes.html#Daily" class="text-decoration-none">Daily Deposit</a></li>
-                        <li><a href="./DepositSchemes.html#Gold" class="text-decoration-none">Gold Loan</a></li>
-                        <li><a href="./DepositSchemes.html#Vehicle" class="text-decoration-none">Vehicle Loan</a></li>
-                        <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan</a></li>
-                        <li><a href="./DepositSchemes.html#Deposit" class="text-decoration-none">Loan on Deposit</a>
-                        </li>
-                        <li><a href="./DepositSchemes.html#Secured" class="text-decoration-none">Other Secured
-                                Loans</a></li>
-                        <li><a href="./OtherServices.html#Merchant" class="text-decoration-none">Merchant QR</a></li>
-                        <li><a href="./OtherServices.html#commerce" class="text-decoration-none">E-commerce</a></li>
-                        <li><a href="./OtherServices.html#Pos" class="text-decoration-none">POS Machine Facility</a>
-                        </li>
-                        <li><a href="./OtherServices.html#Locker" class="text-decoration-none">Locker Facility</a></li>
-                        <li><a href="./OtherServices.html#Demand" class="text-decoration-none">Demand Draft</a></li>
-                        <li><a href="./OtherServices.html#RTGS" class="text-decoration-none">RTGS/NEFT</a></li>
-                        <li><a href="./OtherServices.html#cheque" class="text-decoration-none">At Par Cheque</a></li>
-                        <li><a href="./OtherServices.html#Forex" class="text-decoration-none">Forex</a></li>
-                        <li><a href="./OtherServices.html#SMS" class="text-decoration-none">SMS Services</a></li>
-                    </ul>
-                </div>
-
-                <!-- Application Forms Section -->
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold">Useful Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html#calculateEMI" class="text-decoration-none">EMI calculator</a>
-                        </li>
-                        <li><a href="./corporatebanking.html" class="text-decoration-none">Service Charges</a>
-                        </li>
-                        <li><a href="./DepositSchemes.html#Fixed" class="text-decoration-none">FDI Rate</a></li>
-                        <li><a href="./DepositSchemes.html#Gold" class="text-decoration-none">Gold Loan Rate</a></li>
-                        <li><a href="./DepositSchemes.html#Vehicle" class="text-decoration-none">Vehicle Loan Rate</a>
-                        </li>
-                        <li><a href="./DepositSchemes.html#Deposit" class="text-decoration-none">Loan on Deposit
-                                Rate</a></li>
-                        <li><a href="./corporatebanking.html#Over" class="text-decoration-none">Overdraft Interest
-                                Rate</a></li>
-                        <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan Rate</a></li>
-                        <li><a href="./OtherServices.html#RTGS" class="text-decoration-none">IFSC Code</a></li>
-                        <li><a href="./img/about us/CALENDER FINAL 2025 UPDATE.pdf" class="text-decoration-none">Bank Calendar</a></li>
-                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf" class="text-decoration-none">Privacy Policy</a></li>
-                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf" class="text-decoration-none">Terms & Conditions</a>
-                        </li>
-                    </ul>
-                    <h5 class="fw-bold">Application Forms</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="./application.html" class="text-decoration-none">Savings Account Application</a>
-                        </li>
-                        <li><a href="./application.html" class="text-decoration-none">Current Account Application</a>
-                        </li>
-                        <li><a href="./application.html" class="text-decoration-none">FD Application</a></li>
-                        <li><a href="./application.html" class="text-decoration-none">RIP Application</a></li>
-                        <li><a href="./application.html" class="text-decoration-none">DD Application</a></li>
-                        <li><a href="./application.html" class="text-decoration-none">Service Request Form</a></li>
-                    </ul>
-
-                    <!-- <div class="col-lg-3 col-md-6"> -->
-
-
-                    <!-- </div> -->
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="fw-bold">Media Centre</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="Galley.html" class="text-decoration-none">Gallery</a></li>
-                        <li><a href="Galley.html" class="text-decoration-none">Awards & Recognition</a></li>
-                    </ul>
-                    <h5 class="fw-bold">Support</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="./support.html" class="text-decoration-none">Report a Fraud</a></li>
-                        <li><a href="./support.html" class="text-decoration-none">Queries</a></li>
-                        <li><a href="./support.html" class="text-decoration-none">Requests</a></li>
-                        <li><a href="./support.html" class="text-decoration-none">Complaints</a></li>
-                    </ul>
-                    <h5 class="fw-bold">Customer Awareness</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="https://www.rbi.org.in/commonman/English/scripts/Notification.aspx?Id=578"
-                                class="text-decoration-none">Security & Fraud Awareness</a></li>
-                        <li><a href="https://www.ckycindia.in/ckyc/assets/images/CentralKYCRecordsRegistryCustomerAwarenessVideo.webm"
-                                class="text-decoration-none">CKYC</a></li>
-                    </ul>
-                    <img src="./img/DICGC.png" alt="DICGC Logo" style="max-width: 40%; height: auto;">
-                    <p class="mt-2">Secunderabad Bank is registered with DICGC.</p>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <span class="text-dark">Designed by <a href="https://Adilogram.com"
-                        class="text-dark">Adilogram.com</a></span>
             </div>
         </div>
     </div>
+    <!-- Full Screen Search End -->
 
-    <!-- Footer End -->
+
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header py-5">
+    <div class="container text-center py-5">
+        <h1 class="display-2 text-white mb-4 animated slideInDown">Personal Banking</h1>
+        <p class="text-white">Personal banking offers a range of financial services tailored for individual
+            customers. It provides a secure way for you to manage your finances, access credit, and deposit your
+            money. Designed to meet your personal financial needs, personal banking ensures you have the support and
+            tools necessary for effective money management.</p>
+        <!-- <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                    <li class="breadcrumb-item" aria-current="page">Blog</li>
+                </ol>
+            </nav> -->
+    </div>
+</div>
+<!-- Page Header End -->
 
 
+<div class="container-fluid py-5 my-5">
+    <div class="container pt-5">
+        <!-- Savings Account Section -->
+        <div class="row g-5 align-items-center">
+            <!-- Image on Left -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="img/about us/saving account.jpg" class="img-fluid w-100 rounded" alt="Savings Account">
+            </div>
+            <!-- Text on Right -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h1 class="text-primary" id="Savings">Savings Account</h1>
+                <p>A savings account is the cornerstone of your financial journey, offering a safe and reliable
+                    place to store your hard-earned money. Say goodbye to the challenges of managing cash or the
+                    risks of hidden safes. With our savings account, you’ll have seamless access to your funds
+                    whenever you need them, paired with the convenience of a cheque book, passbook, and ATM card.
+                </p>
+                <p>We offer a range of savings account options to cater to your unique needs, including traditional
+                    savings accounts, high-yield accounts with competitive interest rates, and specialty accounts
+                    designed for specific goals. Our dedicated banking team is here to guide you every step of the
+                    way, helping you select the account that aligns with your financial aspirations.</p>
+                <p>Enjoy the added benefits of low maintenance charges, making it easy to grow your savings without
+                    worrying about high fees. Whether you're saving for a rainy day, planning a major purchase, or
+                    building financial security for the future, our savings accounts are designed to support your
+                    goals.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid py-5 my-5">
+    <div class="container pt-5">
+        <!-- Current Account Section -->
+        <div class="row g-5 align-items-center">
+            <!-- Text on Left -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h1 class="text-primary" id="Current">Current Account</h1>
+                <p>A current account is an essential tool for managing day-to-day finances, offering flexibility and
+                    convenience for both individuals and businesses. With this account, you can deposit, withdraw,
+                    and access your funds as needed, empowering you to manage your financial transactions with ease.
+                </p>
+                <p>We offer a variety of current account options tailored to meet diverse requirements. Whether
+                    you’re an individual, a partnership firm, a company, or a society, our accounts are designed to
+                    suit your needs. Each account comes with a cheque book and ATM card, giving you quick and easy
+                    access to your funds.</p>
+                <h5 class="mt-4">Key features of our current accounts include:</h5>
+                <ul>
+                    <li>Unlimited transactions: Conduct as many transactions as needed to manage your business or
+                        personal finances without restrictions.</li>
+                    <li>Overdraft facility: Access additional funds when necessary to enhance cash flow and
+                        operational efficiency.</li>
+                    <li>Separation of finances: Keep business and personal transactions distinct for better
+                        financial organization.</li>
+                </ul>
+                
+            </div>
+            <!-- Image on Right -->
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="img/about us/current account.jpg"img-fluid w-100 rounded" alt="Current Account">
+            </div>
+            <p style="vertical-align: middle;">At Secunderabad Bank, we also offer an Individual Current Account with a low initial deposit
+                    requirement, making it accessible and affordable. Our professional staff is committed to
+                    providing personalized assistance throughout the account opening process, ensuring you select an
+                    account that best suits your needs. Additionally, our current accounts are designed with minimal charges, allowing you to focus on
+                    growing your business or managing your personal finances effectively. Whether you're an
+                    entrepreneur looking to streamline your business operations or an individual needing a flexible
+                    financial tool, our current accounts are the perfect solution.</p>
+        </div>
+    </div>
+</div>
+    
+
+   <!-- Footer Start -->
+   <div class="container-fluid footer bg-light wow fadeIn" data-wow-delay=".3s" style="color: #403a76;">
+    <div class="container pt-5 pb-4">
+        <!-- Main Footer Row -->
+        <div class="row g-5">
+            <!-- Address Section -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold">The Secunderabad Co-operative Urban Bank Ltd.</h5>
+                <address>
+                    <a href="tel:+918985083534" class="text-decoration-none">
+                        1-4-908/7/2/B/1 to 4 (GR FLOOR),<br>
+                        Beside Gurunanak Care Hospitals,<br>
+                        Musheerabad, Hyderabad-500020.
+                    </a>
+                </address>
+                <p>
+                    <a href="tel:+918985083534" class="text-decoration-none">+918985083534</a><br>
+                    <a href="mailto:accounts@secunderabadbank.com" class="text-decoration-none">
+                        accounts@secunderabadbank.com
+                    </a>
+                </p>
+                <h5 class="fw-bold">Careers</h5>
+                <h5>Connect With Us:</h5>
+                <div style="padding-bottom: 20px;">
+                    <a href="https://www.facebook.com/secunderabadbank" class="me-2"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/secunderabadbank/" class="me-2"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://youtube.com/@secunderabadbank?si=AsSdTzB1hdWEV-Tz" class="me-2"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://twitter.com/Sec_bank" class="me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/33645542/admin/page-posts/published/"><i
+                            class="fab fa-linkedin-in"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- Our Services Section -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold">Our Services</h5>
+                <ul class="list-unstyled">
+                    <li><a href="./personalbanking.html#Savings" class="text-decoration-none">Savings Account</a>
+                    </li>
+                    <li><a href="./personalbanking.html#Current" class="text-decoration-none">Current Account</a>
+                    </li>
+                    <li><a href="./corporatebanking.html#Cash" class="text-decoration-none">Cash Credit</a></li>
+                    <li><a href="./corporatebanking.html#Over" class="text-decoration-none">Over Draft</a></li>
+                    <li><a href="./DepositSchemes.html#Fixed" class="text-decoration-none">Fixed Deposit</a></li>
+                    <li><a href="./DepositSchemes.html#Recurring" class="text-decoration-none">Recurring
+                            Deposit</a></li>
+                    <li><a href="./DepositSchemes.html#Investment" class="text-decoration-none">Re-Investment
+                            Policy</a></li>
+                    <li><a href="./DepositSchemes.html#Daily" class="text-decoration-none">Daily Deposit</a></li>
+                    <li><a href="./DepositSchemes.html#Gold" class="text-decoration-none">Gold Loan</a></li>
+                    <li><a href="./DepositSchemes.html#Vehicle" class="text-decoration-none">Vehicle Loan</a></li>
+                    <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan</a></li>
+                    <li><a href="./DepositSchemes.html#Deposit" class="text-decoration-none">Loan on Deposit</a>
+                    </li>
+                    <li><a href="./DepositSchemes.html#Secured" class="text-decoration-none">Other Secured
+                            Loans</a></li>
+                    <li><a href="./OtherServices.html#Merchant" class="text-decoration-none">Merchant QR</a></li>
+                    <li><a href="./OtherServices.html#commerce" class="text-decoration-none">E-commerce</a></li>
+                    <li><a href="./OtherServices.html#Pos" class="text-decoration-none">POS Machine Facility</a>
+                    </li>
+                    <li><a href="./OtherServices.html#Locker" class="text-decoration-none">Locker Facility</a></li>
+                    <li><a href="./OtherServices.html#Demand" class="text-decoration-none">Demand Draft</a></li>
+                    <li><a href="./OtherServices.html#RTGS" class="text-decoration-none">RTGS/NEFT</a></li>
+                    <li><a href="./OtherServices.html#cheque" class="text-decoration-none">At Par Cheque</a></li>
+                    <li><a href="./OtherServices.html#Forex" class="text-decoration-none">Forex</a></li>
+                    <li><a href="./OtherServices.html#SMS" class="text-decoration-none">SMS Services</a></li>
+                </ul>
+            </div>
+
+            <!-- Application Forms Section -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold">Useful Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html#calculateEMI" class="text-decoration-none">EMI calculator</a>
+                    </li>
+                    <li><a href="./corporatebanking.html" class="text-decoration-none">Service Charges</a>
+                    </li>
+                    <li><a href="./DepositSchemes.html#Fixed" class="text-decoration-none">FDI Rate</a></li>
+                    <li><a href="./DepositSchemes.html#Gold" class="text-decoration-none">Gold Loan Rate</a></li>
+                    <li><a href="./DepositSchemes.html#Vehicle" class="text-decoration-none">Vehicle Loan Rate</a>
+                    </li>
+                    <li><a href="./DepositSchemes.html#Deposit" class="text-decoration-none">Loan on Deposit
+                            Rate</a></li>
+                    <li><a href="./corporatebanking.html#Over" class="text-decoration-none">Overdraft Interest
+                            Rate</a></li>
+                    <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan Rate</a></li>
+                    <li><a href="./OtherServices.html#RTGS" class="text-decoration-none">IFSC Code</a></li>
+                    <li><a href="./img/about us/CALENDER FINAL 2025 UPDATE.pdf" class="text-decoration-none">Bank Calendar</a></li>
+                    <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf" class="text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf" class="text-decoration-none">Terms & Conditions</a>
+                    </li>
+                </ul>
+                <h5 class="fw-bold">Application Forms</h5>
+                <ul class="list-unstyled">
+                    <li><a href="./application.html" class="text-decoration-none">Savings Account Application</a>
+                    </li>
+                    <li><a href="./application.html" class="text-decoration-none">Current Account Application</a>
+                    </li>
+                    <li><a href="./application.html" class="text-decoration-none">FD Application</a></li>
+                    <li><a href="./application.html" class="text-decoration-none">RIP Application</a></li>
+                    <li><a href="./application.html" class="text-decoration-none">DD Application</a></li>
+                    <li><a href="./application.html" class="text-decoration-none">Service Request Form</a></li>
+                </ul>
+
+                <!-- <div class="col-lg-3 col-md-6"> -->
+
+
+                <!-- </div> -->
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="fw-bold">Media Centre</h5>
+                <ul class="list-unstyled">
+                    <li><a href="Galley.html" class="text-decoration-none">Gallery</a></li>
+                    <li><a href="Galley.html" class="text-decoration-none">Awards & Recognition</a></li>
+                </ul>
+                <h5 class="fw-bold">Support</h5>
+                <ul class="list-unstyled">
+                    <li><a href="./support.html" class="text-decoration-none">Report a Fraud</a></li>
+                    <li><a href="./support.html" class="text-decoration-none">Queries</a></li>
+                    <li><a href="./support.html" class="text-decoration-none">Requests</a></li>
+                    <li><a href="./support.html" class="text-decoration-none">Complaints</a></li>
+                </ul>
+                <h5 class="fw-bold">Customer Awareness</h5>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.rbi.org.in/commonman/English/scripts/Notification.aspx?Id=578"
+                            class="text-decoration-none">Security & Fraud Awareness</a></li>
+                    <li><a href="https://www.ckycindia.in/ckyc/assets/images/CentralKYCRecordsRegistryCustomerAwarenessVideo.webm"
+                            class="text-decoration-none">CKYC</a></li>
+                </ul>
+                <img src="./img/DICGC.png" alt="DICGC Logo" style="max-width: 40%; height: auto;">
+                <p class="mt-2">Secunderabad Bank is registered with DICGC.</p>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <span class="text-dark">Designed by <a href="https://Adilogram.com"
+                    class="text-dark">Adilogram.com</a></span>
+        </div>
+    </div>
+</div>
+
+<!-- Footer End -->
     <!-- Back to Top -->
-    <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i
-            class="fa fa-arrow-up text-white"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Template Javascript -->

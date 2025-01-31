@@ -1,720 +1,577 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <title>Corporate Banking</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="" name="keywords">
-        <meta content="" name="description">
+<head>
+    <meta charset="utf-8">
+    <title>Startup - Startup Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
 
-        <!-- Google Web Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Saira:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
 
-        <!-- Icon Font Stylesheet -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        <!-- Libraries Stylesheet -->
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        <!-- Customized Bootstrap Stylesheet -->
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-        <style>
-            .calculator-container {
-                background-color: white;
-                padding: 80px;
-                border-radius: 10px;
-                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-                width: 50%;
-                text-align: center;
-            }
-    
-            label {
-                font-size: 16px;
-                display: block;
-                margin-bottom: 10px;
-            }
-    
-            input[type="range"] {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-    
-            .result {
-                margin-top: 20px;
-            }
-    
-            h1 {
-                margin-bottom: 20px;
-            }
-    
-            .input-section {
-                margin-bottom: 20px;
-            }
-    
-            label {
-                font-size: 16px;
-                display: block;
-                margin-bottom: 10px;
-            }
-    
-            input[type="range"] {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-    
-            .result {
-                margin-top: 20px;
-            }
-    
-            h2 {
-                font-size: 24px;
-                font-weight: bold;
-            }
-    
-            .pricing-section {
-                background-color: #f9f9f9;
-            }
-    
-            .pricing-card {
-                background: #fff;
-                border-radius: 8px;
-                border: 1px solid #ddd;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-    
-            .pricing-card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            }
-    
-            .pricing-card .plan-title {
-                font-size: 1.5rem;
-                font-weight: 700;
-                color: #333;
-            }
-    
-            .pricing-card .price {
-                font-size: 2rem;
-                font-weight: 600;
-                color: #009041;
-            }
-    
-            .pricing-card .features li {
-                padding: 8px 0;
-                border-bottom: 1px solid #ddd;
-            }
-    
-            .pricing-card .features li:last-child {
-                border-bottom: none;
-            }
-    
-            .pricing-card .btn {
-                font-weight: bold;
-            }
-    
-            .featured {
-                border: 2px solid #007bff;
-                background-color: #e6f4ff;
-            }
-    
-            .featured .btn {
-                background-color: #0056b3;
-                color: #fff;
-            }
-    
-            .gallery {
-                margin: 20px 75px;
-            }
-    
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .calculator-container {
+            background-color: white;
+            padding: 80px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            text-align: center;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .input-section {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .pricing-section {
+            background-color: #f9f9f9;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card .plan-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .pricing-card .price {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #009041;
+        }
+
+        .pricing-card .features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .pricing-card .features li:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-card .btn {
+            font-weight: bold;
+        }
+
+        .featured {
+            border: 2px solid #007bff;
+            background-color: #e6f4ff;
+        }
+
+        .featured .btn {
+            background-color: #0056b3;
+            color: #fff;
+        }
+
+        .gallery {
+            margin: 20px 75px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.2s ease;
+            object-fit: cover;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery .col {
+            margin-bottom: 20px;
+        }
+
+        .gallery img {
+            max-height: 200px;
+            /* For mobile */
+        }
+
+        @media (min-width: 768px) {
             .gallery img {
-                width: 100%;
-                height: auto;
-                border-radius: 5px;
-                transition: transform 0.2s ease;
-                object-fit: cover;
+                max-height: 300px;
+                /* For larger screens */
             }
-    
-            .gallery img:hover {
-                transform: scale(1.05);
-            }
-    
-            .gallery .col {
-                margin-bottom: 20px;
-            }
-    
-            .gallery img {
-                max-height: 200px;
-                /* For mobile */
-            }
-    
-            @media (min-width: 768px) {
-                .gallery img {
-                    max-height: 300px;
-                    /* For larger screens */
-                }
-            }
-    
-            .show-more-button {
-                display: flex;
-                justify-content: center;
-                margin-top: 20px;
-            }
-    
-            .hidden {
-                display: none;
-            }
-    
-            /* Hide all submenus by default */
-            .dropdown-menu .dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 0;
-                left: 100%;
-                z-index: 1000;
-            }
-    
-            /* Show submenu when the parent dropdown item is hovered */
-            .dropdown-submenu:hover>.dropdown-menu {
-                display: block;
-            }
-    
-            /* Ensure proper alignment for submenus */
-            .dropdown-submenu {
-                position: relative;
-            }
-    
-            .dropdown-submenu .dropdown-menu {
-                margin-top: 0;
-                margin-left: 0;
-            }
-    
-            .icon-box {
-                width: 100px;
-                height: 60px;
-                border-radius: 10px;
-            }
-    
-            .content-box h5 {
-                font-size: 1.2rem;
-                font-weight: bold;
-                color: #333;
-            }
-    
-            .content-box p {
-                color: #555;
-                font-size: 0.9rem;
-            }
-    
-            .bg-danger {
-                background-color: #009041 !important;
-            }
-    
-            .shadow-sm {
-                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-            }
-    
-            @media (max-width: 768px) {
-                .icon-box {
-                    width: 50px;
-                    height: 50px;
-                }
-    
-                .content-box h5 {
-                    font-size: 1rem;
-                }
-    
-                .content-box p {
-                    font-size: 0.85rem;
-                }
-            }
-    
-            .company-benefits {
-                background-color: #1a1a1a;
-                /* padding: 50px; */
-                border-radius: 10px;
-            }
-    
-            .company-benefits h6 {
-                font-size: 1rem;
-                letter-spacing: 2px;
-            }
-    
-            .company-benefits h2 {
-                font-size: 2rem;
-                font-weight: bold;
-            }
-    
-            .company-benefits p {
-                font-size: 1rem;
-                line-height: 1.8;
-                color: #ccc;
-            }
-    
-            .progress {
-                background: #333;
-                height: 6px;
-                border-radius: 10px;
-                overflow: hidden;
-                margin-top: 8px;
-            }
-    
-            .progress-bar {
-                height: 6px;
-                transition: width 2s ease-in-out;
-            }
-    
-            .video-container video {
-                box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-            }
-    
-            .row {
-                margin: 0;
-            }
-    
-            .search-container {
-                display: flex;
-                align-items: center;
-            }
-    
-            .search-container input {
-        padding: 5px;
-        font-size: 16px;
-        border: none;
-        border-radius: 5px;
-        border: solid;
-        border-color: #009041;
-        margin-right: 175px;
-    }
-    .search-container {
-        position: relative;
-    }
-    
-    /* Hide search-container for screen widths below 620px */
-    @media (max-width: 620px) {
-        .search-container {
+        }
+
+        .show-more-button {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .hidden {
             display: none;
         }
-    }
-    
-    /* Remove margin-right for screen widths below 820px */
-    @media (max-width: 820px) {
-        .search-container input {
-            margin-right: 0;
+
+        /* Hide all submenus by default */
+        .dropdown-menu .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 1000;
         }
+
+        /* Show submenu when the parent dropdown item is hovered */
+        .dropdown-submenu:hover>.dropdown-menu {
+            display: block;
+        }
+
+        /* Ensure proper alignment for submenus */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        .icon-box {
+            width: 100px;
+            height: 60px;
+            border-radius: 10px;
+        }
+
+        .content-box h5 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .content-box p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .bg-danger {
+            background-color: #009041 !important;
+        }
+
+        .shadow-sm {
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .icon-box {
+                width: 50px;
+                height: 50px;
+            }
+
+            .content-box h5 {
+                font-size: 1rem;
+            }
+
+            .content-box p {
+                font-size: 0.85rem;
+            }
+        }
+
+        .company-benefits {
+            background-color: #1a1a1a;
+            /* padding: 50px; */
+            border-radius: 10px;
+        }
+
+        .company-benefits h6 {
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .company-benefits h2 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .company-benefits p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .progress {
+            background: #333;
+            height: 6px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            transition: width 2s ease-in-out;
+        }
+
+        .video-container video {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .row {
+            margin: 0;
+        }
+
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    border: solid;
+    border-color: #009041;
+    margin-right: 175px;
+}
+.search-container {
+    position: relative;
+}
+
+/* Hide search-container for screen widths below 620px */
+@media (max-width: 620px) {
+    .search-container {
+        display: none;
     }
-    
-            .search-container button {
-                background-color: #4CAF50;
-                color: white;
-                padding: 5px 10px;
-                margin-left: 10px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-    
-            .search-container button:hover {
-                background-color: #45a049;
-            }
-    
-            html {
-                scroll-behavior: smooth;
-            }
-            
+}
+
+/* Remove margin-right for screen widths below 820px */
+@media (max-width: 820px) {
+    .search-container input {
+        margin-right: 0;
+    }
+}
+
+        .search-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #45a049;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+.terbang {
+position: fixed;
+width: 75px;
+height: 40px;
+bottom: 0px;
+left: 13px;
+background-color: #25d366;
+color: #FFF;
+border-radius:5px 5px 0px 0px;
+text-align: left;
+font-size: 27px;
+box-shadow: 2px 2px 3px #999;
+z-index: 100;
+}
+
+@media screen
+  and (min-device-width: 1025px)
+  and (max-device-width: 1600px)
+  and (-webkit-min-device-pixel-ratio: 1) {
+.text-wa {
+font-size:15px;
+position:relative;
+color:whitesmoke;
+margin-left:10px;
+text-align:right;
+top:-5px;
+}		
+.melayang{
+    margin-top:8px;
+    margin-left:25px;
+}
+}
+
+
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 580px)
+  and (-webkit-min-device-pixel-ratio: 2) {
     .terbang {
-    position: fixed;
-    width: 75px;
-    height: 40px;
-    bottom: 0px;
-    left: 13px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius:5px 5px 0px 0px;
-    text-align: left;
-    font-size: 27px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
+position: fixed;
+width: 65px;
+height: 65px;
+bottom: 17px;
+left: 15px;
+background-color: #25d366;
+color: #FFF;
+border-radius: 10px;
+text-align: center;
+font-size: 30px;
+box-shadow: 2px 2px 3px #999;
+z-index: 100;
     }
-    
-    @media screen
-      and (min-device-width: 1025px)
-      and (max-device-width: 1600px)
-      and (-webkit-min-device-pixel-ratio: 1) {
-    .text-wa {
+.text-wa {
     font-size:15px;
     position:relative;
-    color:whitesmoke;
-    margin-left:10px;
+    color:white;
+    margin-left:15px;
     text-align:right;
     top:-5px;
-    }		
-    .melayang{
-        margin-top:8px;
-        margin-left:25px;
-    }
-    }
-    
-    
-    @media only screen
-      and (min-device-width: 320px)
-      and (max-device-width: 580px)
-      and (-webkit-min-device-pixel-ratio: 2) {
-        .terbang {
-    position: fixed;
-    width: 65px;
-    height: 65px;
-    bottom: 17px;
-    left: 15px;
-    background-color: #25d366;
-    color: #FFF;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
-        }
-    .text-wa {
-        font-size:15px;
-        position:relative;
-        color:white;
-        margin-left:15px;
-        text-align:right;
-        top:-5px;
-        display:none;
-    }
-    .melayang{
-        margin-top:17px;
-    }
-    }
-    .navbar-toggler {
-        margin-left: auto;
-        margin-top: 0;
-    }
-    
-    /* Apply styles for screen widths below 1000px */
-    @media (max-width: 1000px) {
-        .responsive-navbar-toggler {
-            margin-left: 31rem !important;
-            margin-top: 12px;
-        }
-    }
-        </style>
-    </head>
+    display:none;
+}
+.melayang{
+    margin-top:17px;
+}
+}
+.navbar-toggler {
+    margin-left: auto;
+    margin-top: 0;
+}
 
-    <body>
-        <a href="http://wa.me/+918985083534" class="terbang" target="_blank"><i class="fa fa-whatsapp melayang"></i><i class="teks-wa">WhatsApp</i></a>
+/* Apply styles for screen widths below 1000px */
+@media (max-width: 1000px) {
+    .responsive-navbar-toggler {
+        margin-left: 31rem !important;
+        margin-top: 12px;
+    }
+}
+    </style>
+</head>
+
+<body>
     <!-- Spinner Start -->
-
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner"></div>
+    </div>
     <!-- Spinner End -->
 
-    <style>
-        @media (max-width: 767px) {
-            .pc {
-                display: none;
-            }
-        }
-    </style>
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white" style=" box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;;">
-        <div class="container">
-            <nav class="navbar navbar-dark navbar-expand-lg py-0">
-                <div class="container">
-                    <div class="d-flex justify-content-between align-items-center topbar">
-                        <a href="index.html" class="navbar-brand">
-                        <img src="./img/Logo-update-Copy-1.png" alt="bank Logo" width="200px">
-                    </a>
-                    
-                    </div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
+                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
+                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
                 </div>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <ul class="navbar-nav ms-auto">
-
-                        <!-- About Us Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="Aboutteam.html" id="aboutUsDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
-                            <ul class="dropdown-menu" aria-labelledby="aboutUsDropdown">
-                                <li><a class="dropdown-item" href="./Aboutteam.html#story">Our Story</a></li>
-                                <li><a class="dropdown-item" href="./Aboutteam.html#Vision">Our Vision & Mission</a>
-                                </li>
-                                <li><a class="dropdown-item" href="./Aboutteam.html#Board">Board Members</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Banking Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="bankingDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Banking
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="bankingDropdown">
-                                <!-- Personal Banking Submenu -->
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item" href="personalbanking.html">Personal Banking</a>
-                                    <!-- <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="personalbanking.html#Current">Current Account</a></li>
-                <li><a class="dropdown-item" href="personalbanking.html#Savings">Savings Bank Account</a></li>
-            </ul> -->
-                                </li>
-                                <!-- Corporate Banking Submenu -->
-                                <li class="dropdown-submenu">
-                                    <a class="dropdown-item " href="corporatebanking.html">Corporate Banking</a>
-                                    <!-- <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="corporatebanking.html#Cash">Cash Credit</a></li>
-                <li><a class="dropdown-item" href="corporatebanking.html#Over">Over Draft</a></li>
-            </ul>
-        </li> -->
-                            </ul>
-                        </li>
-
-
-
-                        <!-- Deposit Schemes Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="DepositSchemes.html" id="depositSchemesDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Deposit Schemes</a>
-                            <ul class="dropdown-menu" aria-labelledby="depositSchemesDropdown">
-                                <li><a class="dropdown-item" href="DepositSchemes.html#Fixed">Fixed Deposit</a></li>
-                                <li><a class="dropdown-item" href="DepositSchemes.html#Recurring">Recurring
-                                        Deposit</a></li>
-                                <li><a class="dropdown-item" href="DepositSchemes.html#Investment">Re-Investment
-                                        Policy</a></li>
-                                <li><a class="dropdown-item" href="DepositSchemes.html#Daily">Daily Deposit</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Loans & Advances Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="loanpage.html" id="loansAdvancesDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Loans & Advances</a>
-                            <ul class="dropdown-menu" aria-labelledby="loansAdvancesDropdown">
-                                <li><a class="dropdown-item" href="loanpage.html#Gold">Gold Loan</a></li>
-                                <li><a class="dropdown-item" href="loanpage.html#Vehicle">Vehicle Loan</a></li>
-                                <li><a class="dropdown-item" href="loanpage.html#Demand">Demand Loan</a></li>
-                                <li><a class="dropdown-item" href="loanpage.html#Deposit">Loan on Deposit</a>
-                                </li>
-                                <li><a class="dropdown-item" href="DepositSchemes.html#Secured">Other Secured
-                                        Loans</a></li>
-                            </ul>
-                        </li>
-
-                        <!-- Other Services Dropdown -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="OtherServices.html" id="otherServicesDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Other Services</a>
-                            <ul class="dropdown-menu" aria-labelledby="otherServicesDropdown">
-                                <li><a class="dropdown-item" href="./OtherServices.html#Merchant">Merchant QR</a></li>
-                                <li><a class="dropdown-item" href="./OtherServices.html#commerce">E-commerce</a></li>
-                                <li><a class="dropdown-item" href="./OtherServices.html#Pos">Pos machine facility</a>
-                                </li>
-                                <li><a class="dropdown-item" href="OtherServices.html#Demand">Demand Draft</a></li>
-                                <li><a class="dropdown-item" href="OtherServices.html#RTGS">RTGS/NEFT</a></li>
-                                <li><a class="dropdown-item" href="OtherServices.html#cheque">At par cheque</a></li>
-                                <li><a class="dropdown-item" href="OtherServices.html#Forex">Forex</a></li>
-                                <li><a class="dropdown-item" href="OtherServices.html#SMS">SMS Services</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                    <div class="search-container">
-                        <input type="text" id="searchInput" placeholder="Search for topics..." oninput="searchTopics()">
-                        <ul id="suggestions" class="list-group" style="display: none; position: absolute; z-index: 1000; width: 100%;"></ul>
-                    </div>
+            </div>
+            <div class="col-lg-4 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center" style="height: 45px;">
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
+                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
                 </div>
-                <!-- <div class="d-none d-xl-flex flex-shirink-0">
-                    <div class="d-flex align-items-center justify-content-center ms-4 ">
-                        <a href="#"><i class="bi bi-search text-white fa-2x"></i></a>
-                    </div>
-                </div> -->
-                <script>
-                    const pages = {
-                        home: { 
-                            url: "index.html", 
-                            keywords: ["main", "home", "introduction", "EMI calculator", "banking services"] 
-                        },
-                        PersonalBanking: { 
-                            url: "PersonalBanking.html", 
-                            keywords: ["savings account", "current account", "personal finance", "banking solutions"] 
-                        },
-                        CorporateBanking: { 
-                            url: "CorporateBanking.html", 
-                            keywords: ["cash credit", "overdraft", "service charges", "business banking", "corporate finance"] 
-                        },
-                        Loan: { 
-                            url: "Loanpage.html", 
-                            keywords: ["gold", "vehicle", "demand", "loan", "secured", "loan"] 
-                        },
-                        DepositSchemes: { 
-                            url: "DepositSchemes.html", 
-                            keywords: ["deposit","fixed deposit", "recurring deposit", "reinvestment policy", "daily deposit", "investment plans"] 
-                        },
-                        OthersServices: { 
-                            url: "OthersServices.html", 
-                            keywords: ["merchant QR", "e-commerce", "POS machine", "locker facility", "RTGS", "forex", "IFSC"] 
-                        },
-                        AboutTeam: { 
-                            url: "AboutTeam.html", 
-                            keywords: ["team", "leadership", "about us", "history", "bank overview"] 
-                        },
-                        Gallery: { 
-                            url: "Galley.html", 
-                            keywords: ["gallery", "awards", "recognition", "events", "media center"] 
-                        }
-                    };
-                
-                    function searchTopics() {
-                        const searchInput = document.getElementById("searchInput").value.toLowerCase();
-                        const suggestions = document.getElementById("suggestions");
-                        suggestions.innerHTML = ""; // Clear previous suggestions
-                
-                        if (searchInput.trim() === "") {
-                            suggestions.style.display = "none";
-                            return;
-                        }
-                
-                        let results = [];
-                
-                        for (let page in pages) {
-                            const pageKeywords = pages[page].keywords;
-                
-                            // If any keyword matches the input, add the page to results
-                            if (pageKeywords.some(keyword => keyword.includes(searchInput))) {
-                                results.push({ name: page, url: pages[page].url });
-                            }
-                        }
-                
-                        // Show suggestions if results are found
-                        if (results.length > 0) {
-                            suggestions.style.display = "block";
-                            results.forEach(result => {
-                                const listItem = document.createElement("li");
-                                listItem.textContent = result.name; // Show the page name
-                                listItem.className = "list-group-item list-group-item-action";
-                                listItem.onclick = () => window.location.href = result.url; // Navigate to the page on click
-                                suggestions.appendChild(listItem);
-                            });
-                        } else {
-                            suggestions.style.display = "none"; // Hide suggestions if no results
-                        }
-                    }
-                </script>
-            </nav>
-
+            </div>
         </div>
-
     </div>
-    <div id="note" class="text-secondary d-none d-xl-flex note-slider">
-        <small>Note: We help you to Grow your Business</small>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link active">Services</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="price.html" class="dropdown-item">Pricing Plan</a>
+                            <a href="feature.html" class="dropdown-item">Our features</a>
+                            <a href="team.html" class="dropdown-item">Team Members</a>
+                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                            <a href="quote.html" class="dropdown-item">Free Quote</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
+            </div>
+        </nav>
+
+        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
+            <div class="row py-5">
+                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+                    <h1 class="display-4 text-white animated zoomIn">Services</h1>
+                    <a href="" class="h5 text-white">Home</a>
+                    <i class="far fa-circle text-white px-2"></i>
+                    <a href="" class="h5 text-white">Services</a>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Navbar End -->
 
 
-        
-        <!-- Page Header Start -->
-        <div class="container-fluid page-header py-5">
-            <div class="container text-center py-5">
-                <h1 class="display-2 text-white mb-4 animated slideInDown">Corporate Banking</h1>
-                <!-- <nav aria-label="breadcrumb animated slideInDown">
-                    <ol class="breadcrumb justify-content-center mb-0">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item" aria-current="page">Blog</li>
-                    </ol>
-                </nav> -->
+    <div class="container-fluid py-5 my-5">
+        <div class="container pt-5">
+            <!-- Corporate Banking Introduction -->
+            <div class="row g-5 align-items-center">
+                <!-- Image on Left -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="img/about us/DD service.jpg" class="img-fluid w-100 rounded" alt="Corporate Banking">
+                </div>
+                <!-- Text on Right -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h1 class="text-primary">Corporate Banking</h1>
+                    <p>Corporate banking serves the financial needs of businesses, including large corporations and SMEs, by 
+                       providing loans and essential banking solutions that foster growth and job creation.</p>
+                    <p>At Secunderabad Bank, our dedicated professionals deliver personalized solutions tailored to your 
+                       business, along with competitive rates and low fees for an economical banking experience.</p>
+                </div>
             </div>
-        </div>
-        <!-- Page Header End -->
-
-
-        <div class="container-fluid py-5 my-5">
-            <div class="container pt-5">
-                <!-- Corporate Banking Introduction -->
-                <div class="row g-5 align-items-center">
-                    <!-- Image on Left -->
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="img/about us/DD service.jpg" class="img-fluid w-100 rounded" alt="Corporate Banking">
-                    </div>
-                    <!-- Text on Right -->
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <h1 class="text-primary">Corporate Banking</h1>
-                        <p>Corporate banking serves the financial needs of businesses, including large corporations and SMEs, by 
-                           providing loans and essential banking solutions that foster growth and job creation.</p>
-                        <p>At Secunderabad Bank, our dedicated professionals deliver personalized solutions tailored to your 
-                           business, along with competitive rates and low fees for an economical banking experience.</p>
-                    </div>
+    
+            <!-- Cash Credit Section -->
+            <div class="row g-5 align-items-center mt-5">
+                <!-- Text on Left -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h1 class="text-primary" id="Cash">Cash Credit</h1>
+                    <p>Cash Credit is a flexible short-term loan designed to support businesses with their working capital needs. 
+                       It allows companies to borrow funds against their stock, inventory, or receivables, with a pre-approved 
+                       credit limit. Businesses can withdraw funds as needed, and interest is charged only on the amount utilized, 
+                       not the full limit.</p>
+                    <p>This facility is ideal for maintaining smooth cash flow, especially during day-to-day operations and 
+                       seasonal demands. At Secunderabad Bank, you can fulfil all your business and professional needs with our 
+                       tailored overdraft services, ensuring flexible and efficient financial management.</p>
                 </div>
-        
-                <!-- Cash Credit Section -->
-                <div class="row g-5 align-items-center mt-5">
-                    <!-- Text on Left -->
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <h1 class="text-primary" id="Cash">Cash Credit</h1>
-                        <p>Cash Credit is a flexible short-term loan designed to support businesses with their working capital needs. 
-                           It allows companies to borrow funds against their stock, inventory, or receivables, with a pre-approved 
-                           credit limit. Businesses can withdraw funds as needed, and interest is charged only on the amount utilized, 
-                           not the full limit.</p>
-                        <p>This facility is ideal for maintaining smooth cash flow, especially during day-to-day operations and 
-                           seasonal demands. At Secunderabad Bank, you can fulfil all your business and professional needs with our 
-                           tailored overdraft services, ensuring flexible and efficient financial management.</p>
-                    </div>
-                    <!-- Image on Right -->
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="img/about us/online money.jpg" class="img-fluid w-100 rounded" alt="Cash Credit">
-                    </div>
+                <!-- Image on Right -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="img/about us/online money.jpg" class="img-fluid w-100 rounded" alt="Cash Credit">
                 </div>
-        
-                <!-- Overdraft Section -->
-                <div class="row g-5 align-items-center mt-5">
-                    <!-- Image on Left -->
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="img/about us/overdraft.jpg" class="img-fluid w-100 rounded" alt="Overdraft">
-                    </div>
-                    <!-- Text on Right -->
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <h1 class="text-primary" id="Over">Over Draft</h1>
-                        <p>An Overdraft provides the flexibility to withdraw more than what’s in your account, up to a set limit, 
-                           offering quick access to funds when you need it most. Whether for unexpected expenses or temporary cash 
-                           flow gaps, this short-term credit solution allows you to manage finances smoothly without disrupting your 
-                           routine.</p>
-                        <p>Interest is only charged on the amount used, and repayment is flexible, letting you settle the balance 
-                           when funds are available. Secunderabad Bank’s overdraft facility is a reliable way to handle financial gaps, 
-                           ensuring you stay on track, whether for business or personal needs. Manage your finances flexibly with our 
-                           Over Draft facility, with interest rates ranging from 8% to 19%.</p>
-                    </div>
+            </div>
+    
+            <!-- Overdraft Section -->
+            <div class="row g-5 align-items-center mt-5">
+                <!-- Image on Left -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="img/about us/overdraft.jpg" class="img-fluid w-100 rounded" alt="Overdraft">
                 </div>
-        
-                <!-- Temporary Overdraft Section -->
-                <div class="row g-5 align-items-center mt-5">
-                    <!-- Text on Left -->
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <h1 class="text-primary">Temporary Overdraft (TOD)</h1>
-                        <p>Experience hassle-free short-term funding with our Temporary Overdrafts, available at interest rates 
-                           between 8% and 21%. This facility provides a quick and efficient way to address temporary financial 
-                           requirements, ensuring seamless cash flow management.</p>
-                    </div>
-                    <!-- Image on Right -->
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <img src="img/about us/overdraft.jpg" class="img-fluid w-100 rounded" alt="Temporary Overdraft">
-                    </div>
+                <!-- Text on Right -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h1 class="text-primary" id="Over">Over Draft</h1>
+                    <p>An Overdraft provides the flexibility to withdraw more than what’s in your account, up to a set limit, 
+                       offering quick access to funds when you need it most. Whether for unexpected expenses or temporary cash 
+                       flow gaps, this short-term credit solution allows you to manage finances smoothly without disrupting your 
+                       routine.</p>
+                    <p>Interest is only charged on the amount used, and repayment is flexible, letting you settle the balance 
+                       when funds are available. Secunderabad Bank’s overdraft facility is a reliable way to handle financial gaps, 
+                       ensuring you stay on track, whether for business or personal needs. Manage your finances flexibly with our 
+                       Over Draft facility, with interest rates ranging from 8% to 19%.</p>
+                </div>
+            </div>
+    
+            <!-- Temporary Overdraft Section -->
+            <div class="row g-5 align-items-center mt-5">
+                <!-- Text on Left -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h1 class="text-primary">Temporary Overdraft (TOD)</h1>
+                    <p>Experience hassle-free short-term funding with our Temporary Overdrafts, available at interest rates 
+                       between 8% and 21%. This facility provides a quick and efficient way to address temporary financial 
+                       requirements, ensuring seamless cash flow management.</p>
+                </div>
+                <!-- Image on Right -->
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="img/about us/overdraft.jpg" class="img-fluid w-100 rounded" alt="Temporary Overdraft">
                 </div>
             </div>
         </div>
-        
-        
+    </div>
+    
 
-
-       <!-- Footer Start -->
+    <!-- Footer Start -->
     <div class="container-fluid footer bg-light wow fadeIn" data-wow-delay=".3s" style="color: #403a76;">
         <div class="container pt-5 pb-4">
             <!-- Main Footer Row -->
@@ -861,20 +718,22 @@
 
     <!-- Footer End -->
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-secondary btn-square rounded-circle back-to-top"><i class="fa fa-arrow-up text-white"></i></a>
 
-        
-        <!-- JavaScript Libraries -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
 
 </html>
