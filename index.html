@@ -459,7 +459,7 @@
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
             <a href="index.html" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
+                <img src="./img/Logo-update-Copy-1.png" alt="bank Logo" width="200px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
@@ -949,27 +949,27 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="row g-5 align-items-center" id="calculateEMI">
-                        <div class="calculator-container" style="max-width: 600px; margin: auto; padding: 20px; border-radius: 8px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-                            <h1 style="text-align: center; color: #0056b3; margin-bottom: 20px;">EMI Calculator</h1>
+                        <div class="calculator-container" style="max-width: 600px; margin: auto; padding: 25px; border-radius: 12px; background: rgba(255, 255, 255, 0.1); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); border: 1px solid rgba(255, 255, 255, 0.2);">
+                            <h1 style="text-align: center; color: #333; margin-bottom: 20px; font-size: 26px; font-weight: bold; text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">EMI Calculator</h1>
                 
-                            <div class="input-section text-dark" style="margin-top: 20px;">
-                                <label for="loanAmount" style="display: block; margin-bottom: 10px; font-weight: bold;">Loan Amount: ₹<span id="loanAmountValue">50000</span></label>
-                                <input type="range" style="width: 100%; accent-color: #0056b3;" id="loanAmount" min="50000" max="10000000" step="50000" value="50000">
+                            <div class="input-section text-primary" style="margin-top: 20px;">
+                                <label for="loanAmount" style="display: block; margin-bottom: 10px; font-weight: bold;">Loan Amount: <span id="loanAmountValue">50,000</span></label>
+                                <input type="range" style="width: 100%; accent-color: #18804e;" id="loanAmount" min="50000" max="10000000" step="50000" value="50000">
                 
                                 <label for="interestRate" style="display: block; margin-top: 20px; margin-bottom: 10px; font-weight: bold;">Interest Rate: <span id="interestRateValue">5</span>%</label>
-                                <input type="range" style="width: 100%; accent-color: #0056b3;" id="interestRate" min="5" max="22" step="0.1" value="5">
+                                <input type="range" style="width: 100%; accent-color: #18804e;" id="interestRate" min="5" max="22" step="0.1" value="5">
                 
                                 <label for="loanTenure" style="display: block; margin-top: 20px; margin-bottom: 10px; font-weight: bold;">Loan Tenure (Months): <span id="loanTenureValue">12</span></label>
-                                <input type="range" style="width: 100%; accent-color: #0056b3;" id="loanTenure" min="12" max="84" step="1" value="12">
+                                <input type="range" style="width: 100%; accent-color: #18804e;" id="loanTenure" min="12" max="84" step="1" value="12">
                             </div>
                 
                             <div class="result" style="margin-top: 30px; text-align: center;">
-                                <h2 style="color: #28a745; font-weight: bold;">Equated Monthly Installments: ₹<span id="emiResult">0</span></h2>
+                                <h2 style="color: #18804e; font-weight: bold;">EMI: <span id="emiResult">0</span></h2>
                             </div>
                         </div>
                     </div>
+                
                     <script>
-                        // Get elements
                         const loanAmountSlider = document.getElementById("loanAmount");
                         const interestRateSlider = document.getElementById("interestRate");
                         const loanTenureSlider = document.getElementById("loanTenure");
@@ -977,28 +977,23 @@
                         const loanAmountValue = document.getElementById("loanAmountValue");
                         const interestRateValue = document.getElementById("interestRateValue");
                         const loanTenureValue = document.getElementById("loanTenureValue");
-                
                         const emiResult = document.getElementById("emiResult");
                 
-                        // Function to calculate EMI
+                        const indianNumberFormat = new Intl.NumberFormat('en-IN', { style: 'currency', currency: 'INR', minimumFractionDigits: 0 });
+                
                         function calculateEMI() {
                             const loanAmount = parseInt(loanAmountSlider.value);
                             const interestRate = parseFloat(interestRateSlider.value);
                             const loanTenure = parseInt(loanTenureSlider.value);
                 
-                            // Monthly interest rate
                             const monthlyInterest = interestRate / 100 / 12;
-                
-                            // EMI formula
                             const emi = (loanAmount * monthlyInterest * Math.pow(1 + monthlyInterest, loanTenure)) / (Math.pow(1 + monthlyInterest, loanTenure) - 1);
                 
-                            // Round to 2 decimal places
-                            emiResult.textContent = emi.toFixed(2);
+                            emiResult.textContent = indianNumberFormat.format(emi);
                         }
                 
-                        // Event listeners for sliders
                         loanAmountSlider.addEventListener("input", function () {
-                            loanAmountValue.textContent = loanAmountSlider.value;
+                            loanAmountValue.textContent = indianNumberFormat.format(loanAmountSlider.value);
                             calculateEMI();
                         });
                 
@@ -1012,10 +1007,28 @@
                             calculateEMI();
                         });
                 
-                        // Initial calculation
                         calculateEMI();
                     </script>
-                </div>
+                
+                    <style>
+                        
+                        input[type="range"] {
+                            transition: all 0.3s ease-in-out;
+                        }
+                
+                        input[type="range"]:hover {
+                            opacity: 0.8;
+                        }
+                
+                        .calculator-container {
+                            transition: all 0.3s ease-in-out;
+                        }
+                
+                        .calculator-container:hover {
+                            transform: scale(1.02);
+                        }
+                    </style>
+                </div>                            
             </div>
         </div>
     </div>
@@ -1343,12 +1356,12 @@
                         <li><a href="./DepositSchemes.html#Investment" class="text-decoration-none">Re-Investment
                                 Policy</a></li>
                         <li><a href="./DepositSchemes.html#Daily" class="text-decoration-none">Daily Deposit</a></li>
-                        <li><a href="./DepositSchemes.html#Gold" class="text-decoration-none">Gold Loan</a></li>
-                        <li><a href="./DepositSchemes.html#Vehicle" class="text-decoration-none">Vehicle Loan</a></li>
-                        <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan</a></li>
-                        <li><a href="./DepositSchemes.html#Deposit" class="text-decoration-none">Loan on Deposit</a>
+                        <li><a href="./loanpage.html#gold" class="text-decoration-none">Gold Loan</a></li>
+                        <li><a href="./loanpage.html#Vehicle" class="text-decoration-none">Vehicle Loan</a></li>
+                        <li><a href="./loanpage.html#Demand" class="text-decoration-none">Demand Loan</a></li>
+                        <li><a href="./loanpage.html#Deposit" class="text-decoration-none">Loan on Deposit</a>
                         </li>
-                        <li><a href="./DepositSchemes.html#Secured" class="text-decoration-none">Other Secured
+                        <li><a href="./loanpage.html#Secured" class="text-decoration-none">Other Secured
                                 Loans</a></li>
                         <li><a href="./OtherServices.html#Merchant" class="text-decoration-none">Merchant QR</a></li>
                         <li><a href="./OtherServices.html#commerce" class="text-decoration-none">E-commerce</a></li>
@@ -1367,7 +1380,7 @@
                 <div class="col-lg-3 col-md-6">
                     <h5 class="fw-bold">Useful Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="index.html#calculateEMI" class="text-decoration-none">EMI calculator</a>
+                        <li><a href="./index.html#calculateEMI" class="text-decoration-none">EMI calculator</a>
                         </li>
                         <li><a href="./corporatebanking.html" class="text-decoration-none">Service Charges</a>
                         </li>

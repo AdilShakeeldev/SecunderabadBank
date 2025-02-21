@@ -2,772 +2,621 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Startup - Startup Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Banking - Secunderabad Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <style>
-        .calculator-container {
-            background-color: white;
-            padding: 80px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            text-align: center;
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
         }
 
-        label {
-            font-size: 16px;
-            display: block;
-            margin-bottom: 10px;
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
         }
 
-        input[type="range"] {
-            width: 100%;
-            margin-bottom: 20px;
+        .font-raleway {
+            font-family: 'Raleway', sans-serif;
         }
-
-        .result {
-            margin-top: 20px;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-        }
-
-        .input-section {
-            margin-bottom: 20px;
-        }
-
-        label {
-            font-size: 16px;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        input[type="range"] {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        .result {
-            margin-top: 20px;
-        }
-
-        h2 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .pricing-section {
-            background-color: #f9f9f9;
-        }
-
-        .pricing-card {
-            background: #fff;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .pricing-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .pricing-card .plan-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #333;
-        }
-
-        .pricing-card .price {
-            font-size: 2rem;
-            font-weight: 600;
-            color: #009041;
-        }
-
-        .pricing-card .features li {
-            padding: 8px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .pricing-card .features li:last-child {
-            border-bottom: none;
-        }
-
-        .pricing-card .btn {
-            font-weight: bold;
-        }
-
-        .featured {
-            border: 2px solid #007bff;
-            background-color: #e6f4ff;
-        }
-
-        .featured .btn {
-            background-color: #0056b3;
-            color: #fff;
-        }
-
-        .gallery {
-            margin: 20px 75px;
-        }
-
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            transition: transform 0.2s ease;
-            object-fit: cover;
-        }
-
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery .col {
-            margin-bottom: 20px;
-        }
-
-        .gallery img {
-            max-height: 200px;
-            /* For mobile */
-        }
-
-        @media (min-width: 768px) {
-            .gallery img {
-                max-height: 300px;
-                /* For larger screens */
-            }
-        }
-
-        .show-more-button {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        /* Hide all submenus by default */
-        .dropdown-menu .dropdown-menu {
-            display: none;
-            position: absolute;
-            top: 0;
-            left: 100%;
-            z-index: 1000;
-        }
-
-        /* Show submenu when the parent dropdown item is hovered */
-        .dropdown-submenu:hover>.dropdown-menu {
-            display: block;
-        }
-
-        /* Ensure proper alignment for submenus */
-        .dropdown-submenu {
-            position: relative;
-        }
-
-        .dropdown-submenu .dropdown-menu {
-            margin-top: 0;
-            margin-left: 0;
-        }
-
-        .icon-box {
-            width: 100px;
-            height: 60px;
-            border-radius: 10px;
-        }
-
-        .content-box h5 {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .content-box p {
-            color: #555;
-            font-size: 0.9rem;
-        }
-
-        .bg-danger {
-            background-color: #009041 !important;
-        }
-
-        .shadow-sm {
-            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-        }
-
-        @media (max-width: 768px) {
-            .icon-box {
-                width: 50px;
-                height: 50px;
-            }
-
-            .content-box h5 {
-                font-size: 1rem;
-            }
-
-            .content-box p {
-                font-size: 0.85rem;
-            }
-            
-        }
-
-        .company-benefits {
-            background-color: #1a1a1a;
-            /* padding: 50px; */
-            border-radius: 10px;
-        }
-
-        .company-benefits h6 {
-            font-size: 1rem;
-            letter-spacing: 2px;
-        }
-
-        .company-benefits h2 {
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        .company-benefits p {
-            font-size: 1rem;
-            line-height: 1.8;
-            color: #ccc;
-        }
-
-        .progress {
-            background: #333;
-            height: 6px;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-top: 8px;
-        }
-
-        .progress-bar {
-            height: 6px;
-            transition: width 2s ease-in-out;
-        }
-
-        .video-container video {
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .row {
-            margin: 0;
-        }
-
-        .search-container {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-container input {
-    padding: 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    border: solid;
-    border-color: #009041;
-    margin-right: 175px;
-}
-.search-container {
-    position: relative;
-}
-
-/* Hide search-container for screen widths below 620px */
-@media (max-width: 620px) {
-    .search-container {
-        display: none;
-    }
-}
-
-/* Remove margin-right for screen widths below 820px */
-@media (max-width: 820px) {
-    .search-container input {
-        margin-right: 0;
-    }
-}
-
-        .search-container button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 5px 10px;
-            margin-left: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .search-container button:hover {
-            background-color: #45a049;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-        
-.terbang {
-position: fixed;
-width: 75px;
-height: 40px;
-bottom: 0px;
-left: 13px;
-background-color: #25d366;
-color: #FFF;
-border-radius:5px 5px 0px 0px;
-text-align: left;
-font-size: 27px;
-box-shadow: 2px 2px 3px #999;
-z-index: 100;
-}
-
-@media screen
-  and (min-device-width: 1025px)
-  and (max-device-width: 1600px)
-  and (-webkit-min-device-pixel-ratio: 1) {
-.text-wa {
-font-size:15px;
-position:relative;
-color:whitesmoke;
-margin-left:10px;
-text-align:right;
-top:-5px;
-}		
-.melayang{
-	margin-top:8px;
-	margin-left:25px;
-}
-}
-
-
-@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 580px)
-  and (-webkit-min-device-pixel-ratio: 2) {
-	.terbang {
-position: fixed;
-width: 65px;
-height: 65px;
-bottom: 17px;
-left: 15px;
-background-color: #25d366;
-color: #FFF;
-border-radius: 10px;
-text-align: center;
-font-size: 30px;
-box-shadow: 2px 2px 3px #999;
-z-index: 100;
-	}
-.text-wa {
-	font-size:15px;
-	position:relative;
-	color:white;
-	margin-left:15px;
-	text-align:right;
-	top:-5px;
-	display:none;
-}
-.melayang{
-	margin-top:17px;
-}
-}
-.navbar-toggler {
-    margin-left: auto;
-    margin-top: 0;
-}
-
-/* Apply styles for screen widths below 1000px */
-@media (max-width: 1000px) {
-    .responsive-navbar-toggler {
-        margin-left: 31rem !important;
-        margin-top: 12px;
-    }
-}
     </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#048c44',
+                        secondary: '#3c2c7b'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
-    </div>
-    <!-- Spinner End -->
-
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
+<body class="bg-white min-h-screen">
+    <nav class="bg-white shadow-sm relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <img src="https://static.readdy.ai/image/267b2638083ee1905dd2c35a88f7664a/7cc470cb2c2b000403f9f53a5ab2f17e.png"
+                        alt="Secunderabad Bank Logo" class="h-8">
                 </div>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link active">Services</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="#" class="font-montserrat text-gray-700 hover:text-primary py-2">Home</a>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center space-x-1 font-montserrat text-gray-700 hover:text-primary py-2">
+                            <span>About Us</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block z-50">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Our
+                                Story</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Vision
+                                & Mission</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Board
+                                Members</a>
                         </div>
                     </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                            <a href="feature.html" class="dropdown-item">Our features</a>
-                            <a href="team.html" class="dropdown-item">Team Members</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="quote.html" class="dropdown-item">Free Quote</a>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center space-x-1 font-montserrat text-gray-700 hover:text-primary py-2">
+                            <span>Banking</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block z-50">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Personal
+                                Banking</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Corporate
+                                Banking</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center space-x-1 font-montserrat text-gray-700 hover:text-primary py-2">
+                            <span>Deposit Schemes</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 w-56 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block z-50">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Fixed
+                                Deposit</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Recurring
+                                Deposit</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Re-Investment
+                                Policy</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Daily
+                                Deposit</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center space-x-1 font-montserrat text-gray-700 hover:text-primary py-2">
+                            <span>Loans & Advances</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block z-50">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Gold
+                                Loan</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Vehicle
+                                Loan</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Demand
+                                Loan</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Loan
+                                on Deposit</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Other
+                                Secured Loans</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <button
+                            class="flex items-center space-x-1 font-montserrat text-gray-700 hover:text-primary py-2">
+                            <span>Other Services</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover:block z-50">
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Merchant
+                                QR</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">E-commerce</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">POS
+                                Machine</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Demand
+                                Draft</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">RTGS/NEFT</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Cheques</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">Forex</a>
+                            <a href="#"
+                                class="block px-4 py-2 text-sm font-raleway text-gray-700 hover:bg-gray-50 hover:text-primary">SMS
+                                Services</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button
+                            class="bg-secondary text-white px-4 py-2 !rounded-button font-montserrat hover:bg-opacity-90 whitespace-nowrap">Open
+                            Account</button>
+                    </div>
                 </div>
-                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-primary">
+                        <i class="ri-menu-line text-2xl"></i>
+                    </button>
+                </div>
             </div>
-        </nav>
-
-        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
-            <div class="row py-5">
-                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-white animated zoomIn">Services</h1>
-                    <a href="" class="h5 text-white">Home</a>
-                    <i class="far fa-circle text-white px-2"></i>
-                    <a href="" class="h5 text-white">Services</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Navbar End -->
-
-
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="lg:hidden hidden bg-white absolute top-16 left-0 w-full shadow-lg z-50">
+                <div class="px-4 py-2 space-y-2">
+                    <a href="#" class="block px-4 py-2 font-montserrat text-gray-700">Home</a>
+                    <div class="mobile-dropdown">
+                        <button
+                            class="flex items-center justify-between w-full px-4 py-2 text-left font-montserrat text-gray-700">
+                            <span>About Us</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="hidden px-4 py-2 space-y-2">
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Our Story</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Vision & Mission</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Board Members</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button
+                            class="flex items-center justify-between w-full px-4 py-2 text-left font-montserrat text-gray-700">
+                            <span>Banking</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="hidden px-4 py-2 space-y-2">
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Personal Banking</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Corporate Banking</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button
+                            class="flex items-center justify-between w-full px-4 py-2 text-left font-montserrat text-gray-700">
+                            <span>Deposit Schemes</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="hidden px-4 py-2 space-y-2">
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Fixed Deposit</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Recurring Deposit</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Re-Investment Policy</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Daily Deposit</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button
+                            class="flex items-center justify-between w-full px-4 py-2 text-left font-montserrat text-gray-700">
+                            <span>Loans & Advances</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="hidden px-4 py-2 space-y-2">
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Gold Loan</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Vehicle Loan</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Demand Loan</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Loan on Deposit</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Other Secured Loans</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button
+                            class="flex items-center justify-between w-full px-4 py-2 text-left font-montserrat text-gray-700">
+                            <span>Other Services</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="hidden px-4 py-2 space-y-2">
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Merchant QR</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">E-commerce</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">POS Machine</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Demand Draft</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">RTGS/NEFT</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Cheques</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">Forex</a>
+                            <a href="#" class="block py-2 text-sm font-raleway text-gray-700">SMS Services</a>
+                        </div>
+                    </div>
+                    <div class="px-4 py-2 space-y-2">
+                        <button
+                            class="w-full bg-secondary text-white px-4 py-2 !rounded-button font-montserrat hover:bg-opacity-90">Open
+                            Account</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Full Screen Search End -->
-
-
-  <!-- Page Header Start -->
-  <div class="container-fluid page-header py-5">
-    <div class="container text-center py-5">
-        <h1 class="display-2 text-white mb-4 animated slideInDown">Personal Banking</h1>
-        <p class="text-white">Personal banking offers a range of financial services tailored for individual
-            customers. It provides a secure way for you to manage your finances, access credit, and deposit your
-            money. Designed to meet your personal financial needs, personal banking ensures you have the support and
-            tools necessary for effective money management.</p>
-        <!-- <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item" aria-current="page">Blog</li>
-                </ol>
-            </nav> -->
-    </div>
-</div>
-<!-- Page Header End -->
-
-
-<div class="container-fluid py-5 my-5">
-    <div class="container pt-5">
-        <!-- Savings Account Section -->
-        <div class="row g-5 align-items-center">
-            <!-- Image on Left -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <img src="img/about us/saving account.jpg" class="img-fluid w-100 rounded" alt="Savings Account">
-            </div>
-            <!-- Text on Right -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <h1 class="text-primary" id="Savings">Savings Account</h1>
-                <p>A savings account is the cornerstone of your financial journey, offering a safe and reliable
-                    place to store your hard-earned money. Say goodbye to the challenges of managing cash or the
-                    risks of hidden safes. With our savings account, you’ll have seamless access to your funds
-                    whenever you need them, paired with the convenience of a cheque book, passbook, and ATM card.
-                </p>
-                <p>We offer a range of savings account options to cater to your unique needs, including traditional
-                    savings accounts, high-yield accounts with competitive interest rates, and specialty accounts
-                    designed for specific goals. Our dedicated banking team is here to guide you every step of the
-                    way, helping you select the account that aligns with your financial aspirations.</p>
-                <p>Enjoy the added benefits of low maintenance charges, making it easy to grow your savings without
-                    worrying about high fees. Whether you're saving for a rainy day, planning a major purchase, or
-                    building financial security for the future, our savings accounts are designed to support your
-                    goals.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid py-5 my-5">
-    <div class="container pt-5">
-        <!-- Current Account Section -->
-        <div class="row g-5 align-items-center">
-            <!-- Text on Left -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <h1 class="text-primary" id="Current">Current Account</h1>
-                <p>A current account is an essential tool for managing day-to-day finances, offering flexibility and
-                    convenience for both individuals and businesses. With this account, you can deposit, withdraw,
-                    and access your funds as needed, empowering you to manage your financial transactions with ease.
-                </p>
-                <p>We offer a variety of current account options tailored to meet diverse requirements. Whether
-                    you’re an individual, a partnership firm, a company, or a society, our accounts are designed to
-                    suit your needs. Each account comes with a cheque book and ATM card, giving you quick and easy
-                    access to your funds.</p>
-                <h5 class="mt-4">Key features of our current accounts include:</h5>
-                <ul>
-                    <li>Unlimited transactions: Conduct as many transactions as needed to manage your business or
-                        personal finances without restrictions.</li>
-                    <li>Overdraft facility: Access additional funds when necessary to enhance cash flow and
-                        operational efficiency.</li>
-                    <li>Separation of finances: Keep business and personal transactions distinct for better
-                        financial organization.</li>
-                </ul>
-                
-            </div>
-            <!-- Image on Right -->
-            <div class="col-lg-6 col-md-6 col-sm-12">
-                <img src="img/about us/current account.jpg"img-fluid w-100 rounded" alt="Current Account">
-            </div>
-            <p style="vertical-align: middle;">At Secunderabad Bank, we also offer an Individual Current Account with a low initial deposit
-                    requirement, making it accessible and affordable. Our professional staff is committed to
-                    providing personalized assistance throughout the account opening process, ensuring you select an
-                    account that best suits your needs. Additionally, our current accounts are designed with minimal charges, allowing you to focus on
-                    growing your business or managing your personal finances effectively. Whether you're an
-                    entrepreneur looking to streamline your business operations or an individual needing a flexible
-                    financial tool, our current accounts are the perfect solution.</p>
-        </div>
-    </div>
-</div>
-    
-
-   <!-- Footer Start -->
-   <div class="container-fluid footer bg-light wow fadeIn" data-wow-delay=".3s" style="color: #403a76;">
-    <div class="container pt-5 pb-4">
-        <!-- Main Footer Row -->
-        <div class="row g-5">
-            <!-- Address Section -->
-            <div class="col-lg-3 col-md-6">
-                <h5 class="fw-bold">The Secunderabad Co-operative Urban Bank Ltd.</h5>
-                <address>
-                    <a href="tel:+918985083534" class="text-decoration-none">
-                        1-4-908/7/2/B/1 to 4 (GR FLOOR),<br>
-                        Beside Gurunanak Care Hospitals,<br>
-                        Musheerabad, Hyderabad-500020.
-                    </a>
-                </address>
-                <p>
-                    <a href="tel:+918985083534" class="text-decoration-none">+918985083534</a><br>
-                    <a href="mailto:accounts@secunderabadbank.com" class="text-decoration-none">
-                        accounts@secunderabadbank.com
-                    </a>
-                </p>
-                <h5 class="fw-bold">Careers</h5>
-                <h5>Connect With Us:</h5>
-                <div style="padding-bottom: 20px;">
-                    <a href="https://www.facebook.com/secunderabadbank" class="me-2"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/secunderabadbank/" class="me-2"><i
-                            class="fab fa-instagram"></i></a>
-                    <a href="https://youtube.com/@secunderabadbank?si=AsSdTzB1hdWEV-Tz" class="me-2"><i
-                            class="fab fa-youtube"></i></a>
-                    <a href="https://twitter.com/Sec_bank" class="me-2"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/company/33645542/admin/page-posts/published/"><i
-                            class="fab fa-linkedin-in"></i></a>
-
+    </nav>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+            const button = dropdown.querySelector('button');
+            const content = dropdown.querySelector('div');
+            button.addEventListener('click', () => {
+                content.classList.toggle('hidden');
+                const icon = button.querySelector('i');
+                icon.classList.toggle('ri-arrow-down-s-line');
+                icon.classList.toggle('ri-arrow-up-s-line');
+            });
+        });
+    </script>
+    <header class="relative bg-gradient-to-r from-primary/10 to-secondary/10 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="font-montserrat font-bold text-4xl md:text-5xl text-gray-900 mb-6">Personal Banking</h1>
+                    <p class="font-raleway text-xl text-gray-600 mb-8">Personal banking offers a range of financial
+                        services tailored for individual customers. It provides a secure way for you to manage your
+                        finances, access credit, and deposit your money. Designed to meet your personal financial needs,
+                        personal banking ensures you have the support and tools necessary for effective money
+                        management.</p>
+                    <div class="flex space-x-4">
+                        <button
+                            class="bg-primary text-white px-8 py-3 !rounded-button font-montserrat hover:bg-opacity-90 whitespace-nowrap">Get
+                            Started</button>
+                        <button
+                            class="border-2 border-primary text-primary px-8 py-3 !rounded-button font-montserrat hover:bg-primary hover:text-white whitespace-nowrap">Learn
+                            More</button>
+                    </div>
                 </div>
-
-            </div>
-
-            <!-- Our Services Section -->
-            <div class="col-lg-3 col-md-6">
-                <h5 class="fw-bold">Our Services</h5>
-                <ul class="list-unstyled">
-                    <li><a href="./personalbanking.html#Savings" class="text-decoration-none">Savings Account</a>
-                    </li>
-                    <li><a href="./personalbanking.html#Current" class="text-decoration-none">Current Account</a>
-                    </li>
-                    <li><a href="./corporatebanking.html#Cash" class="text-decoration-none">Cash Credit</a></li>
-                    <li><a href="./corporatebanking.html#Over" class="text-decoration-none">Over Draft</a></li>
-                    <li><a href="./DepositSchemes.html#Fixed" class="text-decoration-none">Fixed Deposit</a></li>
-                    <li><a href="./DepositSchemes.html#Recurring" class="text-decoration-none">Recurring
-                            Deposit</a></li>
-                    <li><a href="./DepositSchemes.html#Investment" class="text-decoration-none">Re-Investment
-                            Policy</a></li>
-                    <li><a href="./DepositSchemes.html#Daily" class="text-decoration-none">Daily Deposit</a></li>
-                    <li><a href="./DepositSchemes.html#Gold" class="text-decoration-none">Gold Loan</a></li>
-                    <li><a href="./DepositSchemes.html#Vehicle" class="text-decoration-none">Vehicle Loan</a></li>
-                    <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan</a></li>
-                    <li><a href="./DepositSchemes.html#Deposit" class="text-decoration-none">Loan on Deposit</a>
-                    </li>
-                    <li><a href="./DepositSchemes.html#Secured" class="text-decoration-none">Other Secured
-                            Loans</a></li>
-                    <li><a href="./OtherServices.html#Merchant" class="text-decoration-none">Merchant QR</a></li>
-                    <li><a href="./OtherServices.html#commerce" class="text-decoration-none">E-commerce</a></li>
-                    <li><a href="./OtherServices.html#Pos" class="text-decoration-none">POS Machine Facility</a>
-                    </li>
-                    <li><a href="./OtherServices.html#Locker" class="text-decoration-none">Locker Facility</a></li>
-                    <li><a href="./OtherServices.html#Demand" class="text-decoration-none">Demand Draft</a></li>
-                    <li><a href="./OtherServices.html#RTGS" class="text-decoration-none">RTGS/NEFT</a></li>
-                    <li><a href="./OtherServices.html#cheque" class="text-decoration-none">At Par Cheque</a></li>
-                    <li><a href="./OtherServices.html#Forex" class="text-decoration-none">Forex</a></li>
-                    <li><a href="./OtherServices.html#SMS" class="text-decoration-none">SMS Services</a></li>
-                </ul>
-            </div>
-
-            <!-- Application Forms Section -->
-            <div class="col-lg-3 col-md-6">
-                <h5 class="fw-bold">Useful Links</h5>
-                <ul class="list-unstyled">
-                    <li><a href="index.html#calculateEMI" class="text-decoration-none">EMI calculator</a>
-                    </li>
-                    <li><a href="./corporatebanking.html" class="text-decoration-none">Service Charges</a>
-                    </li>
-                    <li><a href="./DepositSchemes.html#Fixed" class="text-decoration-none">FDI Rate</a></li>
-                    <li><a href="./DepositSchemes.html#Gold" class="text-decoration-none">Gold Loan Rate</a></li>
-                    <li><a href="./DepositSchemes.html#Vehicle" class="text-decoration-none">Vehicle Loan Rate</a>
-                    </li>
-                    <li><a href="./DepositSchemes.html#Deposit" class="text-decoration-none">Loan on Deposit
-                            Rate</a></li>
-                    <li><a href="./corporatebanking.html#Over" class="text-decoration-none">Overdraft Interest
-                            Rate</a></li>
-                    <li><a href="./DepositSchemes.html#Demand" class="text-decoration-none">Demand Loan Rate</a></li>
-                    <li><a href="./OtherServices.html#RTGS" class="text-decoration-none">IFSC Code</a></li>
-                    <li><a href="./img/about us/CALENDER FINAL 2025 UPDATE.pdf" class="text-decoration-none">Bank Calendar</a></li>
-                    <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf" class="text-decoration-none">Privacy Policy</a></li>
-                    <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf" class="text-decoration-none">Terms & Conditions</a>
-                    </li>
-                </ul>
-                <h5 class="fw-bold">Application Forms</h5>
-                <ul class="list-unstyled">
-                    <li><a href="./application.html" class="text-decoration-none">Savings Account Application</a>
-                    </li>
-                    <li><a href="./application.html" class="text-decoration-none">Current Account Application</a>
-                    </li>
-                    <li><a href="./application.html" class="text-decoration-none">FD Application</a></li>
-                    <li><a href="./application.html" class="text-decoration-none">RIP Application</a></li>
-                    <li><a href="./application.html" class="text-decoration-none">DD Application</a></li>
-                    <li><a href="./application.html" class="text-decoration-none">Service Request Form</a></li>
-                </ul>
-
-                <!-- <div class="col-lg-3 col-md-6"> -->
-
-
-                <!-- </div> -->
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h5 class="fw-bold">Media Centre</h5>
-                <ul class="list-unstyled">
-                    <li><a href="Galley.html" class="text-decoration-none">Gallery</a></li>
-                    <li><a href="Galley.html" class="text-decoration-none">Awards & Recognition</a></li>
-                </ul>
-                <h5 class="fw-bold">Support</h5>
-                <ul class="list-unstyled">
-                    <li><a href="./support.html" class="text-decoration-none">Report a Fraud</a></li>
-                    <li><a href="./support.html" class="text-decoration-none">Queries</a></li>
-                    <li><a href="./support.html" class="text-decoration-none">Requests</a></li>
-                    <li><a href="./support.html" class="text-decoration-none">Complaints</a></li>
-                </ul>
-                <h5 class="fw-bold">Customer Awareness</h5>
-                <ul class="list-unstyled">
-                    <li><a href="https://www.rbi.org.in/commonman/English/scripts/Notification.aspx?Id=578"
-                            class="text-decoration-none">Security & Fraud Awareness</a></li>
-                    <li><a href="https://www.ckycindia.in/ckyc/assets/images/CentralKYCRecordsRegistryCustomerAwarenessVideo.webm"
-                            class="text-decoration-none">CKYC</a></li>
-                </ul>
-                <img src="./img/DICGC.png" alt="DICGC Logo" style="max-width: 40%; height: auto;">
-                <p class="mt-2">Secunderabad Bank is registered with DICGC.</p>
+                <div class="md:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/0814eae71a7f00ddafb2a54dd81c9eea.jpg"
+                        alt="Banking Environment" class="rounded-lg shadow-xl w-full object-cover">
+                </div>
             </div>
         </div>
-        <div class="text-center mt-4">
-            <span class="text-dark">Designed by <a href="https://Adilogram.com"
-                    class="text-dark">Adilogram.com</a></span>
+    </header>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="font-montserrat font-semibold text-3xl text-gray-900 mb-4">Why Choose Our Bank?</h2>
+                    <p class="font-raleway text-gray-600 mb-8">Experience banking excellence with our comprehensive
+                        range of services designed to meet your financial goals.</p>
+                    <div class="space-y-6">
+                        <div
+                            class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-full">
+                                <i class="ri-shield-check-line text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-montserrat font-medium text-xl mb-2">Secure Banking</h3>
+                                <p class="font-raleway text-gray-600">State-of-the-art security measures to protect your
+                                    financial assets and personal information.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-full">
+                                <i class="ri-smartphone-line text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-montserrat font-medium text-xl mb-2">Digital Banking</h3>
+                                <p class="font-raleway text-gray-600">24/7 access to your accounts through our advanced
+                                    mobile and online banking platforms.</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-primary/10 rounded-full">
+                                <i class="ri-customer-service-2-line text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-montserrat font-medium text-xl mb-2">Personal Support</h3>
+                                <p class="font-raleway text-gray-600">Dedicated relationship managers and 24/7 customer
+                                    support for all your banking needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/963eb4f941f4414aa23a29f9edb10c5b.jpg"
+                        alt="Banking Features" class="rounded-lg shadow-xl w-full object-cover">
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="font-montserrat font-semibold text-3xl text-gray-900 mb-6">Savings Account</h2>
+                    <p class="font-raleway text-gray-600 mb-8">A savings account is your foundational banking tool,
+                        allowing you to securely deposit your money without the hassle of cash or hidden safes.
+                        Withdrawals are easy, and you'll receive a cheque book, passbook, and ATM card for added
+                        convenience.</p>
+                    <p class="font-raleway text-gray-600 mb-8">Choose from various savings account types, including
+                        traditional, high-yield, and specialty accounts. Our dedicated staff is here to guide you in
+                        selecting the right account to meet your financial goals. Also enjoy our low maintenance
+                        charges, making savings accessible and affordable.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 flex items-center justify-center mt-1">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-montserrat font-medium text-gray-900">Zero Balance Account</h4>
+                                <p class="font-raleway text-gray-600">No minimum balance requirement for students and
+                                    senior citizens</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 flex items-center justify-center mt-1">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-montserrat font-medium text-gray-900">High Interest Rates</h4>
+                                <p class="font-raleway text-gray-600">Earn up to 4.5% interest on your savings</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 flex items-center justify-center mt-1">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-montserrat font-medium text-gray-900">Free Digital Banking</h4>
+                                <p class="font-raleway text-gray-600">Access your account 24/7 through our mobile and
+                                    online platforms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="mt-8 bg-primary text-white px-8 py-3 !rounded-button font-montserrat hover:bg-opacity-90 whitespace-nowrap">Open
+                        Savings Account</button>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/b8d8b0470a3993ade722b354345a502a.jpg"
+                        alt="Digital Banking Interface" class="rounded-lg shadow-xl w-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-16">
+                <div class="md:w-1/2">
+                    <h2 class="font-montserrat font-semibold text-3xl text-gray-900 mb-4">Current Account</h2>
+                    <p class="font-raleway text-gray-600 mb-6">A current account is a versatile bank account that allows
+                        you to store and withdraw money as needed. Most banks offer a variety of current accounts with
+                        different features, enabling you to find the account that best suits your requirements. You will
+                        also receive a cheque book and ATM card for easy access to your funds.</p>
+                    <p class="font-raleway text-gray-600">Current accounts can be opened by individuals, partnership
+                        firms, private and public limited companies, HUFs, specified associations, societies, and
+                        trusts. The procedures for opening a current account are similar to those for savings accounts.
+                        Our professional staff is here to provide personalized assistance throughout the process,
+                        ensuring you select an account that meets your specific needs.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/a7451fba67fd8422c43a665c19949295.jpg"
+                        alt="Current Account Services" class="rounded-lg shadow-xl w-full object-cover">
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-secondary/10 rounded-full">
+                        <i class="ri-exchange-funds-line text-secondary text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-montserrat font-medium text-lg mb-2">Unlimited Transactions</h3>
+                        <p class="font-raleway text-gray-600">No limit on transactions, enhancing business efficiency
+                            and flexibility</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-secondary/10 rounded-full">
+                        <i class="ri-bank-card-line text-secondary text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-montserrat font-medium text-lg mb-2">Overdraft Facility</h3>
+                        <p class="font-raleway text-gray-600">Flexible overdraft facility to manage cash flow and
+                            business needs</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-secondary/10 rounded-full">
+                        <i class="ri-secure-payment-line text-secondary text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-montserrat font-medium text-lg mb-2">Separate Business Finances</h3>
+                        <p class="font-raleway text-gray-600">Keep business transactions separate from personal finances
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+                    <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-secondary/10 rounded-full">
+                        <i class="ri-pie-chart-line text-secondary text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-montserrat font-medium text-lg mb-2">Low Deposit Requirement</h3>
+                        <p class="font-raleway text-gray-600">Individual current accounts with minimal initial deposit
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <button
+                    class="bg-secondary text-white px-8 py-3 !rounded-button font-montserrat hover:bg-opacity-90 whitespace-nowrap">Open
+                    Current Account</button>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="font-montserrat font-semibold text-3xl text-gray-900 mb-6">Ready to Get Started?</h2>
+                <p class="font-raleway text-gray-600 mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers who
+                    trust us with their banking needs. Our team is ready to assist you.</p>
+                <div class="flex justify-center space-x-4">
+                    <button
+                        class="bg-primary text-white px-8 py-3 !rounded-button font-montserrat hover:bg-opacity-90 whitespace-nowrap">Open
+                        an Account</button>
+                    <button
+                        class="bg-white border-2 border-primary text-primary px-8 py-3 !rounded-button font-montserrat hover:bg-primary hover:text-white whitespace-nowrap">Contact
+                        Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="md:col-span-1">
+                    <h3 class="font-montserrat font-bold text-xl mb-6 text-primary">The Secunderabad Co-operative Urban
+                        Bank Ltd.</h3>
+                    <p class="text-sm mb-4">1-4-908/7/2/B/1 to 4 (GR FLOOR), Beside Gurunanak Care Hospitals,
+                        Musheerabad, Hyderabad-500020.</p>
+                    <p class="text-sm mb-2" href="https://wa.me/+91898508353">+91898508353</p>
+                    <a class="text-sm" href="mailto:accounts@secunderabadbank.com">accounts@secunderabadbank.com</a>
+                    <h4 class="font-montserrat font-bold text-primary mt-8 mb-4">Careers</h4>
+                    <a href="#" class="hover:text-primary">Gallery</a>
+                    <h4 class="font-montserrat font-bold text-primary mt-8 mb-4">Connect With Us</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/secunderabadbank" class="text-white hover:text-primary"><i
+                                class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/secunderabadbank/" class="text-white hover:text-primary"><i
+                                class="ri-instagram-fill"></i></a>
+                        <a href="https://youtube.com/@secunderabadbank?si=AsSdTzB1hdWEV-Tz"
+                            class="text-white hover:text-primary"><i class="ri-youtube-fill"></i></a>
+                        <a href="https://twitter.com/Sec_bank" class="text-white hover:text-primary"><i
+                                class="ri-twitter-fill"></i></a>
+                        <a href="https://www.linkedin.com/company/33645542/admin/page-posts/published/"
+                            class="text-white hover:text-primary"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+                <div class="md:col-span-1">
+                    <h3 class="font-montserrat font-bold text-xl mb-6 text-primary">Our Services</h3>
+                    <ul class="space-y-2 text-sm ">
+                        <li><a href="./personalbanking.html#Savings" class="hover:text-primary">Savings Account</a></li>
+                        <li><a href="./personalbanking.html#Current" class="hover:text-primary">Current Account</a></li>
+                        <li><a href="./corporatebanking.html#Cash" class="hover:text-primary">Cash Credit</a></li>
+                        <li><a href="./corporatebanking.html#Over" class="hover:text-primary">Over Draft</a></li>
+                        <li><a href="./DepositSchemes.html#Fixed" class="hover:text-primary">Fixed Deposit</a></li>
+                        <li><a href="./DepositSchemes.html#Recurring" class="hover:text-primary">Recurring Deposit</a>
+                        </li>
+                        <li><a href="./DepositSchemes.html#Investment" class="hover:text-primary">Re-Investment
+                                Policy</a></li>
+                        <li><a href="./DepositSchemes.html#Daily" class="hover:text-primary">Daily Deposit</a></li>
+                        <li><a href="./loanpage.html#Gold" class="hover:text-primary">Gold Loan</a></li>
+                        <li><a href="./loanpage.html#Vehicle" class="hover:text-primary">Vehicle Loan</a></li>
+                        <li><a href="./loanpage.html#Demand" class="hover:text-primary">Demand Loan</a></li>
+                        <li><a href="./loanpage.html#Deposit" class="hover:text-primary">Loan on Deposit</a></li>
+                        <li><a href="./loanpage.html#Secured" class="hover:text-primary">Other Secured Loans</a></li>
+                        <li><a href="./OtherServices.html#Merchant" class="hover:text-primary">Merchant QR</a></li>
+                        <li><a href="./OtherServices.html#commerce" class="hover:text-primary">E-commerce</a></li>
+                        <li><a href="./OtherServices.html#Pos" class="hover:text-primary">POS Machine Facility</a></li>
+                        <li><a href="./OtherServices.html#Locker" class="hover:text-primary">Locker Facility</a></li>
+                        <li><a href="./OtherServices.html#Demand" class="hover:text-primary">Demand Draft</a></li>
+                        <li><a href="./OtherServices.html#RTGS" class="hover:text-primary">RTGS/NEFT</a></li>
+                        <li><a href="./OtherServices.html#cheque" class="hover:text-primary">At Par Cheque</a></li>
+                        <li><a href="./OtherServices.html#Forex" class="hover:text-primary">Forex</a></li>
+                        <li><a href="./OtherServices.html#SMS" class="hover:text-primary">SMS Services</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-1">
+                    <h3 class="font-montserrat font-bold text-xl mb-6 text-primary">Useful Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./index.html#calculateEMI" class="hover:text-primary">EMI calculator</a></li>
+                        <li><a href="./corporatebanking.html" class="hover:text-primary">Service Charges</a></li>
+                        <li><a href="./DepositSchemes.html#Fixed" class="hover:text-primary">FDI Rate</a></li>
+                        <li><a href="./loanpage.html#Gold" class="hover:text-primary">Gold Loan Rate</a></li>
+                        <li><a href="./loanpage.html#Vehicle" class="hover:text-primary">Vehicle Loan Rate</a></li>
+                        <li><a href="./loanpage.html#Deposit" class="hover:text-primary">Loan on Deposit Rate</a></li>
+                        <li><a href="./corporatebanking.html#Over" class="hover:text-primary">Overdraft Interest
+                                Rate</a></li>
+                        <li><a href="./loanpage.html#Demand" class="hover:text-primary">Demand Loan Rate</a></li>
+                        <li><a href="./OtherServices.html#RTGS" class="hover:text-primary">IFSC Code</a></li>
+                        <li><a href="./img/about us/CALENDER FINAL 2025 UPDATE.pdf" class="hover:text-primary">Bank
+                                Calendar</a></li>
+                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf"
+                                class="hover:text-primary">Privacy Policy</a></li>
+                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf"
+                                class="hover:text-primary">Terms & Conditions</a></li>
+                    </ul>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-8 mb-6">Application Forms</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./application.html" class="hover:text-primary">Savings Account Application</a></li>
+                        <li><a href="./application.html" class="hover:text-primary">Current Account Application</a></li>
+                        <li><a href="./application.html" class="hover:text-primary">FD Application</a></li>
+                        <li><a href="./application.html" class="hover:text-primary">RIP Application</a></li>
+                        <li><a href="./application.html" class="hover:text-primary">DD Application</a></li>
+                        <li><a href="./application.html" class="hover:text-primary">Service Request Form</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-1">
+                    <h3 class="font-montserrat font-bold text-xl mb-6 text-primary">Media Centre</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./Galley.html" class="hover:text-primary">Gallery</a></li>
+                        <li><a href="./Galley.html" class="hover:text-primary">Awards & Recognition</a></li>
+                    </ul>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-8 mb-6">Support</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./support.html" class="hover:text-primary">Report a Fraud</a></li>
+                        <li><a href="./support.html" class="hover:text-primary">Queries</a></li>
+                        <li><a href="./support.html" class="hover:text-primary">Requests</a></li>
+                        <li><a href="./support.html" class="hover:text-primary">Complaints</a></li>
+                    </ul>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-8 mb-6">Customer Awareness</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.rbi.org.in/commonman/English/scripts/Notification.aspx?Id=578"
+                                class="hover:text-primary">Security & Fraud Awareness</a></li>
+                        <li><a href="https://www.ckycindia.in/ckyc/assets/images/CentralKYCRecordsRegistryCustomerAwarenessVideo.webm"
+                                class="hover:text-primary">CKYC</a></li>
 
-<!-- Footer End -->
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+                        <img src="./img/DICGC.png" alt="DICGC Logo" style="max-width: 40%; height: auto;">
+                        <p class="text-sm">Secunderabad Bank is registered with DICGC.</p>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-16 pt-12 text-center">
 
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+                <p class="font-raleway text-sm text-gray-400">&copy; 2025 Secunderabad Bank. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
