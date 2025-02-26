@@ -2,524 +2,403 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Startup - Startup Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secunderabad Bank - Customer Support</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#048c44',
+                        secondary: '#3c2c7b'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* General Styling */
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
         body {
-          font-family: 'Inter', sans-serif; /* Using Inter for general text */
-          background-color: #f4f4f4;
-          margin: 0;
-          padding: 0;
+            font-family: 'Raleway', sans-serif;
         }
-    
-        /* Navigation and Header Styling */
-        header {
-          background-color: #001F5A; /* Dark Blue for header */
-          color: white;
-          padding: 20px;
-          text-align: center;
-          font-family: 'Saira', sans-serif; /* Using Saira for header */
+
+        .montserrat {
+            font-family: 'Montserrat', sans-serif;
         }
-    
-        /* Form Container */
-        form {
-          max-width: 80%;
-          margin: 40px auto;
-          background-color: white;
-          padding: 20px;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          font-family: 'Inter', sans-serif;
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
-    
-        /* Form Labels and Inputs */
-        label {
-          display: block;
-          font-weight: bold;
-          margin-top: 15px;
-          font-family: 'Saira', sans-serif; /* Using Saira for form labels */
+
+        .toast {
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
         }
-    
-        input, select, textarea {
-          width: 90%;
-          padding: 10px;
-          margin: 10px 0;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          font-size: 16px;
-          font-family: 'Inter', sans-serif;
+
+        .toast.show {
+            transform: translateY(0);
         }
-    
-        textarea {
-          resize: vertical;
+
+        #mobileMenuBtn span {
+            transition: all 0.3s ease-in-out;
         }
-    
-        /* Button Styling */
-        button {
-          padding: 10px 20px;
-          background-color: #009041; /* Green for primary button */
-          color: white;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          font-size: 16px;
-          font-family: 'Inter', sans-serif;
+
+        #mobileMenuBtn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(2px, 6px);
         }
-    
-        button:hover {
-          background-color: #007a30; /* Darker green for hover effect */
+
+        #mobileMenuBtn.active span:nth-child(2) {
+            opacity: 0;
         }
-    
-        /* Secondary Button (Orange) */
-        .secondary-btn {
-          background-color: #eb5821; /* Orange for secondary button */
-          color: white;
+
+        #mobileMenuBtn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(2px, -6px);
         }
-    
-        .secondary-btn:hover {
-          background-color: #d1531b;
-        }
-    
-        /* Error Message Styling (Reddish) */
-        .error {
-          color: #bb2a1e; /* Reddish for error messages */
-          font-weight: bold;
-          font-family: 'Inter', sans-serif;
-        }
-    
-        /* Success Message Styling (Green) */
-        .success {
-          color: #009041; /* Green for success messages */
-          font-weight: bold;
-          font-family: 'Inter', sans-serif;
-        }
-    
-        /* Styling for Section Titles */
-        h2 {
-          color: #001F5A; /* Dark Blue for section titles */
-          font-family: 'Saira', sans-serif; /* Using Saira for section titles */
-        }
-    
-        /* Active navigation item (Dark Blue) */
-        .active {
-          color: #001F5A;
-        }
-    
-        /* Dividers */
-        hr {
-          border: 0;
-          border-top: 1px solid #000101; /* Black for dividers */
-          margin: 20px 0;
-        }
-    
-        /* Background Section */
-        .background-section {
-          background-color: #001F5A; /* Dark Blue background for sections */
-          color: black;
-          padding: 20px;
-          border-radius: 8px;
-        }
-      </style>
+    </style>
 </head>
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
-    </div>
-    <!-- Spinner End -->
 
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link active">Services</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm relative">
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center">
+                        <img src="https://static.readdy.ai/image/e468fcddea67c5ffcad275128ab07418/7cc470cb2c2b000403f9f53a5ab2f17e.png"
+                            alt="Secunderabad Bank Logo" class="h-12" />
+                    </a>
+                    <div class="hidden xl:flex items-center space-x-8">
+                        <a href="./index.html" class="font-montserrat hover:text-primary">Home</a>
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                                <a href="./About team.html">About Us</a>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                        </div>
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                                <span>Banking</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                        </div>
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                                <a href="./DepositSchemes.html">Deposit Schemes</a>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                        </div>
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                                <a href="./loanpage.html">Loans & Advances</a>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                        </div>
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                                <a href="./OtherServices.html">Other Services</a>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                            <a href="feature.html" class="dropdown-item">Our features</a>
-                            <a href="team.html" class="dropdown-item">Team Members</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="quote.html" class="dropdown-item">Free Quote</a>
+                    <button class="xl:hidden w-10 h-10 flex items-center justify-center" id="mobileMenuBtn">
+                        <i class="ri-menu-line text-2xl"></i>
+                    </button>
+                </div>
+                <div class="xl:hidden hidden" id="mobileMenu">
+                    <div class="py-4 space-y-2">
+                        <a href="./index.html" class="block px-4 py-2 font-montserrat hover:text-primary">Home</a>
+                        <div class="mobile-dropdown">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                                <span>About Us</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="hidden bg-gray-50 py-2">
+                                <a href="./about.html" class="block px-6 py-2 text-sm font-raleway hover:text-primary">Our
+                                    Story</a>
+                                <a href="./About team.html#vision"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Vision & Mission</a>
+                                <a href="/About team.html#team"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Board Members</a>
+                            </div>
+                        </div>
+                        <div class="mobile-dropdown">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                                <span>Banking</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="hidden bg-gray-50 py-2">
+                                <a href="./personalbanking.html"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Personal Banking</a>
+                                <a href="./corporatebanking.html"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Corporate Banking</a>
+                            </div>
+                        </div>
+                        <div class="mobile-dropdown">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                                <span>Deposit Schemes</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="hidden bg-gray-50 py-2">
+                                <a href="./DepositSchemes.html#Fixed"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Fixed Deposit</a>
+                                <a href="./DepositSchemes.html#Recurring"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Recurring Deposit</a>
+                                <a href="./DepositSchemes.html#Investment"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Re-Investment Policy</a>
+                                <a href="./DepositSchemes.html#Daily"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Daily Deposit</a>
+                            </div>
+                        </div>
+                        <div class="mobile-dropdown">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                                <span>Loans & Advances</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="hidden bg-gray-50 py-2">
+                                <a href="./loanpage.html#gold"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Gold Loan</a>
+                                <a href="/loanpage.html#Vehicle"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Vehicle Loan</a>
+                                <a href="./loanpage.html#Demand"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Demand Loan</a>
+                                <a href="./loanpage.html#Deposit"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Loan on Deposit</a>
+                                <a href="./loanpage.html#Secured"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Other Secured Loans</a>
+                            </div>
+                        </div>
+                        <div class="mobile-dropdown">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                                <span>Other Services</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="hidden bg-gray-50 py-2">
+                                <a href="./OtherServices.html#Merchant"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Merchant QR</a>
+                                <a href="./OtherServices.html#commerce"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">E-commerce</a>
+                                <a href="./OtherServices.html#Pos"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">POS Machine</a>
+                                <a href="./OtherServices.html#Demand"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Demand Draft</a>
+                                <a href="./OtherServices.html#RTGS"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">RTGS/NEFT</a>
+                                <a href="./OtherServices.html#cheque"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Cheques</a>
+                                <a href="./OtherServices.html#Forex"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Forex</a>
+                                <a href="./OtherServices.html#SMS"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">SMS Services</a>
+                            </div>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
             </div>
         </nav>
-
-        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
-            <div class="row py-5">
-                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-white animated zoomIn">Services</h1>
-                    <a href="" class="h5 text-white">Home</a>
-                    <i class="far fa-circle text-white px-2"></i>
-                    <a href="" class="h5 text-white">Services</a>
+    <main class="container mx-auto px-4 py-8" style="padding-top: 70px;">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div id="support">
+                    <h1 class="montserrat text-3xl font-bold text-gray-800 mb-2">Customer Support</h1>
+                    <p class="text-gray-600 mb-8">Need assistance? We're here to help!</p>
+                    <form id="supportForm" class="space-y-6">
+                        <div class="relative">
+                            <i class="ri-user-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input type="text" placeholder="Full Name"
+                                class="w-full pl-10 pr-4 py-3 border rounded focus:outline-none focus:border-primary"
+                                required>
+                        </div>
+                        <div class="relative">
+                            <i class="ri-phone-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input type="number" placeholder="Phone Number"
+                                class="w-full pl-10 pr-4 py-3 border rounded focus:outline-none focus:border-primary"
+                                required>
+                        </div>
+                        <div class="relative">
+                            <i class="ri-mail-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input type="email" placeholder="Email Address"
+                                class="w-full pl-10 pr-4 py-3 border rounded focus:outline-none focus:border-primary"
+                                required>
+                        </div>
+                        <div class="relative">
+                            <i class="ri-questionnaire-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <input type="text" placeholder="Subject"
+                                class="w-full pl-10 pr-4 py-3 border rounded focus:outline-none focus:border-primary"
+                                required>
+                        </div>
+                        <div class="relative">
+                            <i class="ri-list-check absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                            <button type="button"
+                                class="issue-type-btn w-full pl-10 pr-4 py-3 border rounded text-left focus:outline-none focus:border-primary bg-white">Select
+                                Issue Type</button>
+                            <div
+                                class="issue-type-dropdown hidden absolute w-full mt-1 bg-white border rounded shadow-lg z-10">
+                                <div class="p-2 hover:bg-gray-100 cursor-pointer">Report a Fraud</div>
+                                <div class="p-2 hover:bg-gray-100 cursor-pointer">Queries</div>
+                                <div class="p-2 hover:bg-gray-100 cursor-pointer">Requests</div>
+                                <div class="p-2 hover:bg-gray-100 cursor-pointer">Complaints</div>
+                                <div class="p-2 hover:bg-gray-100 cursor-pointer">Feedback</div>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <textarea placeholder="Message (Max 180 characters)" maxlength="180"
+                                class="w-full p-4 border rounded focus:outline-none focus:border-primary h-32"
+                                required></textarea>
+                            <div class="text-right text-sm text-gray-500"><span class="char-count">0</span>/180</div>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-primary text-white py-3 rounded-button font-semibold hover:bg-opacity-90 transition-colors">Send
+                            Message</button>
+                    </form>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Navbar End -->
-
-
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
+    </main>
+    <div class="toast fixed bottom-4 right-4 bg-white shadow-lg rounded-lg p-4 hidden">
+        <div class="flex items-center space-x-2">
+            <i class="ri-check-line text-green-500"></i>
+            <p class="toast-message"></p>
         </div>
     </div>
-    <!-- Full Screen Search End -->
-
-
-    <!-- Service Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
-                <h1 class="mb-0">Custom IT Solutions for Your Successful Business</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-shield-alt text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Cyber Security</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-chart-pie text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Data Analytics</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-code text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Web Development</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fab fa-android text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Apps Development</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-search text-white"></i>
-                        </div>
-                        <h4 class="mb-3">SEO Optimization</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
-                        <h3 class="text-white mb-3">Call Us For Quote</h3>
-                        <p class="text-white mb-3">Clita ipsum magna kasd rebum at ipsum amet dolor justo dolor est magna stet eirmod</p>
-                        <h2 class="text-white mb-0">+012 345 6789</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
-                <h1 class="mb-0">What Our Clients Say About Our Digital Services</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-4.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
-            <div class="bg-white">
-                <div class="owl-carousel vendor-carousel">
-                    <img src="img/vendor-1.jpg" alt="">
-                    <img src="img/vendor-2.jpg" alt="">
-                    <img src="img/vendor-3.jpg" alt="">
-                    <img src="img/vendor-4.jpg" alt="">
-                    <img src="img/vendor-5.jpg" alt="">
-                    <img src="img/vendor-6.jpg" alt="">
-                    <img src="img/vendor-7.jpg" alt="">
-                    <img src="img/vendor-8.jpg" alt="">
-                    <img src="img/vendor-9.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Vendor End -->
-    
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row gx-5">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                        <a href="index.html" class="navbar-brand">
-                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Startup</h1>
-                        </a>
-                        <p class="mt-3 mb-4">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.</p>
-                        <form action="">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                                <button class="btn btn-dark">Sign Up</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-6">
-                    <div class="row gx-5">
-                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Get In Touch</h3>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-envelope-open text-primary me-2"></i>
-                                <p class="mb-0">info@example.com</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">+012 345 67890</p>
-                            </div>
-                            <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Quick Links</h3>
-                            </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Popular Links</h3>
-                            </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid text-white" style="background: #061429;">
-        <div class="container text-center">
-            <div class="row justify-content-end">
-                <div class="col-lg-8 col-md-6">
-                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved. 
-						
-						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-						Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toast = document.querySelector('.toast');
+            const issueTypeBtn = document.querySelector('.issue-type-btn');
+            const issueTypeDropdown = document.querySelector('.issue-type-dropdown');
+            const textarea = document.querySelector('textarea');
+            const charCount = document.querySelector('.char-count');
+            const uploadDivs = document.querySelectorAll('.border-dashed');
+            const form = document.getElementById('supportForm');
+            // Form validation and submission
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                // Get form data
+                const formData = {
+                    fullName: form.querySelector('input[type="text"]').value,
+                    phone: form.querySelector('input[type="number"]').value,
+                    email: form.querySelector('input[type="email"]').value,
+                    subject: form.querySelector('input[placeholder="Subject"]').value,
+                    issueType: issueTypeBtn.textContent,
+                    message: textarea.value
+                };
+                // Basic validation
+                if (formData.issueType === 'Select Issue Type') {
+                    showToast('Please select an issue type', 'error');
+                    return;
+                }
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(formData.email)) {
+                    showToast('Please enter a valid email address', 'error');
+                    return;
+                }
+                // Phone validation
+                if (formData.phone.length < 10) {
+                    showToast('Please enter a valid phone number', 'error');
+                    return;
+                }
+                try {
+                    // Simulate API call
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                    showToast('Support request submitted successfully!', 'success');
+                    form.reset();
+                    charCount.textContent = '0';
+                    issueTypeBtn.textContent = 'Select Issue Type';
+                } catch (error) {
+                    showToast('Something went wrong. Please try again.', 'error');
+                }
+            });
+            issueTypeBtn.addEventListener('click', () => {
+                issueTypeDropdown.classList.toggle('hidden');
+            });
+            document.querySelectorAll('.issue-type-dropdown div').forEach(option => {
+                option.addEventListener('click', () => {
+                    issueTypeBtn.textContent = option.textContent;
+                    issueTypeDropdown.classList.add('hidden');
+                });
+            });
+            textarea.addEventListener('input', () => {
+                charCount.textContent = textarea.value.length;
+            });
+            uploadDivs.forEach(div => {
+                div.addEventListener('click', () => {
+                    div.querySelector('input[type="file"]').click();
+                });
+                div.querySelector('input[type="file"]').addEventListener('change', (e) => {
+                    if (e.target.files.length > 0) {
+                        div.querySelector('p').textContent = e.target.files[0].name;
+                    }
+                });
+            });
+            document.getElementById('supportForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                showToast('Support request submitted successfully!');
+                e.target.reset();
+            });
+            document.getElementById('accountForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                showToast('Account application submitted successfully!');
+                e.target.reset();
+            });
+            function showToast(message, type = 'success') {
+                const toastMessage = document.querySelector('.toast-message');
+                const icon = toast.querySelector('i');
+                // Update toast style based on type
+                if (type === 'success') {
+                    toast.classList.remove('bg-red-50');
+                    toast.classList.add('bg-white');
+                    icon.classList.remove('ri-error-warning-line', 'text-red-500');
+                    icon.classList.add('ri-check-line', 'text-green-500');
+                } else {
+                    toast.classList.remove('bg-white');
+                    toast.classList.add('bg-red-50');
+                    icon.classList.remove('ri-check-line', 'text-green-500');
+                    icon.classList.add('ri-error-warning-line', 'text-red-500');
+                }
+                toastMessage.textContent = message;
+                toast.classList.remove('hidden');
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => toast.classList.add('hidden'), 300);
+                }, 3000);
+            }
+            document.addEventListener('click', (e) => {
+                if (!issueTypeBtn.contains(e.target) && !issueTypeDropdown.contains(e.target)) {
+                    issueTypeDropdown.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

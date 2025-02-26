@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | Secunderabad Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { primary: '#1F479E', secondary: '#6C6D71', primaryHover: '#FFAF42', secondaryHover: '#BCBDBF' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }</script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#048c44',
+                        secondary: '#3c2c7b',
+                        textColor: '#282828',
+                        accent: '#bb2a1e'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        raleway: ['Raleway', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            transition: transform 0.3s ease;
+        }
+
+        .service-image {
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+
+        .nav-dropdown {
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover+.nav-dropdown,
+        .nav-dropdown:hover {
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 1220px) {
+            .xl\:hidden {
+                display: none;
+            }
+
+            .xl\:flex {
+                display: flex;
+            }
+
+            .xl\:block {
+                display: block;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference&family=Pacifico&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
+
+        .job-search:focus-within {
+            box-shadow: 0 0 0 2px rgba(26, 75, 140, 0.2);
+        }
+
+        .department-filter {
+            display: none;
+        }
+
+        .filter-btn:focus+.department-filter {
+            display: block;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="/" class="flex items-center">
+                    <img src="https://static.readdy.ai/image/e468fcddea67c5ffcad275128ab07418/7cc470cb2c2b000403f9f53a5ab2f17e.png"
+                        alt="Secunderabad Bank Logo" class="h-12" />
+                </a>
+                <div class="hidden xl:flex items-center space-x-8">
+                    <a href="./index.html" class="font-montserrat hover:text-primary">Home</a>
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                            <a href="./About team.html">About Us</a>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                            <span>Banking</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                            <a href="./DepositSchemes.html">Deposit Schemes</a>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                            <a href="./loanpage.html">Loans & Advances</a>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                    </div>
+                    <div class="relative group">
+                        <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                            <a href="./OtherServices.html">Other Services</a>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                    </div>
+                </div>
+                <button class="xl:hidden w-10 h-10 flex items-center justify-center" id="mobileMenuBtn">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+            <div class="xl:hidden hidden" id="mobileMenu">
+                <div class="py-4 space-y-2">
+                    <a href="./index.html" class="block px-4 py-2 font-montserrat hover:text-primary">Home</a>
+                    <div class="mobile-dropdown">
+                        <button
+                            class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                            <span>About Us</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="hidden bg-gray-50 py-2">
+                            <a href="./about.html" class="block px-6 py-2 text-sm font-raleway hover:text-primary">Our
+                                Story</a>
+                            <a href="./About team.html#vision"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Vision & Mission</a>
+                            <a href="/About team.html#team"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Board Members</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button
+                            class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                            <span>Banking</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="hidden bg-gray-50 py-2">
+                            <a href="./personalbanking.html"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Personal Banking</a>
+                            <a href="./corporatebanking.html"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Corporate Banking</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button
+                            class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                            <span>Deposit Schemes</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="hidden bg-gray-50 py-2">
+                            <a href="./DepositSchemes.html#Fixed"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Fixed Deposit</a>
+                            <a href="./DepositSchemes.html#Recurring"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Recurring Deposit</a>
+                            <a href="./DepositSchemes.html#Investment"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Re-Investment Policy</a>
+                            <a href="./DepositSchemes.html#Daily"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Daily Deposit</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button
+                            class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                            <span>Loans & Advances</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="hidden bg-gray-50 py-2">
+                            <a href="./loanpage.html#gold"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Gold Loan</a>
+                            <a href="/loanpage.html#Vehicle"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Vehicle Loan</a>
+                            <a href="./loanpage.html#Demand"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Demand Loan</a>
+                            <a href="./loanpage.html#Deposit"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Loan on Deposit</a>
+                            <a href="./loanpage.html#Secured"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Other Secured Loans</a>
+                        </div>
+                    </div>
+                    <div class="mobile-dropdown">
+                        <button
+                            class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                            <span>Other Services</span>
+                            <i class="ri-arrow-down-s-line"></i>
+                        </button>
+                        <div class="hidden bg-gray-50 py-2">
+                            <a href="./OtherServices.html#Merchant"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Merchant QR</a>
+                            <a href="./OtherServices.html#commerce"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">E-commerce</a>
+                            <a href="./OtherServices.html#Pos"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">POS Machine</a>
+                            <a href="./OtherServices.html#Demand"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Demand Draft</a>
+                            <a href="./OtherServices.html#RTGS"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">RTGS/NEFT</a>
+                            <a href="./OtherServices.html#cheque"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Cheques</a>
+                            <a href="./OtherServices.html#Forex"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">Forex</a>
+                            <a href="./OtherServices.html#SMS"
+                                class="block px-6 py-2 text-sm font-raleway hover:text-primary">SMS Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+            document.getElementById("mobileMenu").classList.toggle("hidden");
+            const icon = this.querySelector("i");
+            icon.classList.toggle("ri-menu-line");
+            icon.classList.toggle("ri-close-line");
+        });
+        document.querySelectorAll(".mobile-dropdown").forEach((dropdown) => {
+            const btn = dropdown.querySelector("button");
+            const content = dropdown.querySelector("div");
+            btn.addEventListener("click", () => {
+                content.classList.toggle("hidden");
+                const icon = btn.querySelector("i");
+                icon.classList.toggle("ri-arrow-down-s-line");
+                icon.classList.toggle("ri-arrow-up-s-line");
+            });
+        });
+    </script>
+    <main class="pt-16">
+        <section class="relative h-[600px] flex items-center overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center"
+                style="background-image: url('https://public.readdy.ai/ai/img_res/e9dedd3e64921be5be296e9536bc9e58.jpg');">
+                <div class="absolute inset-0 bg-primary bg-opacity-50"></div>
+            </div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div class="max-w-3xl">
+                    <h1 class="text-5xl font-bold text-white mb-6">Build Your Future with Secunderabad Bank</h1>
+                    <p class="text-xl text-white mb-12">Join a team that's redefining banking with innovation and
+                        integrity.</p>
+                    <div class="bg-white p-4 !rounded-button shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-1 relative">
+                                <div class="absolute inset-y-0 left-3 flex items-center">
+                                    <i class="ri-search-line text-gray-400"></i>
+                                </div>
+                                <input type="text" placeholder="Search jobs by title, department, or location"
+                                    class="w-full pl-10 pr-4 py-2 text-sm border-none focus:ring-2 focus:ring-primary !rounded-button">
+                            </div>
+                            <button class="filter-btn relative btn-primary px-6 py-2 !rounded-button whitespace-nowrap">
+                                <i class="ri-filter-3-line mr-2"></i>Filter
+                            </button>
+                            <div
+                                class="department-filter absolute right-0 mt-2 w-64 bg-white shadow-lg !rounded-button p-4">
+                                <h4 class="font-semibold mb-3">Department</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox text-primary"
+                                            value="digital-banking">
+                                        <span class="ml-2">Digital Banking</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox text-primary"
+                                            value="risk-management">
+                                        <span class="ml-2">Risk Management</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox text-primary" value="operations">
+                                        <span class="ml-2">Operations</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox text-primary" value="finance">
+                                        <span class="ml-2">Finance</span>
+                                    </label>
+                                </div>
+                                <h4 class="font-semibold mt-4 mb-3">Location</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox text-primary" value="hyderabad">
+                                        <span class="ml-2">Hyderabad</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox text-primary" value="mumbai">
+                                        <span class="ml-2">Mumbai</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox text-primary" value="bangalore">
+                                        <span class="ml-2">Bangalore</span>
+                                    </label>
+                                </div>
+                                <h4 class="font-semibold mt-4 mb-3">Job Type</h4>
+                                <div class="space-y-2">
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox text-primary" value="full-time">
+                                        <span class="ml-2">Full Time</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox text-primary" value="part-time">
+                                        <span class="ml-2">Part Time</span>
+                                    </label>
+                                    <label class="flex items-center">
+                                        <input type="checkbox" class="form-checkbox text-primary" value="contract">
+                                        <span class="ml-2">Contract</span>
+                                    </label>
+                                </div>
+                                <div class="mt-4 flex space-x-2">
+                                    <button
+                                        class="flex-1 bg-gray-100 text-gray-700 px-4 py-2 !rounded-button whitespace-nowrap hover:bg-gray-200"
+                                        onclick="clearFilters()">Clear</button>
+                                    <button class="flex-1 btn-primary px-4 py-2 !rounded-button whitespace-nowrap"
+                                        onclick="applyFilters()">Apply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="jobs" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">Open Positions</h2>
+                    <div class="flex items-center space-x-4">
+                        <span class="text-sm text-gray-500">Sort by:</span>
+                        <select class="text-sm border-none bg-white !rounded-button pr-8">
+                            <option>Most Recent</option>
+                            <option>Relevance</option>
+                            <option>Location</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid gap-6">
+                    <div class="bg-white p-6 !rounded-button shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Senior Digital Banking Manager</h3>
+                                <p class="text-gray-600 mb-4">Lead our digital transformation initiatives and shape the
+                                    future of banking technology.</p>
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span class="flex items-center"><i class="ri-map-pin-line mr-1"></i>Hyderabad,
+                                        India</span>
+                                    <span class="flex items-center"><i class="ri-time-line mr-1"></i>Full Time</span>
+                                    <span class="flex items-center"><i class="ri-folder-line mr-1"></i>Digital
+                                        Banking</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary px-6 py-2 !rounded-button whitespace-nowrap">Apply Now</button>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 !rounded-button shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-900 mb-2">Risk Analytics Specialist</h3>
+                                <p class="text-gray-600 mb-4">Develop and implement risk assessment models using
+                                    advanced analytics and machine learning.</p>
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span class="flex items-center"><i class="ri-map-pin-line mr-1"></i>Mumbai,
+                                        India</span>
+                                    <span class="flex items-center"><i class="ri-time-line mr-1"></i>Full Time</span>
+                                    <span class="flex items-center"><i class="ri-folder-line mr-1"></i>Risk
+                                        Management</span>
+                                </div>
+                            </div>
+                            <button class="btn-primary px-6 py-2 !rounded-button whitespace-nowrap">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="why-join" class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">Why Join Secunderabad Bank?</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-primary bg-opacity-5 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-line-chart-line text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Growth Opportunities</h3>
+                        <p class="text-gray-600">Clear career paths and continuous learning opportunities to help you
+                            reach your full potential.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-primary bg-opacity-5 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-heart-line text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Work-Life Balance</h3>
+                        <p class="text-gray-600">Flexible work arrangements and comprehensive wellness programs for a
+                            balanced lifestyle.</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-16 h-16 bg-primary bg-opacity-5 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="ri-team-line text-2xl text-primary"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-4">Inclusive Culture</h3>
+                        <p class="text-gray-600">A diverse and collaborative environment where every voice matters and
+                            innovation thrives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- <section id="benefits" class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">Comprehensive Benefits</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="bg-gray-50 p-6 !rounded-button shadow-sm">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-5 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-medicine-bottle-line text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-primary">Health & Wellness</h3>
+                        <ul class="text-gray-900 space-y-2">
+                            <li>Comprehensive medical coverage</li>
+                            <li>Dental and vision plans</li>
+                            <li>Mental health support</li>
+                        </ul>
+                    </div>
+                    <div class="bg-primary p-6 !rounded-button shadow-sm">
+                        <div
+                            class="w-12 h-12 bg-white bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-bank-card-line text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-[#00FF00]">Financial Benefits</h3>
+                        <ul class="text-white space-y-2">
+                            <li>Competitive salary</li>
+                            <li>Performance bonuses</li>
+                            <li>Retirement plans</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-6 !rounded-button shadow-sm">
+                        <div
+                            class="w-12 h-12 bg-primary bg-opacity-5 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-book-open-line text-xl text-primary"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-primary">Learning & Development</h3>
+                        <ul class="text-gray-900 space-y-2">
+                            <li>Professional certifications</li>
+                            <li>Leadership training</li>
+                            <li>Mentorship programs</li>
+                        </ul>
+                    </div>
+                    <div class="bg-primary p-6 !rounded-button shadow-sm">
+                        <div
+                            class="w-12 h-12 bg-white bg-opacity-10 rounded-full flex items-center justify-center mb-4">
+                            <i class="ri-calendar-line text-xl text-white"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2 text-[#00FF00]">Time Off</h3>
+                        <ul class="text-white space-y-2">
+                            <li>Generous paid vacation</li>
+                            <li>Paid holidays</li>
+                            <li>Parental leave</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">Our Application Process</h2>
+                <div class="grid md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            1</div>
+                        <h3 class="text-lg font-semibold mb-2">Apply Online</h3>
+                        <p class="text-gray-600">Submit your application through our career portal</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            2</div>
+                        <h3 class="text-lg font-semibold mb-2">Initial Screening</h3>
+                        <p class="text-gray-600">Our HR team reviews your application</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            3</div>
+                        <h3 class="text-lg font-semibold mb-2">Interviews</h3>
+                        <p class="text-gray-600">Multiple rounds with team and leadership</p>
+                    </div>
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-4">
+                            4</div>
+                        <h3 class="text-lg font-semibold mb-2">Offer & Onboarding</h3>
+                        <p class="text-gray-600">Welcome to Secunderabad Bank!</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+    </main>
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div class="md:col-span-1">
+                    <h3 class="font-montserrat font-bold text-xl mb-6 text-primary">The Secunderabad Co-operative Urban
+                        Bank Ltd.</h3>
+                    <p class="text-sm mb-4">1-4-908/7/2/B/1 to 4 (GR FLOOR), Beside Gurunanak Care Hospitals,
+                        Musheerabad, Hyderabad-500020.</p>
+                    <p class="text-sm mb-2" href="https://wa.me/+91898508353">+91898508353</p>
+                    <a class="text-sm" href="mailto:accounts@secunderabadbank.com">accounts@secunderabadbank.com</a>
+                    <h4 class="font-montserrat font-bold text-primary mt-8 mb-4">Careers</h4>
+                    <a href="careers.html" class="hover:text-primary">Opportunties</a>
+                    <h4 class="font-montserrat font-bold text-primary mt-8 mb-4">Connect With Us</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.facebook.com/secunderabadbank" class="text-white hover:text-primary"><i
+                                class="ri-facebook-fill"></i></a>
+                        <a href="https://www.instagram.com/secunderabadbank/" class="text-white hover:text-primary"><i
+                                class="ri-instagram-fill"></i></a>
+                        <a href="https://youtube.com/@secunderabadbank?si=AsSdTzB1hdWEV-Tz"
+                            class="text-white hover:text-primary"><i class="ri-youtube-fill"></i></a>
+                        <a href="https://twitter.com/Sec_bank" class="text-white hover:text-primary"><i
+                                class="ri-twitter-fill"></i></a>
+                        <a href="https://www.linkedin.com/company/33645542/admin/page-posts/published/"
+                            class="text-white hover:text-primary"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
+                <div class="md:col-span-1">
+                    <h3 class="font-montserrat font-bold text-xl mb-6 text-primary">Our Services</h3>
+                    <ul class="space-y-2 text-sm ">
+                        <li><a href="./personalbanking.html#Savings" class="hover:text-primary">Savings Account</a></li>
+                        <li><a href="./personalbanking.html#Current" class="hover:text-primary">Current Account</a></li>
+                        <li><a href="./corporatebanking.html#Cash" class="hover:text-primary">Cash Credit</a></li>
+                        <li><a href="./corporatebanking.html#Over" class="hover:text-primary">Over Draft</a></li>
+                        <li><a href="./DepositSchemes.html#Fixed" class="hover:text-primary">Fixed Deposit</a></li>
+                        <li><a href="./DepositSchemes.html#Recurring" class="hover:text-primary">Recurring Deposit</a>
+                        </li>
+                        <li><a href="./DepositSchemes.html#Investment" class="hover:text-primary">Re-Investment
+                                Policy</a></li>
+                        <li><a href="./DepositSchemes.html#Daily" class="hover:text-primary">Daily Deposit</a></li>
+                        <li><a href="./loanpage.html#Gold" class="hover:text-primary">Gold Loan</a></li>
+                        <li><a href="./loanpage.html#Vehicle" class="hover:text-primary">Vehicle Loan</a></li>
+                        <li><a href="./loanpage.html#Demand" class="hover:text-primary">Demand Loan</a></li>
+                        <li><a href="./loanpage.html#Deposit" class="hover:text-primary">Loan on Deposit</a></li>
+                        <li><a href="./loanpage.html#Secured" class="hover:text-primary">Other Secured Loans</a></li>
+                        <li><a href="./OtherServices.html#Merchant" class="hover:text-primary">Merchant QR</a></li>
+                        <li><a href="./OtherServices.html#commerce" class="hover:text-primary">E-commerce</a></li>
+                        <li><a href="./OtherServices.html#Pos" class="hover:text-primary">POS Machine Facility</a></li>
+                        <li><a href="./OtherServices.html#Locker" class="hover:text-primary">Locker Facility</a></li>
+                        <li><a href="./OtherServices.html#Demand" class="hover:text-primary">Demand Draft</a></li>
+                        <li><a href="./OtherServices.html#RTGS" class="hover:text-primary">RTGS/NEFT</a></li>
+                        <li><a href="./OtherServices.html#cheque" class="hover:text-primary">At Par Cheque</a></li>
+                        <li><a href="./OtherServices.html#Forex" class="hover:text-primary">Forex</a></li>
+                        <li><a href="./OtherServices.html#SMS" class="hover:text-primary">SMS Services</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-1">
+                    <h3 class="font-montserrat font-bold text-xl mb-6 text-primary">Useful Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./index.html#calculateEMI" class="hover:text-primary">EMI calculator</a></li>
+                        <li><a href="./corporatebanking.html" class="hover:text-primary">Service Charges</a></li>
+                        <li><a href="./DepositSchemes.html#Fixed" class="hover:text-primary">FDI Rate</a></li>
+                        <li><a href="./loanpage.html#Gold" class="hover:text-primary">Gold Loan Rate</a></li>
+                        <li><a href="./loanpage.html#Vehicle" class="hover:text-primary">Vehicle Loan Rate</a></li>
+                        <li><a href="./loanpage.html#Deposit" class="hover:text-primary">Loan on Deposit Rate</a></li>
+                        <li><a href="./corporatebanking.html#Over" class="hover:text-primary">Overdraft Interest
+                                Rate</a></li>
+                        <li><a href="./loanpage.html#Demand" class="hover:text-primary">Demand Loan Rate</a></li>
+                        <li><a href="./OtherServices.html#RTGS" class="hover:text-primary">IFSC Code</a></li>
+                        <li><a href="./img/about us/CALENDER FINAL 2025 UPDATE.pdf" class="hover:text-primary">Bank
+                                Calendar</a></li>
+                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf"
+                                class="hover:text-primary">Privacy Policy</a></li>
+                        <li><a href="./img/about us/syeda-turab-fatima-term-and-conditions.pdf"
+                                class="hover:text-primary">Terms & Conditions</a></li>
+                    </ul>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-8 mb-6">Application Forms</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./application.html" class="hover:text-primary">Savings Account Application</a></li>
+                        <li><a href="./application.html" class="hover:text-primary">Current Account Application</a></li>
+                        <li><a href="./application.html" class="hover:text-primary">FD Application</a></li>
+                        <li><a href="./application.html" class="hover:text-primary">RIP Application</a></li>
+                        <li><a href="./application.html" class="hover:text-primary">DD Application</a></li>
+                        <li><a href="./application.html" class="hover:text-primary">Service Request Form</a></li>
+                    </ul>
+                </div>
+                <div class="md:col-span-1">
+                    <h3 class="font-montserrat font-bold text-xl mb-6 text-primary">Media Centre</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./Galley.html" class="hover:text-primary">Gallery</a></li>
+                        <li><a href="./Galley.html" class="hover:text-primary">Awards & Recognition</a></li>
+                    </ul>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-8 mb-6">Support</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="./support.html" class="hover:text-primary">Report a Fraud</a></li>
+                        <li><a href="./support.html" class="hover:text-primary">Queries</a></li>
+                        <li><a href="./support.html" class="hover:text-primary">Requests</a></li>
+                        <li><a href="./support.html" class="hover:text-primary">Complaints</a></li>
+                    </ul>
+                    <h3 class="font-montserrat font-bold text-xl text-primary mt-8 mb-6">Customer Awareness</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://www.rbi.org.in/commonman/English/scripts/Notification.aspx?Id=578"
+                                class="hover:text-primary">Security & Fraud Awareness</a></li>
+                        <li><a href="https://www.ckycindia.in/ckyc/assets/images/CentralKYCRecordsRegistryCustomerAwarenessVideo.webm"
+                                class="hover:text-primary">CKYC</a></li>
+
+                        <img src="./img/DICGC.png" alt="DICGC Logo" style="max-width: 40%; height: auto;">
+                        <p class="text-sm">Secunderabad Bank is registered with DICGC.</p>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-16 pt-12 text-center">
+
+                <p class="font-raleway text-sm text-gray-400">&copy; 2025 Secunderabad Bank. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 0) {
+                    nav.classList.add('shadow');
+                } else {
+                    nav.classList.remove('shadow');
+                }
+            });
+            const filterBtn = document.querySelector('.filter-btn');
+            const departmentFilter = document.querySelector('.department-filter');
+            const jobsGrid = document.querySelector('#jobs .grid');
+            filterBtn.addEventListener('click', function () {
+                departmentFilter.style.display = departmentFilter.style.display === 'none' ? 'block' : 'none';
+            });
+            document.addEventListener('click', function (event) {
+                if (!filterBtn.contains(event.target) && !departmentFilter.contains(event.target)) {
+                    departmentFilter.style.display = 'none';
+                }
+            });
+            function clearFilters() {
+                const checkboxes = departmentFilter.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => checkbox.checked = false);
+                updateJobsList();
+            }
+            function applyFilters() {
+                updateJobsList();
+                departmentFilter.style.display = 'none';
+            }
+            function updateJobsList() {
+                const selectedDepartments = Array.from(departmentFilter.querySelectorAll('input[name="department"]:checked')).map(cb => cb.value);
+                const selectedLocations = Array.from(departmentFilter.querySelectorAll('input[value="hyderabad"]:checked, input[value="mumbai"]:checked, input[value="bangalore"]:checked')).map(cb => cb.value);
+                const selectedTypes = Array.from(departmentFilter.querySelectorAll('input[value="full-time"]:checked, input[value="part-time"]:checked, input[value="contract"]:checked')).map(cb => cb.value);
+                const jobs = [
+                    {
+                        title: 'Senior Digital Banking Manager',
+                        description: 'Lead our digital transformation initiatives and shape the future of banking technology.',
+                        location: 'hyderabad',
+                        type: 'full-time',
+                        department: 'digital-banking'
+                    },
+                    {
+                        title: 'Risk Analytics Specialist',
+                        description: 'Develop and implement risk assessment models using advanced analytics and machine learning.',
+                        location: 'mumbai',
+                        type: 'full-time',
+                        department: 'risk-management'
+                    },
+                    {
+                        title: 'Operations Manager',
+                        description: 'Oversee daily banking operations and improve operational efficiency.',
+                        location: 'bangalore',
+                        type: 'full-time',
+                        department: 'operations'
+                    }
+                ];
+                const filteredJobs = jobs.filter(job => {
+                    const matchesDepartment = selectedDepartments.length === 0 || selectedDepartments.includes(job.department);
+                    const matchesLocation = selectedLocations.length === 0 || selectedLocations.includes(job.location);
+                    const matchesType = selectedTypes.length === 0 || selectedTypes.includes(job.type);
+                    return matchesDepartment && matchesLocation && matchesType;
+                });
+                jobsGrid.innerHTML = filteredJobs.map(job => `
+<div class="bg-white p-6 !rounded-button shadow-sm hover:shadow-md transition-shadow">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">${job.title}</h3>
+<p class="text-gray-600 mb-4">${job.description}</p>
+<div class="flex items-center space-x-4 text-sm text-gray-500">
+<span class="flex items-center"><i class="ri-map-pin-line mr-1"></i>${job.location.charAt(0).toUpperCase() + job.location.slice(1)}, India</span>
+<span class="flex items-center"><i class="ri-time-line mr-1"></i>${job.type.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</span>
+<span class="flex items-center"><i class="ri-folder-line mr-1"></i>${job.department.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</span>
+</div>
+</div>
+<button class="btn-primary px-6 py-2 !rounded-button whitespace-nowrap">Apply Now</button>
+</div>
+</div>
+`).join('');
+            }
+            window.clearFilters = clearFilters;
+            window.applyFilters = applyFilters;
+        });
+    </script>
+</body>
+
+</html>

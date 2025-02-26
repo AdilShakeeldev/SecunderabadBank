@@ -2,408 +2,463 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Startup - Startup Website Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Account - Secunderabad Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#048c44',
+                        secondary: '#3c2c7b'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before {
+            content: "\f3c2";
+        }
 
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        .montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
+        .raleway {
+            font-family: 'Raleway', sans-serif;
+        }
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+        .file-upload-box {
+            border: 2px dashed #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .file-upload-box:hover {
+            border-color: #048c44;
+        }
+
+        .success-modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner"></div>
-    </div>
-    <!-- Spinner End -->
-
-
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-        <div class="row gx-0">
-            <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <small class="me-3 text-light"><i class="fa fa-map-marker-alt me-2"></i>123 Street, New York, USA</small>
-                    <small class="me-3 text-light"><i class="fa fa-phone-alt me-2"></i>+012 345 6789</small>
-                    <small class="text-light"><i class="fa fa-envelope-open me-2"></i>info@example.com</small>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center" style="height: 45px;">
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal"></i></a>
-                    <a class="btn btn-sm btn-outline-light btn-sm-square rounded-circle" href=""><i class="fab fa-youtube fw-normal"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar End -->
-
-
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
-                <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>Startup</h1>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="fa fa-bars"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="service.html" class="nav-item nav-link active">Services</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="detail.html" class="dropdown-item">Blog Detail</a>
+<body class="bg-gray-50">
+    <div class="min-h-screen">
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between items-center h-16">
+                    <a href="/" class="flex items-center">
+                        <img src="https://static.readdy.ai/image/e468fcddea67c5ffcad275128ab07418/7cc470cb2c2b000403f9f53a5ab2f17e.png"
+                            alt="Secunderabad Bank Logo" class="h-12" />
+                    </a>
+                    <div class="hidden xl:flex items-center space-x-8">
+                        <a href="./index.html" class="font-montserrat hover:text-primary">Home</a>
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                                <a href="./About team.html">About Us</a>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                        </div>
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                                <span>Banking</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                        </div>
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                                <a href="./DepositSchemes.html">Deposit Schemes</a>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                        </div>
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                                <a href="./loanpage.html">Loans & Advances</a>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                        </div>
+                        <div class="relative group">
+                            <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
+                                <a href="./OtherServices.html">Other Services</a>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
                         </div>
                     </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="price.html" class="dropdown-item">Pricing Plan</a>
-                            <a href="feature.html" class="dropdown-item">Our features</a>
-                            <a href="team.html" class="dropdown-item">Team Members</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="quote.html" class="dropdown-item">Free Quote</a>
+                    <button class="xl:hidden w-10 h-10 flex items-center justify-center" id="mobileMenuBtn">
+                        <i class="ri-menu-line text-2xl"></i>
+                    </button>
+                </div>
+                <div class="xl:hidden hidden" id="mobileMenu">
+                    <div class="py-4 space-y-2">
+                        <a href="./index.html" class="block px-4 py-2 font-montserrat hover:text-primary">Home</a>
+                        <div class="mobile-dropdown">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                                <span>About Us</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="hidden bg-gray-50 py-2">
+                                <a href="./about.html" class="block px-6 py-2 text-sm font-raleway hover:text-primary">Our
+                                    Story</a>
+                                <a href="./About team.html#vision"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Vision & Mission</a>
+                                <a href="/About team.html#team"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Board Members</a>
+                            </div>
+                        </div>
+                        <div class="mobile-dropdown">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                                <span>Banking</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="hidden bg-gray-50 py-2">
+                                <a href="./personalbanking.html"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Personal Banking</a>
+                                <a href="./corporatebanking.html"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Corporate Banking</a>
+                            </div>
+                        </div>
+                        <div class="mobile-dropdown">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                                <span>Deposit Schemes</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="hidden bg-gray-50 py-2">
+                                <a href="./DepositSchemes.html#Fixed"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Fixed Deposit</a>
+                                <a href="./DepositSchemes.html#Recurring"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Recurring Deposit</a>
+                                <a href="./DepositSchemes.html#Investment"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Re-Investment Policy</a>
+                                <a href="./DepositSchemes.html#Daily"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Daily Deposit</a>
+                            </div>
+                        </div>
+                        <div class="mobile-dropdown">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                                <span>Loans & Advances</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="hidden bg-gray-50 py-2">
+                                <a href="./loanpage.html#gold"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Gold Loan</a>
+                                <a href="/loanpage.html#Vehicle"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Vehicle Loan</a>
+                                <a href="./loanpage.html#Demand"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Demand Loan</a>
+                                <a href="./loanpage.html#Deposit"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Loan on Deposit</a>
+                                <a href="./loanpage.html#Secured"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Other Secured Loans</a>
+                            </div>
+                        </div>
+                        <div class="mobile-dropdown">
+                            <button
+                                class="w-full flex justify-between items-center px-4 py-2 font-montserrat hover:text-primary">
+                                <span>Other Services</span>
+                                <i class="ri-arrow-down-s-line"></i>
+                            </button>
+                            <div class="hidden bg-gray-50 py-2">
+                                <a href="./OtherServices.html#Merchant"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Merchant QR</a>
+                                <a href="./OtherServices.html#commerce"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">E-commerce</a>
+                                <a href="./OtherServices.html#Pos"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">POS Machine</a>
+                                <a href="./OtherServices.html#Demand"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Demand Draft</a>
+                                <a href="./OtherServices.html#RTGS"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">RTGS/NEFT</a>
+                                <a href="./OtherServices.html#cheque"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Cheques</a>
+                                <a href="./OtherServices.html#Forex"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">Forex</a>
+                                <a href="./OtherServices.html#SMS"
+                                    class="block px-6 py-2 text-sm font-raleway hover:text-primary">SMS Services</a>
+                            </div>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
-                <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                <a href="https://htmlcodex.com/startup-company-website-template" class="btn btn-primary py-2 px-4 ms-3">Download Pro Version</a>
             </div>
         </nav>
-
-        <div class="container-fluid bg-primary py-5 bg-header" style="margin-bottom: 90px;">
-            <div class="row py-5">
-                <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-                    <h1 class="display-4 text-white animated zoomIn">Services</h1>
-                    <a href="" class="h5 text-white">Home</a>
-                    <i class="far fa-circle text-white px-2"></i>
-                    <a href="" class="h5 text-white">Services</a>
+        <main class="container mx-auto px-4 py-8" style="margin-top: 40px;">
+            <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold montserrat text-gray-800 mb-4">Open New Account</h2>
+                    <p class="text-gray-600 raleway">Welcome to Secunderabad Bank. Please fill in the details below to
+                        open your account.</p>
                 </div>
+                <form id="accountForm" class="space-y-8" name="accountForm">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Account Type</label>
+                                <div class="relative">
+                                    <select name="accountType" required
+                                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none appearance-none pr-10">
+                                        <option value="">Select Account Type</option>
+                                        <option value="savings">Savings Account</option>
+                                        <option value="current">Current Account</option>
+                                        <option value="fixed">Fixed Deposit</option>
+                                        <option value="recurring">Recurring Deposit</option>
+                                    </select>
+                                    <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                        <i class="ri-arrow-down-s-line text-gray-400"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                                <input type="text" name="fullName" required
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                                    placeholder="Enter your full name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
+                                <input type="date" name="dateOfBirth" required
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" name="phoneNumber" required pattern="[0-9]{10}"
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                                    placeholder="Enter 10-digit mobile number">
+                            </div>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                                <input type="email" name="email" required
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                                    placeholder="Enter your email address">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+                                <textarea name="address" required rows="3"
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                                    placeholder="Enter your complete address"></textarea>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">PAN Card Number</label>
+                                <input type="text" name="panNumber" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                                    placeholder="Enter PAN number">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Aadhaar Number</label>
+                                <input type="text" name="aadhaarNumber" required pattern="[0-9]{12}"
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                                    placeholder="Enter 12-digit Aadhaar number">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Occupation</label>
+                            <div class="relative">
+                                <select name="accountType" required
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none appearance-none pr-10">
+                                    <option value="">Select Occupation</option>
+                                    <option value="salaried">Salaried</option>
+                                    <option value="self-employed">Self-Employed</option>
+                                    <option value="student">Student</option>
+                                    <option value="retired">Retired</option>
+                                    <option value="others">Others</option>
+                                </select>
+                                <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                    <i class="ri-arrow-down-s-line text-gray-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Initial Deposit Amount</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">₹</span>
+                                <input type="number" name="initialDeposit"
+                                    class="w-full pl-8 pr-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
+                                    placeholder="Enter amount">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-gray-800">Upload Documents</h3>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="file-upload-box p-4 rounded text-center cursor-pointer">
+                                <input type="file" name="panCardFile" class="hidden" accept="image/*,.pdf" required>
+                                <i class="ri-file-upload-line text-2xl text-gray-400 mb-2"></i>
+                                <p class="text-sm text-gray-600">Upload PAN Card</p>
+                            </div>
+                            <div class="file-upload-box p-4 rounded text-center cursor-pointer">
+                                <input type="file" name="panCardFile" class="hidden" accept="image/*,.pdf" required>
+                                <i class="ri-file-upload-line text-2xl text-gray-400 mb-2"></i>
+                                <p class="text-sm text-gray-600">Upload Aadhaar Card</p>
+                            </div>
+                            <div class="file-upload-box p-4 rounded text-center cursor-pointer">
+                                <input type="file" name="panCardFile" class="hidden" accept="image/*,.pdf" required>
+                                <i class="ri-file-upload-line text-2xl text-gray-400 mb-2"></i>
+                                <p class="text-sm text-gray-600">Upload Address Proof</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <input type="checkbox" required
+                                class="mt-1 h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary">
+                            <label class="ml-2 text-sm text-gray-600">
+                                I agree to the <a href="#" class="text-primary hover:underline">Terms & Conditions</a>
+                                and <a href="#" class="text-primary hover:underline">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-primary text-white font-semibold py-4 px-6 rounded-button hover:bg-primary/90 transition-colors">
+                            Submit Application
+                        </button>
+                    </div>
+                </form>
             </div>
+        </main>
+    </div>
+    <div class="modal-overlay"></div>
+    <div class="success-modal bg-white rounded-lg p-8 max-w-md w-full mx-4">
+        <div class="text-center">
+            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class="ri-check-line text-3xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Application Submitted Successfully!</h3>
+            <p class="text-gray-600 mb-6">Thank you for choosing Secunderabad Bank. We will review your application and
+                contact you shortly.</p>
+            <button onclick="closeModal()"
+                class="bg-primary text-white font-semibold py-3 px-6 rounded-button hover:bg-primary/90 transition-colors">
+                Close
+            </button>
         </div>
     </div>
-    <!-- Navbar End -->
-
-
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Full Screen Search End -->
-
-
-    <!-- Service Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-5 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Our Services</h5>
-                <h1 class="mb-0">Custom IT Solutions for Your Successful Business</h1>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-shield-alt text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Cyber Security</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-chart-pie text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Data Analytics</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-code text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Web Development</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fab fa-android text-white"></i>
-                        </div>
-                        <h4 class="mb-3">Apps Development</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
-                        <div class="service-icon">
-                            <i class="fa fa-search text-white"></i>
-                        </div>
-                        <h4 class="mb-3">SEO Optimization</h4>
-                        <p class="m-0">Amet justo dolor lorem kasd amet magna sea stet eos vero lorem ipsum dolore sed</p>
-                        <a class="btn btn-lg btn-primary rounded" href="">
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
-                    <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
-                        <h3 class="text-white mb-3">Call Us For Quote</h3>
-                        <p class="text-white mb-3">Clita ipsum magna kasd rebum at ipsum amet dolor justo dolor est magna stet eirmod</p>
-                        <h2 class="text-white mb-0">+012 345 6789</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Service End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="section-title text-center position-relative pb-3 mb-4 mx-auto" style="max-width: 600px;">
-                <h5 class="fw-bold text-primary text-uppercase">Testimonial</h5>
-                <h1 class="mb-0">What Our Clients Say About Our Digital Services</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.6s">
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-1.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-2.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-3.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-                <div class="testimonial-item bg-light my-4">
-                    <div class="d-flex align-items-center border-bottom pt-5 pb-4 px-5">
-                        <img class="img-fluid rounded" src="img/testimonial-4.jpg" style="width: 60px; height: 60px;" >
-                        <div class="ps-4">
-                            <h4 class="text-primary mb-1">Client Name</h4>
-                            <small class="text-uppercase">Profession</small>
-                        </div>
-                    </div>
-                    <div class="pt-4 pb-5 px-5">
-                        Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
-
-
-    <!-- Vendor Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-5 mb-5">
-            <div class="bg-white">
-                <div class="owl-carousel vendor-carousel">
-                    <img src="img/vendor-1.jpg" alt="">
-                    <img src="img/vendor-2.jpg" alt="">
-                    <img src="img/vendor-3.jpg" alt="">
-                    <img src="img/vendor-4.jpg" alt="">
-                    <img src="img/vendor-5.jpg" alt="">
-                    <img src="img/vendor-6.jpg" alt="">
-                    <img src="img/vendor-7.jpg" alt="">
-                    <img src="img/vendor-8.jpg" alt="">
-                    <img src="img/vendor-9.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Vendor End -->
-    
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row gx-5">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4">
-                        <a href="index.html" class="navbar-brand">
-                            <h1 class="m-0 text-white"><i class="fa fa-user-tie me-2"></i>Startup</h1>
-                        </a>
-                        <p class="mt-3 mb-4">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit. Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd eos duo.</p>
-                        <form action="">
-                            <div class="input-group">
-                                <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                                <button class="btn btn-dark">Sign Up</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-6">
-                    <div class="row gx-5">
-                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Get In Touch</h3>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">123 Street, New York, USA</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-envelope-open text-primary me-2"></i>
-                                <p class="mb-0">info@example.com</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">+012 345 67890</p>
-                            </div>
-                            <div class="d-flex mt-4">
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
-                                <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Quick Links</h3>
-                            </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Popular Links</h3>
-                            </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Meet The Team</a>
-                                <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid text-white" style="background: #061429;">
-        <div class="container text-center">
-            <div class="row justify-content-end">
-                <div class="col-lg-8 col-md-6">
-                    <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved. 
-						
-						<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-						Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">HTML Codex</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script>
+        const SHEET_ID = 'YOUR_GOOGLE_SHEET_ID';
+        const SHEET_NAME = 'Sheet1';
+        const SCRIPT_URL = `https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec`;
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('accountForm');
+            const fileUploadBoxes = document.querySelectorAll('.file-upload-box');
+            const modal = document.querySelector('.success-modal');
+            const overlay = document.querySelector('.modal-overlay');
+            fileUploadBoxes.forEach(box => {
+                const input = box.querySelector('input[type="file"]');
+                box.addEventListener('click', () => input.click());
+                input.addEventListener('change', function () {
+                    const fileName = this.files[0]?.name;
+                    if (fileName) {
+                        box.querySelector('p').textContent = fileName;
+                        box.querySelector('i').className = 'ri-check-line text-2xl text-primary mb-2';
+                    }
+                });
+            });
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const jsonData = {};
+                formData.forEach((value, key) => {
+                    if (value instanceof File) {
+                        jsonData[key] = value.name;
+                    } else {
+                        jsonData[key] = value;
+                    }
+                });
+                jsonData['timestamp'] = new Date().toISOString();
+                try {
+                    const response = await fetch(SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(jsonData)
+                    });
+                    modal.style.display = 'block';
+                    overlay.style.display = 'block';
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('An error occurred while submitting the form. Please try again.');
+                }
+            });
+        });
+        function closeModal() {
+            document.querySelector('.success-modal').style.display = 'none';
+            document.querySelector('.modal-overlay').style.display = 'none';
+            document.getElementById('accountForm').reset();
+            document.querySelectorAll('.file-upload-box').forEach(box => {
+                box.querySelector('p').textContent = box.querySelector('p').textContent.includes('Upload') ?
+                    box.querySelector('p').textContent : 'Upload Document';
+                box.querySelector('i').className = 'ri-file-upload-line text-2xl text-gray-400 mb-2';
+            });
+        }
+        // Google Apps Script Code (to be deployed separately):
+        /*
+        function doPost(e) {
+        const data = JSON.parse(e.postData.contents);
+        const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
+        // Get headers from the first row
+        const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
+        // If sheet is empty, add headers
+        if (sheet.getLastRow() === 0) {
+        sheet.appendRow(Object.keys(data));
+        }
+        // Prepare row data in the same order as headers
+        const rowData = headers.map(header => data[header] || '');
+        // Append the data
+        sheet.appendRow(rowData);
+        return ContentService.createTextOutput(JSON.stringify({ 'result': 'success' }))
+        .setMimeType(ContentService.MimeType.JSON);
+        }
+        */
+    </script>
 </body>
 
 </html>
