@@ -41,12 +41,12 @@
             content: "\f3c2";
         }
 
-        .montserrat {
-            font-family: 'Montserrat', sans-serif;
+        body {
+            font-family: 'Raleway', sans-serif;
         }
 
-        .raleway {
-            font-family: 'Raleway', sans-serif;
+        .montserrat {
+            font-family: 'Montserrat', sans-serif;
         }
 
         input[type="number"]::-webkit-inner-spin-button,
@@ -55,41 +55,37 @@
             margin: 0;
         }
 
-        .file-upload-box {
-            border: 2px dashed #e2e8f0;
-            transition: all 0.3s ease;
+        .toast {
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
         }
 
-        .file-upload-box:hover {
-            border-color: #048c44;
+        .toast.show {
+            transform: translateY(0);
         }
 
-        .success-modal {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1000;
+        #mobileMenuBtn span {
+            transition: all 0.3s ease-in-out;
         }
 
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
+        #mobileMenuBtn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(2px, 6px);
+        }
+
+        #mobileMenuBtn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        #mobileMenuBtn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(2px, -6px);
         }
     </style>
 </head>
 
 <body class="bg-gray-50">
     <div class="min-h-screen">
-        <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
-            <div class="max-w-7xl mx-auto px-4">
+        <nav class="bg-white shadow-md sticky top-0 z-50">
+            <div class="max-w-10xl mx-auto px-4">
                 <div class="flex justify-between items-center h-16">
                     <a href="/" class="flex items-center">
                         <img src="https://static.readdy.ai/image/e468fcddea67c5ffcad275128ab07418/7cc470cb2c2b000403f9f53a5ab2f17e.png"
@@ -102,31 +98,120 @@
                                 <a href="./About team.html">About Us</a>
                                 <i class="ri-arrow-down-s-line"></i>
                             </button>
+                            <div
+                                class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                                <a href="./About team.html"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Our
+                                    Story</a>
+                                <a href="./About team.html#vision"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Vision
+                                    & Mission</a>
+                                <a href="./About team.html#team"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Board
+                                    Members</a>
+                            </div>
                         </div>
                         <div class="relative group">
                             <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
                                 <span>Banking</span>
                                 <i class="ri-arrow-down-s-line"></i>
                             </button>
+                            <div
+                                class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                                <a href="./personalbanking.html"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Personal
+                                    Banking</a>
+                                <a href="./personalbanking.html#Savings"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">- Savings Account</a>
+                                    <a href="./personalbanking.html#Current"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">- Current Account</a>
+                                <a href="./corporatebanking.html"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Corporate
+                                    Banking</a>
+                                <a href="./corporatebanking.html#Cash"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">- Cash Credit</a>
+                                <a href="./corporatebanking.html#Over"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">- Over Draft</a>
+                            </div>
                         </div>
                         <div class="relative group">
                             <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
                                 <a href="./DepositSchemes.html">Deposit Schemes</a>
                                 <i class="ri-arrow-down-s-line"></i>
                             </button>
+                            <div
+                                class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                                <a href="./DepositSchemes.html#Fixed"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Fixed
+                                    Deposit</a>
+                                <a href="./DepositSchemes.html#Recurring"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Recurring
+                                    Deposit</a>
+                                <a href="./DepositSchemes.html#Investment"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Re-Investment
+                                    Policy</a>
+                                <a href="./DepositSchemes.html#Daily"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Daily
+                                    Deposit</a>
+                            </div>
                         </div>
                         <div class="relative group">
                             <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
                                 <a href="./loanpage.html">Loans & Advances</a>
                                 <i class="ri-arrow-down-s-line"></i>
                             </button>
+                            <div
+                                class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                                <a href="./loanpage.html#gold"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Gold
+                                    Loan</a>
+                                <a href="./loanpage.html#Vehicle"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Vehicle
+                                    Loan</a>
+                                <a href="./loanpage.html#Demand"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Demand
+                                    Loan</a>
+                                <a href="./loanpage.html#Deposit"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Loan on
+                                    Deposit</a>
+                                <a href="./loanpage.html#Secured"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Other
+                                    Secured Loans</a>
+                            </div>
                         </div>
                         <div class="relative group">
                             <button class="flex items-center space-x-1 font-montserrat hover:text-primary">
                                 <a href="./OtherServices.html">Other Services</a>
                                 <i class="ri-arrow-down-s-line"></i>
                             </button>
+                            <div
+                                class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-300 ease-in-out">
+                                <a href="./OtherServices.html#Merchant"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Merchant
+                                    QR</a>
+                                <a href="./OtherServices.html#commerce"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">E-commerce</a>
+                                <a href="./OtherServices.html#Pos""
+                    class=" block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">POS Machine</a>
+                                <a href="./OtherServices.html#Demand"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Demand
+                                    Draft</a>
+                                <a href="./OtherServices.html#RTGS"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">RTGS/NEFT</a>
+                                <a href="./OtherServices.html#cheque"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Cheques</a>
+                                <a href="./OtherServices.html#Forex"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Forex</a>
+                                <a href="./OtherServices.html#SMS"
+                                    class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">SMS
+                                    Services</a>
+                            </div>
+                            
                         </div>
+                        <a href="application.html"
+                            class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                            Open account
+                        </a>
                     </div>
                     <button class="xl:hidden w-10 h-10 flex items-center justify-center" id="mobileMenuBtn">
                         <i class="ri-menu-line text-2xl"></i>
@@ -228,237 +313,171 @@
                 </div>
             </div>
         </nav>
-        <main class="container mx-auto px-4 py-8" style="margin-top: 40px;">
-            <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold montserrat text-gray-800 mb-4">Open New Account</h2>
-                    <p class="text-gray-600 raleway">Welcome to Secunderabad Bank. Please fill in the details below to
-                        open your account.</p>
-                </div>
-                <form id="accountForm" class="space-y-8" name="accountForm">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="space-y-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Account Type</label>
-                                <div class="relative">
-                                    <select name="accountType" required
-                                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none appearance-none pr-10">
-                                        <option value="">Select Account Type</option>
-                                        <option value="savings">Savings Account</option>
-                                        <option value="current">Current Account</option>
-                                        <option value="fixed">Fixed Deposit</option>
-                                        <option value="recurring">Recurring Deposit</option>
-                                    </select>
-                                    <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-                                        <i class="ri-arrow-down-s-line text-gray-400"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                                <input type="text" name="fullName" required
-                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
-                                    placeholder="Enter your full name">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
-                                <input type="date" name="dateOfBirth" required
-                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                                <input type="tel" name="phoneNumber" required pattern="[0-9]{10}"
-                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
-                                    placeholder="Enter 10-digit mobile number">
-                            </div>
-                        </div>
-                        <div class="space-y-6">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                                <input type="email" name="email" required
-                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
-                                    placeholder="Enter your email address">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Address</label>
-                                <textarea name="address" required rows="3"
-                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
-                                    placeholder="Enter your complete address"></textarea>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">PAN Card Number</label>
-                                <input type="text" name="panNumber" required pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}"
-                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
-                                    placeholder="Enter PAN number">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">Aadhaar Number</label>
-                                <input type="text" name="aadhaarNumber" required pattern="[0-9]{12}"
-                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
-                                    placeholder="Enter 12-digit Aadhaar number">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Occupation</label>
-                            <div class="relative">
-                                <select name="accountType" required
-                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none appearance-none pr-10">
-                                    <option value="">Select Occupation</option>
-                                    <option value="salaried">Salaried</option>
-                                    <option value="self-employed">Self-Employed</option>
-                                    <option value="student">Student</option>
-                                    <option value="retired">Retired</option>
-                                    <option value="others">Others</option>
-                                </select>
-                                <div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
-                                    <i class="ri-arrow-down-s-line text-gray-400"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Initial Deposit Amount</label>
-                            <div class="relative">
-                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">₹</span>
-                                <input type="number" name="initialDeposit"
-                                    class="w-full pl-8 pr-4 py-3 bg-gray-50 border border-gray-200 rounded focus:border-primary focus:ring-1 focus:ring-primary outline-none"
-                                    placeholder="Enter amount">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-lg font-semibold text-gray-800">Upload Documents</h3>
-                        <div class="grid md:grid-cols-3 gap-4">
-                            <div class="file-upload-box p-4 rounded text-center cursor-pointer">
-                                <input type="file" name="panCardFile" class="hidden" accept="image/*,.pdf" required>
-                                <i class="ri-file-upload-line text-2xl text-gray-400 mb-2"></i>
-                                <p class="text-sm text-gray-600">Upload PAN Card</p>
-                            </div>
-                            <div class="file-upload-box p-4 rounded text-center cursor-pointer">
-                                <input type="file" name="panCardFile" class="hidden" accept="image/*,.pdf" required>
-                                <i class="ri-file-upload-line text-2xl text-gray-400 mb-2"></i>
-                                <p class="text-sm text-gray-600">Upload Aadhaar Card</p>
-                            </div>
-                            <div class="file-upload-box p-4 rounded text-center cursor-pointer">
-                                <input type="file" name="panCardFile" class="hidden" accept="image/*,.pdf" required>
-                                <i class="ri-file-upload-line text-2xl text-gray-400 mb-2"></i>
-                                <p class="text-sm text-gray-600">Upload Address Proof</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <input type="checkbox" required
-                                class="mt-1 h-4 w-4 text-primary border-gray-300 rounded focus:ring-primary">
-                            <label class="ml-2 text-sm text-gray-600">
-                                I agree to the <a href="#" class="text-primary hover:underline">Terms & Conditions</a>
-                                and <a href="#" class="text-primary hover:underline">Privacy Policy</a>
-                            </label>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-primary text-white font-semibold py-4 px-6 rounded-button hover:bg-primary/90 transition-colors">
-                            Submit Application
-                        </button>
-                    </div>
-                </form>
+        <script>
+            document.getElementById("mobileMenuBtn").addEventListener("click", function () {
+                document.getElementById("mobileMenu").classList.toggle("hidden");
+                const icon = this.querySelector("i");
+                icon.classList.toggle("ri-menu-line");
+                icon.classList.toggle("ri-close-line");
+            });
+            document.querySelectorAll(".mobile-dropdown").forEach((dropdown) => {
+                const btn = dropdown.querySelector("button");
+                const content = dropdown.querySelector("div");
+                btn.addEventListener("click", () => {
+                    content.classList.toggle("hidden");
+                    const icon = btn.querySelector("i");
+                    icon.classList.toggle("ri-arrow-down-s-line");
+                    icon.classList.toggle("ri-arrow-up-s-line");
+                });
+            });
+        </script>
+        <!-- Main Form Section -->
+<main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Open New Account</h2>
+        <p class="text-gray-600">Welcome to Secunderabad Bank. Please fill in the details below to open your account.</p>
+      </div>
+  
+      <form id="accountForm" class="space-y-8">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Account Type</label>
+              <select name="accountType" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded">
+                <option value="">Select Account Type</option>
+                <option value="savings">Savings</option>
+                <option value="current">Current</option>
+                <option value="fixed">Fixed Deposit</option>
+                <option value="recurring">Recurring Deposit</option>
+              </select>
             </div>
-        </main>
-    </div>
-    <div class="modal-overlay"></div>
-    <div class="success-modal bg-white rounded-lg p-8 max-w-md w-full mx-4">
-        <div class="text-center">
-            <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <i class="ri-check-line text-3xl text-primary"></i>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+              <input type="text" name="fullName" required class="w-full px-4 py-3 border rounded" placeholder="Enter your name" />
             </div>
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Application Submitted Successfully!</h3>
-            <p class="text-gray-600 mb-6">Thank you for choosing Secunderabad Bank. We will review your application and
-                contact you shortly.</p>
-            <button onclick="closeModal()"
-                class="bg-primary text-white font-semibold py-3 px-6 rounded-button hover:bg-primary/90 transition-colors">
-                Close
-            </button>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Date of Birth</label>
+              <input type="date" name="dateOfBirth" required class="w-full px-4 py-3 border rounded" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+              <input type="tel" name="phoneNumber" pattern="[0-9]{10}" required class="w-full px-4 py-3 border rounded" placeholder="10-digit phone" />
+            </div>
+          </div>
+  
+          <div class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 border rounded" placeholder="Enter email" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+              <textarea name="address" rows="3" required class="w-full px-4 py-3 border rounded" placeholder="Your address"></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">PAN Number</label>
+              <input type="text" name="panNumber" pattern="[A-Z]{5}[0-9]{4}[A-Z]{1}" required class="w-full px-4 py-3 border rounded" placeholder="ABCDE1234F" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Aadhaar Number</label>
+              <input type="text" name="aadhaarNumber" pattern="[0-9]{12}" required class="w-full px-4 py-3 border rounded" placeholder="12-digit Aadhaar" />
+            </div>
+          </div>
         </div>
+  
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Occupation</label>
+            <select name="occupation" required class="w-full px-4 py-3 border rounded">
+              <option value="">Select Occupation</option>
+              <option value="salaried">Salaried</option>
+              <option value="student">Student</option>
+              <option value="retired">Retired</option>
+              <option value="self-employed">Self-employed</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Initial Deposit</label>
+            <div class="relative">
+              <span class="absolute left-4 top-1/2 -translate-y-1/2 text-gray-500">₹</span>
+              <input type="number" name="initialDeposit" required class="w-full pl-8 px-4 py-3 border rounded" placeholder="Amount" />
+            </div>
+          </div>
+        </div>
+  
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <input type="checkbox" required class="mt-1 h-4 w-4 text-primary border-gray-300 rounded" />
+            <label class="ml-2 text-sm text-gray-600">I agree to the <a href="#" class="text-blue-500">Terms & Conditions</a> and <a href="#" class="text-blue-500">Privacy Policy</a></label>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded hover:bg-blue-800 transition">Submit Application</button>
+        </div>
+      </form>
     </div>
-    <script>
-        const SHEET_ID = 'YOUR_GOOGLE_SHEET_ID';
-        const SHEET_NAME = 'Sheet1';
-        const SCRIPT_URL = `https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_ID/exec`;
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('accountForm');
-            const fileUploadBoxes = document.querySelectorAll('.file-upload-box');
-            const modal = document.querySelector('.success-modal');
-            const overlay = document.querySelector('.modal-overlay');
-            fileUploadBoxes.forEach(box => {
-                const input = box.querySelector('input[type="file"]');
-                box.addEventListener('click', () => input.click());
-                input.addEventListener('change', function () {
-                    const fileName = this.files[0]?.name;
-                    if (fileName) {
-                        box.querySelector('p').textContent = fileName;
-                        box.querySelector('i').className = 'ri-check-line text-2xl text-primary mb-2';
-                    }
-                });
-            });
-            form.addEventListener('submit', async function (e) {
-                e.preventDefault();
-                const formData = new FormData(form);
-                const jsonData = {};
-                formData.forEach((value, key) => {
-                    if (value instanceof File) {
-                        jsonData[key] = value.name;
-                    } else {
-                        jsonData[key] = value;
-                    }
-                });
-                jsonData['timestamp'] = new Date().toISOString();
-                try {
-                    const response = await fetch(SCRIPT_URL, {
-                        method: 'POST',
-                        mode: 'no-cors',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify(jsonData)
-                    });
-                    modal.style.display = 'block';
-                    overlay.style.display = 'block';
-                } catch (error) {
-                    console.error('Error:', error);
-                    alert('An error occurred while submitting the form. Please try again.');
-                }
-            });
-        });
-        function closeModal() {
-            document.querySelector('.success-modal').style.display = 'none';
-            document.querySelector('.modal-overlay').style.display = 'none';
-            document.getElementById('accountForm').reset();
-            document.querySelectorAll('.file-upload-box').forEach(box => {
-                box.querySelector('p').textContent = box.querySelector('p').textContent.includes('Upload') ?
-                    box.querySelector('p').textContent : 'Upload Document';
-                box.querySelector('i').className = 'ri-file-upload-line text-2xl text-gray-400 mb-2';
-            });
-        }
-        // Google Apps Script Code (to be deployed separately):
-        /*
-        function doPost(e) {
-        const data = JSON.parse(e.postData.contents);
-        const sheet = SpreadsheetApp.openById(SHEET_ID).getSheetByName(SHEET_NAME);
-        // Get headers from the first row
-        const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
-        // If sheet is empty, add headers
-        if (sheet.getLastRow() === 0) {
-        sheet.appendRow(Object.keys(data));
-        }
-        // Prepare row data in the same order as headers
-        const rowData = headers.map(header => data[header] || '');
-        // Append the data
-        sheet.appendRow(rowData);
-        return ContentService.createTextOutput(JSON.stringify({ 'result': 'success' }))
-        .setMimeType(ContentService.MimeType.JSON);
-        }
-        */
-    </script>
+  </main>
+  
+  <!-- Success Modal -->
+  <div class="fixed inset-0 bg-black/40 hidden items-center justify-center z-50 modal-overlay" id="modalOverlay">
+    <div class="bg-white p-8 rounded-lg max-w-md w-full shadow-lg success-modal" id="successModal">
+      <div class="text-center">
+        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <i class="ri-check-line text-3xl text-blue-600"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">Application Submitted!</h3>
+        <p class="text-gray-600 mb-6">Thank you for choosing Secunderabad Bank. We will contact you soon.</p>
+        <button onclick="closeModal()" class="bg-blue-600 text-white py-3 px-6 rounded hover:bg-blue-700">Close</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("WHvo9AZMCUmhZNhlX"); // Your actual public key
+
+  const form = document.getElementById("accountForm");
+  const modal = document.querySelector(".success-modal");
+  const overlay = document.querySelector(".modal-overlay");
+
+  function closeModal() {
+    modal.style.display = "none";
+    overlay.style.display = "none";
+    form.reset();
+  }
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const emailParams = {
+      accountType: formData.get("accountType"),
+      fullName: formData.get("fullName"),
+      dateOfBirth: formData.get("dateOfBirth"),
+      phoneNumber: formData.get("phoneNumber"),
+      email: formData.get("email"),
+      address: formData.get("address"),
+      panNumber: formData.get("panNumber"),
+      aadhaarNumber: formData.get("aadhaarNumber"),
+      occupation: formData.get("occupation"),
+      initialDeposit: formData.get("initialDeposit")
+    };
+
+    emailjs.send("service_t8697pt", "openaccount", emailParams)
+      .then(() => {
+        modal.style.display = "block";
+        overlay.style.display = "block";
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        alert("Something went wrong: " + (error.text || error.message));
+      });
+  });
+</script>
+
+  
+
 </body>
 
 </html>

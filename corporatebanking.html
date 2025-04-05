@@ -101,7 +101,7 @@
 
 <body class="bg-gray-50">
     <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-10xl mx-auto px-4">
             <div class="flex justify-between items-center h-16">
                 <a href="/" class="flex items-center">
                     <img src="https://static.readdy.ai/image/e468fcddea67c5ffcad275128ab07418/7cc470cb2c2b000403f9f53a5ab2f17e.png"
@@ -137,9 +137,17 @@
                             <a href="./personalbanking.html"
                                 class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Personal
                                 Banking</a>
+                            <a href="./personalbanking.html#Savings"
+                                class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">- Savings Account</a>
+                                <a href="./personalbanking.html#Current"
+                                class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">- Current Account</a>
                             <a href="./corporatebanking.html"
                                 class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">Corporate
                                 Banking</a>
+                            <a href="./corporatebanking.html#Cash"
+                                class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">- Cash Credit</a>
+                            <a href="./corporatebanking.html#Over"
+                                class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">- Over Draft</a>
                         </div>
                     </div>
                     <div class="relative group">
@@ -214,7 +222,12 @@
                                 class="block px-4 py-2 text-sm font-raleway hover:bg-gray-50 hover:text-primary">SMS
                                 Services</a>
                         </div>
+                        
                     </div>
+                    <a href="application.html"
+                        class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-opacity-90 transition-colors whitespace-nowrap">
+                        Open account
+                    </a>
                 </div>
                 <button class="xl:hidden w-10 h-10 flex items-center justify-center" id="mobileMenuBtn">
                     <i class="ri-menu-line text-2xl"></i>
@@ -340,51 +353,28 @@
                 <div class="md:w-1/2 mb-10 md:mb-0">
                     <h1 class="font-montserrat font-bold text-4xl md:text-5xl text-gray-900 mb-6">Corporate Banking</h1>
                     <p class="font-raleway text-xl text-gray-600 mb-8">Corporate banking serves the financial needs of
-                        businesses, including large corporations and SMEs,
-                        by providing loans and essential banking solutions that foster growth and job creation.</p>
-                    <p class="font-raleway text-xl text-gray-600 mb-8">
-                        At Secunderabad Bank, our dedicated professionals deliver personalized solutions tailored to your
-                        business, along with competitive rates and low fees for an economical banking experience
+                        businesses, including large corporations and SMEs, by providing loans and essential banking
+                        solutions that foster growth and job creation.
+
+                        At Secunderabad Bank, our dedicated professionals deliver personalized solutions tailored to
+                        your business, along with competitive rates and low fees for an economical banking experience.
                     </p>
-                    <!-- <div class=" flex space-x-4">
+                    <!-- <div class="flex space-x-4">
                         <button
                             class="bg-primary text-white px-8 py-3 !rounded-button font-montserrat hover:bg-opacity-90 whitespace-nowrap">Get
                             Started</button>
                         <button
                             class="border-2 border-primary text-primary px-8 py-3 !rounded-button font-montserrat hover:bg-primary hover:text-white whitespace-nowrap">Learn
                             More</button>
-                </div> -->
+                    </div> -->
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/0814eae71a7f00ddafb2a54dd81c9eea.jpg"
+                        alt="Banking Environment" class="rounded-lg shadow-xl w-full object-cover">
+                </div>
             </div>
-            <div class="md:w-1/2">
-                <img src="https://public.readdy.ai/ai/img_res/0814eae71a7f00ddafb2a54dd81c9eea.jpg"
-                    alt="Banking Environment" class="rounded-lg shadow-xl w-full object-cover">
-            </div>
-        </div>
         </div>
     </header>
-    
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
-                <div class="md:w-1/2">
-                    <h2 class="font-montserrat font-semibold text-3xl text-gray-900 mb-6">Cash Credit</h2>
-                    <p class="font-raleway text-gray-600 mb-8">Cash Credit is a flexible short-term loan designed to support businesses with their working capital
-                        needs. It allows companies to borrow funds against their stock, inventory, or receivables, with a preapproved credit limit. Businesses can withdraw funds as needed, and interest is charged only on the
-                        amount utilized, not the full limit. </p><p class="font-raleway text-gray-600 mb-8">This facility is ideal for maintaining smooth cash flow, especially
-                        during day-to-day operations and seasonal demands. At Secunderabad Bank, you can fulfil all your
-                        business and professional needs with our tailored overdraft services, ensuring flexible and efficient
-                        financial management.</p>
-                    <a href="application.html"
-                        class="mt-8 bg-primary text-white px-8 py-3 !rounded-button font-montserrat hover:bg-opacity-90 whitespace-nowrap">Open
-                        Savings Account</a>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="https://public.readdy.ai/ai/img_res/b8d8b0470a3993ade722b354345a502a.jpg"
-                        alt="Digital Banking Interface" class="rounded-lg shadow-xl w-full object-cover">
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-12">
@@ -438,26 +428,82 @@
             </div>
         </div>
     </section>
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2">
+                    <h2 class="font-montserrat font-semibold text-3xl text-gray-900 mb-6">Savings Account</h2>
+                    <p class="font-raleway text-gray-600 mb-8">A savings account is your foundational banking tool,
+                        allowing you to securely deposit your money without the hassle of cash or hidden safes.
+                        Withdrawals are easy, and you'll receive a cheque book, passbook, and ATM card for added
+                        convenience.</p>
+                    <p class="font-raleway text-gray-600 mb-8">Choose from various savings account types, including
+                        traditional, high-yield, and specialty accounts. Our dedicated staff is here to guide you in
+                        selecting the right account to meet your financial goals. Also enjoy our low maintenance
+                        charges, making savings accessible and affordable.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 flex items-center justify-center mt-1">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-montserrat font-medium text-gray-900">Zero Balance Account</h4>
+                                <p class="font-raleway text-gray-600">No minimum balance requirement for students and
+                                    senior citizens</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 flex items-center justify-center mt-1">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-montserrat font-medium text-gray-900">High Interest Rates</h4>
+                                <p class="font-raleway text-gray-600">Earn up to 4.5% interest on your savings</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-6 h-6 flex items-center justify-center mt-1">
+                                <i class="ri-check-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-montserrat font-medium text-gray-900">Free Digital Banking</h4>
+                                <p class="font-raleway text-gray-600">Access your account 24/7 through our mobile and
+                                    online platforms</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button
+                        class="mt-8 bg-primary text-white px-8 py-3 !rounded-button font-montserrat hover:bg-opacity-90 whitespace-nowrap">Open
+                        Savings Account</button>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://public.readdy.ai/ai/img_res/b8d8b0470a3993ade722b354345a502a.jpg"
+                        alt="Digital Banking Interface" class="rounded-lg shadow-xl w-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center justify-between gap-12 mb-16">
-                <div class="md:w-2/2">
-                    <h2 class="font-montserrat font-semibold text-3xl text-gray-900 mb-4">Overdraft</h2>
-                    <p class="font-raleway text-gray-600 mb-6">An Overdraft provides the flexibility to withdraw more than what's in your account, up to a set limit,
-                        offering quick access to funds when you need it most. Whether for unexpected expenses or
-                        temporary cash flow gaps, this short-term credit solution allows you to manage finances smoothly
-                        without disrupting your routine.</p>
-                    <p class="font-raleway text-gray-600"> Interest is only charged on the amount used, and repayment is
-                        flexible, letting you settle the balance when funds are available. Secunderabad Bank’s overdraft
-                        facility is a reliable way to handle financial gaps, ensuring you stay on track, whether for business or
-                        personal needs.</p>
+                <div class="md:w-1/2">
+                    <h2 class="font-montserrat font-semibold text-3xl text-gray-900 mb-4">Current Account</h2>
+                    <p class="font-raleway text-gray-600 mb-6">A current account is a versatile bank account that allows
+                        you to store and withdraw money as needed. Most banks offer a variety of current accounts with
+                        different features, enabling you to find the account that best suits your requirements. You will
+                        also receive a cheque book and ATM card for easy access to your funds.</p>
+                    <p class="font-raleway text-gray-600">Current accounts can be opened by individuals, partnership
+                        firms, private and public limited companies, HUFs, specified associations, societies, and
+                        trusts. The procedures for opening a current account are similar to those for savings accounts.
+                        Our professional staff is here to provide personalized assistance throughout the process,
+                        ensuring you select an account that meets your specific needs.</p>
                 </div>
-                <!-- <div class="md:w-1/2">
+                <div class="md:w-1/2">
                     <img src="https://public.readdy.ai/ai/img_res/a7451fba67fd8422c43a665c19949295.jpg"
                         alt="Current Account Services" class="rounded-lg shadow-xl w-full object-cover">
-                </div> -->
+                </div>
             </div>
-            <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
                     <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-secondary/10 rounded-full">
                         <i class="ri-exchange-funds-line text-secondary text-2xl"></i>
@@ -498,12 +544,12 @@
                         </p>
                     </div>
                 </div>
-            </div> -->
-            <!-- <div class="mt-12 text-center">
+            </div>
+            <div class="mt-12 text-center">
                 <button
                     class="bg-secondary text-white px-8 py-3 !rounded-button font-montserrat hover:bg-opacity-90 whitespace-nowrap">Open
                     Current Account</button>
-            </div> -->
+            </div>
         </div>
     </section>
     <section class="py-20 bg-gradient-to-r from-primary/5 to-secondary/5">
@@ -513,12 +559,12 @@
                 <p class="font-raleway text-gray-600 mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers who
                     trust us with their banking needs. Our team is ready to assist you.</p>
                 <div class="flex justify-center space-x-4">
-                    <a href="application.html"
+                    <button
                         class="bg-primary text-white px-8 py-3 !rounded-button font-montserrat hover:bg-opacity-90 whitespace-nowrap">Open
-                        an Account</a>
-                    <a href="support.html"
+                        an Account</button>
+                    <button
                         class="bg-white border-2 border-primary text-primary px-8 py-3 !rounded-button font-montserrat hover:bg-primary hover:text-white whitespace-nowrap">Contact
-                        Us</a>
+                        Us</button>
                 </div>
             </div>
         </div>
