@@ -3,96 +3,94 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deposite Schemes - Secunderabad Bank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Fixed Deposit Calculator</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#048c44',
-                        secondary: '#3c2c7b',
-                        textColor: '#282828',
-                        accent: '#bb2a1e'
-                    },
-                    borderRadius: {
-                        'none': '0px',
-                        'sm': '4px',
-                        DEFAULT: '8px',
-                        'md': '12px',
-                        'lg': '16px',
-                        'xl': '20px',
-                        '2xl': '24px',
-                        '3xl': '32px',
-                        'full': '9999px',
-                        'button': '8px'
-                    },
-                    fontFamily: {
-                        montserrat: ['Montserrat', 'sans-serif'],
-                        raleway: ['Raleway', 'sans-serif']
-                    }
-                }
-            }
-        }
+        tailwind.config = { theme: { extend: { colors: { primary: '#009041', secondary: '#2563eb' }, borderRadius: { 'none': '0px', 'sm': '4px', DEFAULT: '8px', 'md': '12px', 'lg': '16px', 'xl': '20px', '2xl': '24px', '3xl': '32px', 'full': '9999px', 'button': '8px' } } } }
     </script>
     <style>
         :where([class^="ri-"])::before {
             content: "\f3c2";
         }
 
-        .service-card:hover {
-            transform: translateY(-4px);
-            transition: transform 0.3s ease;
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #e5e7eb;
+            border-radius: 4px;
+            outline: none;
         }
 
-        .service-image {
-            transition: transform 0.3s ease;
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #009041;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background .15s ease-in-out;
         }
 
-        .service-card:hover .service-image {
-            transform: scale(1.05);
+        input[type="range"]::-webkit-slider-thumb:hover {
+            background: #007034;
         }
 
-        .nav-dropdown {
-            display: block;
-            visibility: hidden;
+        .toggle-btn {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+
+        .toggle-btn input {
             opacity: 0;
-            transform: translateY(-10px);
-            transition: all 0.3s ease;
+            width: 0;
+            height: 0;
         }
 
-        .nav-link:hover+.nav-dropdown,
-        .nav-dropdown:hover {
-            visibility: visible;
-            opacity: 1;
-            transform: translateY(0);
+        .toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e5e7eb;
+            transition: .4s;
+            border-radius: 30px;
         }
 
-        @media (max-width: 1220px) {
-            .xl\:hidden {
-                display: none;
-            }
+        .toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
 
-            .xl\:flex {
-                display: flex;
-            }
+        input:checked+.toggle-slider {
+            background-color: #009041;
+        }
 
-            .xl\:block {
-                display: block;
-            }
+        input:checked+.toggle-slider:before {
+            transform: translateX(30px);
         }
     </style>
 </head>
 
-<body class="bg-gray-50">
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm">
+        <nav class="bg-white shadow-md sticky top-0 z-50">
             <div class="max-w-10xl mx-auto px-4">
                 <div class="flex justify-between items-center h-16">
                     <a href="/" class="flex items-center">
@@ -355,348 +353,298 @@
                 });
             });
         </script>
-    <header class="relative h-[400px] flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 z-0 bg-primary/90">
-            <img src="https://readdy.ai/api/search-image?query=modern banking hall interior with glass walls and minimal design, natural lighting, professional atmosphere, banking environment, high-end finishes, clean and sophisticated&width=1920&height=800&orientation=landscape&flag=1d0afcaa6e36c669d97def6db9abc541"
-                class="w-full h-full object-cover opacity-10 mix-blend-overlay">
-        </div>
-        <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
-            <h1 class="font-montserrat font-bold text-5xl mb-6 text-white">Deposit Schemes</h1>
-            <p class="font-raleway text-xl text-white/80">A deposit scheme provides a safe and effective way to save and
-                grow your money, ensuring both security and steady returns. With the flexibility to choose from various
-                deposit options, you can build financial stability and achieve your savings goals without the stress of
-                market risks. At Secunderabad Bank, our deposit schemes are tailored to meet your needs, offering
-                attractive interest rates and unmatched convenience.</p>
-        </div>
     </header>
-    <main class="max-w-7xl mx-auto px-4 py-16">
-        <div class="grid gap-12">
-            <div class="service-card bg-white rounded-lg shadow-lg p-8">
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="flex-1">
-                        <h2 class="font-montserrat font-bold text-2xl mb-4 text-textColor">Fixed Deposit</h2>
-                        <p class="font-raleway text-gray-600 mb-6">A Fixed Deposit (FD) is a secure and reliable
-                            investment option that guarantees returns over a predetermined period. With an FD, you
-                            deposit a lump sum for a specific tenure at a fixed interest rate, ensuring you earn more
-                            than with a standard savings account. This investment comes without any market-related
-                            risks, making it an excellent choice for those seeking a stable and predictable way to grow
-                            their wealth. Whether you’re saving for future education, a major purchase, or just want to
-                            enjoy the peace of mind that comes with a secure investment, a Fixed Deposit can help you
-                            achieve your financial goals. With flexible tenure options and guaranteed returns, FDs offer
-                            both safety and financial growth. At Secunderabad Bank, we make it easy to invest in an FD
-                            with competitive interest rates and customer-focused service.
-                        </p>
-                        <!-- <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Instant settlements with zero hardware requirements</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Secure cashless transactions with detailed reporting</span>
-                            </li>
-                        </ul> -->
-                        <button
-                            class="bg-primary text-white px-6 py-3 rounded-button font-raleway hover:bg-primary/90 transition-colors">
-                            Get Merchant QR
-                        </button>
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h1 class="text-3xl font-bold text-gray-900 mb-4">Fixed Deposit Calculator</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto">Plan your investments with our easy-to-use calculator and
+                    maximize your returns with the right fixed deposit strategy.</p>
+            </div>
+            <div class="w-full max-w-5xl mx-auto flex flex-col lg:flex-row bg-white rounded-lg shadow-lg">
+                <div class="w-full lg:w-2/5 p-8 bg-gray-50 lg:border-r border-gray-100">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">About Fixed Deposits</h2>
+                    <p class="text-gray-700 mb-6">Fixed deposits are one of the most popular investment options that
+                        offer guaranteed returns. They provide a safe and secure way to grow your savings with
+                        predictable interest rates.</p>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">Key Benefits</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                                <i class="ri-check-line text-primary ri-lg"></i>
+                            </div>
+                            <span class="text-gray-700">Guaranteed returns with fixed interest rates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                                <i class="ri-check-line text-primary ri-lg"></i>
+                            </div>
+                            <span class="text-gray-700">Flexible tenure options from days to years</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                                <i class="ri-check-line text-primary ri-lg"></i>
+                            </div>
+                            <span class="text-gray-700">Higher interest rates compared to regular savings</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                                <i class="ri-check-line text-primary ri-lg"></i>
+                            </div>
+                            <span class="text-gray-700">Option for regular interest payouts or compounding</span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2 mt-0.5">
+                                <i class="ri-check-line text-primary ri-lg"></i>
+                            </div>
+                            <span class="text-gray-700">Safe investment backed by deposit insurance</span>
+                        </li>
+                    </ul>
+                    <h3 class="text-lg font-semibold text-gray-800 mt-6 mb-3">How to Use This Calculator</h3>
+                    <p class="text-gray-700 mb-4">Adjust the sliders to set your principal amount, interest rate, and
+                        tenure. Choose your preferred compounding frequency to see how your investment will grow over
+                        time.</p>
+                    <div class="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
+                        <div class="flex items-start">
+                            <div class="w-6 h-6 flex items-center justify-center mr-2">
+                                <i class="ri-information-line text-secondary ri-lg"></i>
+                            </div>
+                            <p class="text-gray-700 text-sm">The actual returns may vary based on the bank's policies
+                                and prevailing interest rates. Please consult with your financial institution for the
+                                most accurate information.</p>
+                        </div>
                     </div>
-                    <div class="w-full md:w-2/5">
-                        <img src="https://readdy.ai/api/search-image?query=modern retail store counter with QR code payment system, customer scanning with smartphone, clean minimal setup with professional lighting&width=600&height=400&orientation=landscape&flag=0c310504c75bc9b5f12bae4e123eb1e9"
-                            class="w-full h-[300px] object-cover rounded-lg service-image">
+                </div>
+                <div class="w-full lg:w-3/5 p-8">
+                    <div class="text-center mb-8">
+                        <h1 class="text-2xl font-bold text-gray-900">Fixed Deposit Calculator</h1>
+                        <p class="text-gray-600 mt-2">Calculate your Fixed Deposit returns and maturity amount</p>
+                    </div>
+                    <div class="space-y-8">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="text-sm font-medium text-gray-700">Principal Amount</label>
+                                <div class="flex items-center">
+                                    <span class="text-sm font-medium text-gray-900 mr-2">₹</span>
+                                    <input type="text" id="principalInput" value="100,000"
+                                        class="w-24 text-sm font-medium text-gray-900 text-right border border-gray-300 rounded px-2 py-1">
+                                </div>
+                            </div>
+                            <input type="range" id="principal" min="1000" max="5000000" value="100000" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="text-sm font-medium text-gray-700">Interest Rate (% p.a.)</label>
+                                <div class="flex items-center">
+                                    <input type="text" id="interestInput" value="6.5"
+                                        class="w-16 text-sm font-medium text-gray-900 text-right border border-gray-300 rounded px-2 py-1">
+                                    <span class="text-sm font-medium text-gray-900 ml-1">%</span>
+                                </div>
+                            </div>
+                            <input type="range" id="interest" min="3" max="12" value="6.5" step="0.1" class="w-full">
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="text-sm font-medium text-gray-700">Tenure</label>
+                                <div class="flex items-center">
+                                    <input type="text" id="tenureInput" value="12"
+                                        class="w-16 text-sm font-medium text-gray-900 text-right border border-gray-300 rounded px-2 py-1">
+                                    <span class="text-sm font-medium text-gray-900 ml-1" id="tenureUnit">months</span>
+                                </div>
+                            </div>
+                            <input type="range" id="tenure" min="1" max="120" value="12" class="w-full">
+                            <div class="flex justify-between mt-3 flex-wrap gap-2">
+                                <div class="flex items-center space-x-2">
+                                    <input type="radio" id="days" name="tenureType" value="days" class="hidden">
+                                    <label for="days"
+                                        class="cursor-pointer flex items-center justify-center px-3 py-1 text-sm border border-gray-300 rounded-full"
+                                        id="daysLabel">Days</label>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <input type="radio" id="months" name="tenureType" value="months" class="hidden"
+                                        checked>
+                                    <label for="months"
+                                        class="cursor-pointer flex items-center justify-center px-3 py-1 text-sm border border-gray-300 rounded-full bg-primary text-white"
+                                        id="monthsLabel">Months</label>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <input type="radio" id="years" name="tenureType" value="years" class="hidden">
+                                    <label for="years"
+                                        class="cursor-pointer flex items-center justify-center px-3 py-1 text-sm border border-gray-300 rounded-full"
+                                        id="yearsLabel">Years</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <label class="text-sm font-medium text-gray-700">Compounding Frequency</label>
+                            </div>
+                            <select id="compounding"
+                                class="w-full p-2 border border-gray-300 rounded text-gray-700 pr-8">
+                                <option value="1">Annually</option>
+                                <option value="2">Semi-Annually</option>
+                                <option value="4" selected>Quarterly</option>
+                                <option value="12">Monthly</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-6 bg-gray-50 rounded-lg">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <p class="text-sm text-gray-600">Maturity Amount</p>
+                                <p class="text-2xl font-bold text-primary mt-1">₹<span
+                                        id="maturityAmount">106,610</span></p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-600">Interest Earned</p>
+                                <p class="text-2xl font-bold text-secondary mt-1">₹<span
+                                        id="interestEarned">6,610</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <button
+                            class="w-full bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-4 !rounded-button transition-colors whitespace-nowrap"
+                            onclick="calculate()">
+                            Calculate
+                        </button>
                     </div>
                 </div>
             </div>
-            
-            <div class="service-card bg-white rounded-lg shadow-lg p-8">
-                <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
-                    <div class="flex-1">
-                        <h2 class="font-montserrat font-bold text-2xl mb-4 text-textColor">Recurring Deposit</h2>
-                        <p class="font-raleway text-gray-600 mb-6">A Recurring Deposit (RD) is the perfect solution for
-                            those who prefer to save consistently without requiring a large initial deposit. By
-                            contributing a fixed amount monthly over a set period, you can accumulate significant
-                            savings while earning assured returns at maturity. Ranging from short to long tenures, RDs
-                            offer the flexibility to align your savings with specific goals—whether it’s planning a
-                            vacation, funding education, or simply building a disciplined habit of saving. The
-                            predictable nature of RDs makes them ideal for individuals seeking financial stability
-                            without market volatility. At Secunderabad Bank, our RDs provide the security of fixed
-                            returns, ensuring your hard-earned money grows steadily over time.</p>
-                        <!-- <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">EMV chip security with contactless payments</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Accepted at millions of locations worldwide</span>
-                            </li>
-                        </ul> -->
-                        <button
-                            class="bg-primary text-white px-6 py-3 rounded-button font-raleway hover:bg-primary/90 transition-colors">
-                            Apply for Debit Card
-                        </button>
-                    </div>
-                    <div class="w-full md:w-2/5">
-                        <img src="https://readdy.ai/api/search-image?query=modern contactless payment card with chip, professional banking card design with minimal background, secure payment concept&width=600&height=400&orientation=landscape&flag=534f78fcda2276db72ecdeff89b07145"
-                            class="w-full h-[300px] object-cover rounded-lg service-image">
-                    </div>
-                </div>
-            </div>
-            <div class="service-card bg-white rounded-lg shadow-lg p-8">
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="flex-1">
-                        <h2 class="font-montserrat font-bold text-2xl mb-4 text-textColor">Re-Investment Policy</h2>
-                        <p class="font-raleway text-gray-600 mb-6">For those looking to maximize the potential of their
-                            Fixed Deposits, the Re-Investment Policy offers a powerful way to grow wealth. This strategy
-                            adds the interest earned on your FD back to the principal amount on a quarterly basis,
-                            enabling you to benefit from the power of compounding. Over time, this compounding effect
-                            results in significantly higher returns, making it an excellent choice for long-term
-                            savings. By choosing the Re-Investment Policy, you can watch your money grow exponentially
-                            without any additional effort. Whether you’re saving for retirement, higher education, or
-                            simply want to build a substantial financial corpus, our Re-Investment Policy ensures your
-                            financial future is both secure and rewarding.</p>
-                        <!-- <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Multi-layer security for online transactions</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Real-time inventory tracking and management</span>
-                            </li>
-                        </ul> -->
-                        <button
-                            class="bg-primary text-white px-6 py-3 rounded-button font-raleway hover:bg-primary/90 transition-colors">
-                            Get Started
-                        </button>
-                    </div>
-                    <div class="w-full md:w-2/5">
-                        <img src="https://readdy.ai/api/search-image?query=modern e-commerce dashboard interface showing sales analytics and inventory management, professional business application with clean design&width=600&height=400&orientation=landscape&flag=7c2f9d12f94ce2a2b073622c654ca52f"
-                            class="w-full h-[300px] object-cover rounded-lg service-image">
-                    </div>
-                </div>
-            </div>
-            <div class="service-card bg-white rounded-lg shadow-lg p-8">
-                <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
-                    <div class="flex-1">
-                        <h2 class="font-montserrat font-bold text-2xl mb-4 text-textColor">Daily Deposit</h2>
-                        <p class="font-raleway text-gray-600 mb-6">The Daily Deposit Scheme is a unique offering
-                            tailored for individuals with variable incomes, such as small business owners, shopkeepers,
-                            and self-employed professionals. This scheme allows you to deposit small amounts daily,
-                            gradually building a substantial savings corpus over time. With attractive interest rates
-                            and the flexibility to withdraw after six months, it’s a practical solution for those
-                            looking to grow their savings steadily.</p>
-                        <!-- <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Lightning-fast checkout experience</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Detailed sales reports and analytics</span>
-                            </li>
-                        </ul> -->
-                        <button
-                            class="bg-primary text-white px-6 py-3 rounded-button font-raleway hover:bg-primary/90 transition-colors">
-                            Request POS Machine
-                        </button>
-                    </div>
-                    <div class="w-full md:w-2/5">
-                        <img src="https://readdy.ai/api/search-image?query=modern POS terminal with touchscreen display in retail environment, professional payment system with clean design&width=600&height=400&orientation=landscape&flag=accbdfeb286893f645676553b3571fa4"
-                            class="w-full h-[300px] object-cover rounded-lg service-image">
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="service-card bg-white rounded-lg shadow-lg p-8">
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="flex-1">
-                        <h2 class="font-montserrat font-bold text-2xl mb-4 text-textColor">Locker Facility</h2>
-                        <p class="font-raleway text-gray-600 mb-6">When it comes to storing your most prized
-                            possessions, security is paramount. Our locker facility offers a safe, accessible, and
-                            secure space for your valuables, including important documents, jewelry, and heirlooms. With
-                            robust safety measures and 24/7 monitoring, you can have peace of mind knowing your
-                            belongings are protected. Accessing your locker is quick and convenient, thanks to our
-                            dedicated and professional staff. Trust Secunderabad Bank to provide a secure sanctuary for
-                            the things that matter most to you.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Advanced security with biometric authentication</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Flexible access hours with complete privacy</span>
-                            </li>
-                        </ul>
-                        <button
-                            class="bg-primary text-white px-6 py-3 rounded-button font-raleway hover:bg-primary/90 transition-colors">
-                            Rent a Locker
-                        </button>
-                    </div>
-                    <div class="w-full md:w-2/5">
-                        <img src="https://readdy.ai/api/search-image?query=modern bank vault with safety deposit boxes, secure banking environment with professional lighting, clean minimal design&width=600&height=400&orientation=landscape&flag=033b4e61d03962519ccabe8cb745f32c"
-                            class="w-full h-[300px] object-cover rounded-lg service-image">
-                    </div>
-                </div>
-            </div> -->
-            <!-- <div class="service-card bg-white rounded-lg shadow-lg p-8">
-                <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
-                    <div class="flex-1">
-                        <h2 class="font-montserrat font-bold text-2xl mb-4 text-textColor">Demand Draft</h2>
-                        <p class="font-raleway text-gray-600 mb-6">Simplify your payment needs with our demand draft
-                            services, the ideal solution for situations requiring guaranteed fund transfers. Whether
-                            you’re making a large payment for personal reasons or managing business transactions, demand
-                            drafts provide a reliable method to send money securely. Designed for both individuals and
-                            organizations, they ensure that your payments reach the intended recipients without delays
-                            or complications. With Secunderabad Bank, experience a hassle-free and secure way to manage
-                            your money transfers.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Guaranteed payment instrument</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Same-day processing available</span>
-                            </li>
-                        </ul>
-                        <button
-                            class="bg-primary text-white px-6 py-3 rounded-button font-raleway hover:bg-primary/90 transition-colors">
-                            Request Demand Draft
-                        </button>
-                    </div>
-                    <div class="w-full md:w-2/5">
-                        <img src="https://readdy.ai/api/search-image?query=professional banking document with official stamp and signature, secure financial instrument on clean minimal background&width=600&height=400&orientation=landscape&flag=5ef5afa8fc4626617771abd9ce94f6dc"
-                            class="w-full h-[300px] object-cover rounded-lg service-image">
-                    </div>
-                </div>
-            </div>
-            <div class="service-card bg-white rounded-lg shadow-lg p-8">
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="flex-1">
-                        <h2 class="font-montserrat font-bold text-2xl mb-4 text-textColor">RTGS / NEFT</h2>
-                        <p class="font-raleway text-gray-600 mb-6">Enjoy the convenience of real-time and scheduled fund
-                            transfers with our RTGS (Real-Time Gross Settlement) and NEFT (National Electronic Funds
-                            Transfer) services. Whether you need to send money urgently or plan regular payments, our
-                            services guarantee secure and efficient transfers to any bank across India. With a
-                            user-friendly process and real-time updates, managing your finances has never been easier.
-                            Trust Secunderabad Bank to make your fund transfers fast, reliable, and stress-free.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">IFSC Code: SVCB0029002</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Secure transactions with multi-layer authentication</span>
-                            </li>
-                        </ul>
-                        <button
-                            class="bg-primary text-white px-6 py-3 rounded-button font-raleway hover:bg-primary/90 transition-colors">
-                            Initiate Transfer
-                        </button>
-                    </div>
-                    <div class="w-full md:w-2/5">
-                        <img src="https://readdy.ai/api/search-image?query=modern digital banking interface showing fund transfer screen with professional design, secure transaction visualization on minimal background&width=600&height=400&orientation=landscape&flag=2078e555f7c40e64b048e6a6d411ac9c"
-                            class="w-full h-[300px] object-cover rounded-lg service-image">
-                    </div>
-                </div>
-            </div>
-            <div class="service-card bg-white rounded-lg shadow-lg p-8">
-                <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
-                    <div class="flex-1">
-                        <h2 class="font-montserrat font-bold text-2xl mb-4 text-textColor">At Par Cheques</h2>
-                        <p class="font-raleway text-gray-600 mb-6">Make your payments smoother and more flexible with
-                            our at par cheque services, which are accepted across multiple banks nationwide. Ideal for
-                            businesses and individuals alike, these cheques simplify your transactions, ensuring timely
-                            and accurate payments. Whether for personal use or professional obligations, at par cheques
-                            eliminate the complexities of inter-bank payments and provide a reliable method to settle
-                            your accounts.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Zero additional charges for clearing at any location</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Enhanced security features with quick processing</span>
-                            </li>
-                        </ul>
-                        <button
-                            class="bg-primary text-white px-6 py-3 rounded-button font-raleway hover:bg-primary/90 transition-colors">
-                            Request Cheque Book
-                        </button>
-                    </div>
-                    <div class="w-full md:w-2/5">
-                        <img src="https://readdy.ai/api/search-image?query=professional cheque book with modern security features, banking document on clean minimal background with sophisticated design&width=600&height=400&orientation=landscape&flag=bd140b34792a77617da34ea6a1cb4bdb"
-                            class="w-full h-[300px] object-cover rounded-lg service-image">
-                    </div>
-                </div>
-            </div>
-            <div class="service-card bg-white rounded-lg shadow-lg p-8">
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <div class="flex-1">
-                        <h2 class="font-montserrat font-bold text-2xl mb-4 text-textColor">Forex Services</h2>
-                        <p class="font-raleway text-gray-600 mb-6">Traveling abroad or conducting international
-                            business? Our forex services ensure that your foreign exchange needs are met with efficiency
-                            and reliability. Benefit from competitive exchange rates and access to a variety of foreign
-                            currencies, making international transactions simpler and more cost-effective. Whether for
-                            leisure travel, studies, or corporate ventures, our forex solutions are designed to support
-                            your global endeavors with ease.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Best-in-market exchange rates for major currencies</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Instant forex cards and traveler's cheques</span>
-                            </li>
-                        </ul>
-                        <button
-                            class="bg-primary text-white px-6 py-3 rounded-button font-raleway hover:bg-primary/90 transition-colors">
-                            Exchange Currency
-                        </button>
-                    </div>
-                    <div class="w-full md:w-2/5">
-                        <img src="https://readdy.ai/api/search-image?query=professional forex trading display with currency exchange rates, modern financial interface with clean design&width=600&height=400&orientation=landscape&flag=32b30d5a00187505a399159b080c0aaf"
-                            class="w-full h-[300px] object-cover rounded-lg service-image">
-                    </div>
-                </div>
-            </div>
-            <div class="service-card bg-white rounded-lg shadow-lg p-8">
-                <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
-                    <div class="flex-1">
-                        <h2 class="font-montserrat font-bold text-2xl mb-4 text-textColor">SMS Banking</h2>
-                        <p class="font-raleway text-gray-600 mb-6">Stay connected with your finances wherever you are
-                            with our SMS banking services. Receive instant alerts for transactions, account balances,
-                            and exclusive offers directly on your mobile phone. With real-time updates and
-                            notifications, you’ll never miss a beat when it comes to managing your money. Simple, fast,
-                            and reliable, our SMS services are the perfect way to stay in control of your financial
-                            activities at all times.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Instant transaction notifications 24/7</span>
-                            </li>
-                            <li class="flex items-center gap-3">
-                                <i class="ri-check-line text-primary"></i>
-                                <span class="font-raleway">Balance enquiry and mini statement on demand</span>
-                            </li>
-                        </ul>
-                        <button
-                            class="bg-primary text-white px-6 py-3 rounded-button font-raleway hover:bg-primary/90 transition-colors">
-                            Activate SMS Alerts
-                        </button>
-                    </div>
-                    <div class="w-full md:w-2/5">
-                        <img src="https://readdy.ai/api/search-image?query=modern smartphone displaying banking notification interface, professional mobile banking concept with minimal design&width=600&height=400&orientation=landscape&flag=66dac7afeeadc33fe16b85d189a6a354"
-                            class="w-full h-[300px] object-cover rounded-lg service-image">
-                    </div>
-                </div>
-            </div> -->
         </div>
-    </main>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Fixed Deposits</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover the advantages of investing in fixed deposits with
+                    us.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-shield-check-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Safe & Secure</h3>
+                    <p class="text-gray-700">Your investments are protected with deposit insurance up to ₹5 lakhs,
+                        ensuring complete peace of mind.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-line-chart-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Competitive Rates</h3>
+                    <p class="text-gray-700">Enjoy some of the best interest rates in the market, helping your money
+                        grow faster over time.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg">
+                    <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full mb-4">
+                        <i class="ri-calendar-check-line text-primary ri-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Flexible Tenures</h3>
+                    <p class="text-gray-700">Choose from a wide range of tenure options from 7 days to 10 years to match
+                        your financial goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Follow these simple steps to calculate your fixed deposit
+                    returns.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mx-auto mb-4 text-xl font-bold">
+                        1</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Enter Amount</h3>
+                    <p class="text-gray-700">Input your principal investment amount using the slider.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mx-auto mb-4 text-xl font-bold">
+                        2</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Set Interest Rate</h3>
+                    <p class="text-gray-700">Adjust the interest rate based on current market offerings.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mx-auto mb-4 text-xl font-bold">
+                        3</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">Choose Tenure</h3>
+                    <p class="text-gray-700">Select your preferred investment duration in days, months, or years.</p>
+                </div>
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 flex items-center justify-center bg-primary text-white rounded-full mx-auto mb-4 text-xl font-bold">
+                        4</div>
+                    <h3 class="text-lg font-semibold text-gray-900 mb-2">View Results</h3>
+                    <p class="text-gray-700">See your maturity amount and total interest earned instantly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about fixed deposits.</p>
+            </div>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="border border-gray-200 rounded-lg">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-4 text-left font-medium text-gray-900">
+                        <span>What is a fixed deposit?</span>
+                        <i class="ri-arrow-down-s-line ri-lg"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 pt-0 text-gray-700">
+                        <p>A fixed deposit is a financial instrument provided by banks which provides investors a higher
+                            rate of interest than a regular savings account, until the given maturity date. It may or
+                            may not require the creation of a separate account.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-4 text-left font-medium text-gray-900">
+                        <span>How is interest calculated on fixed deposits?</span>
+                        <i class="ri-arrow-down-s-line ri-lg"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 pt-0 text-gray-700">
+                        <p>Interest on fixed deposits is calculated using the compound interest formula. The frequency
+                            of compounding (monthly, quarterly, half-yearly, or yearly) affects the final returns. The
+                            more frequent the compounding, the higher the returns.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-4 text-left font-medium text-gray-900">
+                        <span>Can I withdraw my fixed deposit before maturity?</span>
+                        <i class="ri-arrow-down-s-line ri-lg"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 pt-0 text-gray-700">
+                        <p>Yes, most banks allow premature withdrawal of fixed deposits. However, this usually comes
+                            with a penalty in the form of a reduced interest rate. The exact penalty varies from bank to
+                            bank.</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-lg">
+                    <button
+                        class="faq-toggle w-full flex justify-between items-center p-4 text-left font-medium text-gray-900">
+                        <span>Are fixed deposits taxable?</span>
+                        <i class="ri-arrow-down-s-line ri-lg"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 pt-0 text-gray-700">
+                        <p>Yes, the interest earned on fixed deposits is taxable as per your income tax slab. TDS is
+                            deducted if the interest earned exceeds ₹40,000 per year (₹50,000 for senior citizens). You
+                            can submit Form 15G/15H to avoid TDS if you're eligible.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="bg-gray-900 text-white py-16">
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -813,7 +761,182 @@
             </div>
         </div>
     </footer>
-    <script src="https://static.readdy.ai/static/share.js"></script>
+    <script>
+        const principalSlider = document.getElementById('principal');
+        const interestSlider = document.getElementById('interest');
+        const tenureSlider = document.getElementById('tenure');
+        const principalInput = document.getElementById('principalInput');
+        const interestInput = document.getElementById('interestInput');
+        const tenureInput = document.getElementById('tenureInput');
+        const tenureUnit = document.getElementById('tenureUnit');
+        const maturityAmountEl = document.getElementById('maturityAmount');
+        const interestEarnedEl = document.getElementById('interestEarned');
+        const compoundingSelect = document.getElementById('compounding');
+        const daysRadio = document.getElementById('days');
+        const monthsRadio = document.getElementById('months');
+        const yearsRadio = document.getElementById('years');
+        const daysLabel = document.getElementById('daysLabel');
+        const monthsLabel = document.getElementById('monthsLabel');
+        const yearsLabel = document.getElementById('yearsLabel');
+        let currentTenureType = 'months';
+        function formatIndianNumber(num) {
+            return num.toLocaleString('en-IN');
+        }
+        function updateSliderFromInput(input, slider, min, max, isFloat = false) {
+            let value = input.value.replace(/,/g, '');
+            if (isFloat) {
+                value = parseFloat(value) || min;
+            } else {
+                value = parseInt(value) || min;
+            }
+            value = Math.max(min, Math.min(max, value));
+            slider.value = value;
+
+            if (isFloat) {
+                input.value = value;
+            } else {
+                input.value = formatIndianNumber(value);
+            }
+
+            calculate();
+        }
+        function updateInputFromSlider(slider, input, format = x => x) {
+            slider.addEventListener('input', () => {
+                input.value = format(slider.value);
+                calculate();
+            });
+        }
+        // Principal amount slider and input
+        updateInputFromSlider(principalSlider, principalInput, val => {
+            return formatIndianNumber(Number(val));
+        });
+        principalInput.addEventListener('blur', () => {
+            updateSliderFromInput(principalInput, principalSlider, 1000, 5000000);
+        });
+        principalInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                updateSliderFromInput(principalInput, principalSlider, 1000, 5000000);
+            }
+        });
+        // Interest rate slider and input
+        updateInputFromSlider(interestSlider, interestInput);
+        interestInput.addEventListener('blur', () => {
+            updateSliderFromInput(interestInput, interestSlider, 3, 12, true);
+        });
+        interestInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                updateSliderFromInput(interestInput, interestSlider, 3, 12, true);
+            }
+        });
+        // Tenure slider and input
+        updateInputFromSlider(tenureSlider, tenureInput);
+        tenureInput.addEventListener('blur', () => {
+            let min = 1, max = 120;
+            if (currentTenureType === 'days') {
+                min = 7;
+                max = 365;
+            } else if (currentTenureType === 'years') {
+                min = 1;
+                max = 10;
+            }
+            updateSliderFromInput(tenureInput, tenureSlider, min, max);
+        });
+        tenureInput.addEventListener('keyup', (e) => {
+            if (e.key === 'Enter') {
+                let min = 1, max = 120;
+                if (currentTenureType === 'days') {
+                    min = 7;
+                    max = 365;
+                } else if (currentTenureType === 'years') {
+                    min = 1;
+                    max = 10;
+                }
+                updateSliderFromInput(tenureInput, tenureSlider, min, max);
+            }
+        });
+        compoundingSelect.addEventListener('change', calculate);
+        function setupTenureTypeToggle() {
+            daysLabel.addEventListener('click', () => {
+                currentTenureType = 'days';
+                tenureUnit.textContent = 'days';
+                daysLabel.classList.add('bg-primary', 'text-white');
+                monthsLabel.classList.remove('bg-primary', 'text-white');
+                yearsLabel.classList.remove('bg-primary', 'text-white');
+                tenureSlider.min = 7;
+                tenureSlider.max = 365;
+                tenureSlider.value = 30;
+                tenureInput.value = 30;
+                calculate();
+            });
+
+            monthsLabel.addEventListener('click', () => {
+                currentTenureType = 'months';
+                tenureUnit.textContent = 'months';
+                monthsLabel.classList.add('bg-primary', 'text-white');
+                daysLabel.classList.remove('bg-primary', 'text-white');
+                yearsLabel.classList.remove('bg-primary', 'text-white');
+                tenureSlider.min = 1;
+                tenureSlider.max = 120;
+                tenureSlider.value = 12;
+                tenureInput.value = 12;
+                calculate();
+            });
+
+            yearsLabel.addEventListener('click', () => {
+                currentTenureType = 'years';
+                tenureUnit.textContent = 'years';
+                yearsLabel.classList.add('bg-primary', 'text-white');
+                daysLabel.classList.remove('bg-primary', 'text-white');
+                monthsLabel.classList.remove('bg-primary', 'text-white');
+                tenureSlider.min = 1;
+                tenureSlider.max = 10;
+                tenureSlider.value = 1;
+                tenureInput.value = 1;
+                calculate();
+            });
+        }
+        setupTenureTypeToggle();
+        function calculate() {
+            const principal = parseFloat(principalSlider.value);
+            const ratePerAnnum = parseFloat(interestSlider.value) / 100;
+            const compoundingFrequency = parseInt(compoundingSelect.value);
+            let tenureInYears;
+
+            if (currentTenureType === 'days') {
+                tenureInYears = parseFloat(tenureSlider.value) / 365;
+            } else if (currentTenureType === 'months') {
+                tenureInYears = parseFloat(tenureSlider.value) / 12;
+            } else {
+                tenureInYears = parseFloat(tenureSlider.value);
+            }
+
+            const ratePerPeriod = ratePerAnnum / compoundingFrequency;
+            const periods = compoundingFrequency * tenureInYears;
+            const maturityAmount = principal * Math.pow(1 + ratePerPeriod, periods);
+            const interestEarned = maturityAmount - principal;
+
+            maturityAmountEl.textContent = formatIndianNumber(Math.round(maturityAmount));
+            interestEarnedEl.textContent = formatIndianNumber(Math.round(interestEarned));
+        }
+        calculate();
+        // FAQ Toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                // Toggle content visibility
+                content.classList.toggle('hidden');
+                // Toggle icon
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('ri-arrow-up-s-line');
+                    icon.classList.add('ri-arrow-down-s-line');
+                } else {
+                    icon.classList.remove('ri-arrow-down-s-line');
+                    icon.classList.add('ri-arrow-up-s-line');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
