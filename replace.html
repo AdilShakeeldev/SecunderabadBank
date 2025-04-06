@@ -1,0 +1,133 @@
+<script>
+    let currentHero = 0;
+    const heroTrack = document.querySelector('.hero-track');
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroDots = document.querySelectorAll('.hero-dot');
+    function updateHeroPosition() {
+        heroTrack.style.transform = `translateX(-${currentHero * 100}%)`;
+        heroDots.forEach((dot, index) => {
+            dot.classList.toggle('bg-white', index === currentHero);
+            dot.classList.toggle('bg-white/20', index !== currentHero);
+        });
+    }
+    function moveHero(direction) {
+        currentHero = (currentHero + direction + heroSlides.length) % heroSlides.length;
+        updateHeroPosition();
+    }
+    heroDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentHero = index;
+            updateHeroPosition();
+        });
+    });
+    setInterval(() => moveHero(1), 5000);
+    // Function to format numbers in Indian system (lakhs, crores)
+function formatIndianCurrency(number) {
+return number.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+}
+
+// EMI Calculator
+function calculateEMI() {
+const amount = parseFloat(document.getElementById('loan-amount').value);
+const rate = parseFloat(document.getElementById('interest-rate').value);
+const tenure = parseFloat(document.getElementById('loan-tenure').value);
+
+const monthlyRate = rate / 12 / 100;
+const months = tenure * 12;
+
+const emi = amount * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
+const totalAmount = emi * months;
+
+// Update values with formatted currency
+document.getElementById('monthly-emi').innerHTML = `₹${formatIndianCurrency(emi)}`;
+document.getElementById('total-amount').innerHTML = `₹${formatIndianCurrency(totalAmount)}`;
+}
+
+// Loan Amount Slider
+document.getElementById('loan-amount').addEventListener('input', function () {
+document.getElementById('loan-amount-value').textContent = formatIndianCurrency(this.value);
+calculateEMI();
+});
+
+// Interest Rate Slider
+document.getElementById('interest-rate').addEventListener('input', function () {
+document.getElementById('interest-rate-value').textContent = this.value;
+calculateEMI();
+});
+
+// Loan Tenure Slider
+document.getElementById('loan-tenure').addEventListener('input', function () {
+document.getElementById('loan-tenure-value').textContent = this.value;
+calculateEMI();
+});
+
+    // Gallery Show More
+    document.getElementById('show-more').addEventListener('click', function () {
+        const moreGallery = document.getElementById('more-gallery');
+        const button = document.getElementById('show-more');
+        if (moreGallery.classList.contains('hidden')) {
+            moreGallery.classList.remove('hidden');
+            button.textContent = 'Show Less';
+        } else {
+            moreGallery.classList.add('hidden');
+            button.textContent = 'Show More';
+        }
+    });
+    // Counter Animation
+    const counters = document.querySelectorAll('.counter');
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                let count = 0;
+                const speed = 2000 / target; // Adjust speed based on target value
+
+                const updateCount = () => {
+                    if (count < target) {
+                        count += target >= 1000 ? 100 : 1; // Increment by 100 for large numbers, 1 otherwise
+
+                        let displayValue;
+                        if (target >= 1000) {
+                            if (count >= 1000) {
+                                displayValue = `${(count / 1000).toFixed(1)}K+`; // Show decimals up to 9.9K
+                                if (count >= 10000) displayValue = `${Math.floor(count / 1000)}K+`; // Round after 10K
+                            } else {
+                                displayValue = `${count}+`; // Normal count for small numbers
+                            }
+                        } else {
+                            displayValue = `${count}+`;
+                        }
+
+                        if (counter.textContent.includes('₹')) {
+                            displayValue = `₹${displayValue}`;
+                        }
+
+                        counter.textContent = displayValue;
+                        setTimeout(updateCount, speed);
+                    }
+                };
+
+                updateCount();
+                observer.unobserve(counter);
+            }
+
+        });
+    }, options);
+    counters.forEach(counter => observer.observe(counter));
+    // Initialize EMI calculation
+    calculateEMI();
+    document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
+        const button = dropdown.querySelector('button');
+        const content = dropdown.querySelector('div');
+        button.addEventListener('click', () => {
+            content.classList.toggle('hidden');
+        });
+    });
+    updateHeroPosition();
+</script>
